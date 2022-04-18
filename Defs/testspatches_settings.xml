@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the SettingsMenuDef with two tabs defined. All other tabs are added by patches -->
+<Defs>
+
+    <XmlExtensions.SettingsMenuDef>
+        <defName>testspatches_settings</defName> <!--Can be anything unique with no periods-->
+        <modId>tests.patches</modId> <!--MUST be the same as the one entered earlier-->
+        <label>tests patches</label> <!-- This is what displays as your mod's name-->
+        <settings>
+            <!--This is where you define what settings are in the settings menu-->
+            <li Class="XmlExtensions.Setting.Text">
+                <text>All XML Extensions settings require a restart to be applied!</text>
+            </li>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>All settings are safe to have enabled even if you don't have the appropriate mods.</text>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine"/>
+
+            <!--settings -->
+            
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_fantasydeep</key>
+                <label>Fantasy Metals Reforged - deep drilling nerf.</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>Makes Fantasy Metals appear less when using ground-penetrating scanner, which makes vanilla materials more common. Makes lumps smaller. Those materials are very expensive, but without this patch too easy to mine and sell.</tooltip>
+            </li>
+                        
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_solpyrite</key>
+                <label>Fantasy Metals Reforged - items made from solpyrite have "solpyrite" adjective instead of "golden?"</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>Items made from solpyrite will have "solpyrite" adjective instead of "golden?"</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_megafauna</key>
+                <label>Megafauna - fix tame revenge chances being 0.28% instead of 28%.</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>looks like a bug</tooltip>
+            </li>
+<!--
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_gemstones</key>
+                <label>RimFantasy - replace cut gemstones with ones from TMaterials</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>will only have effect if TMaterials is loaded, also since TMaterials gems have realistic costs (that are typically much lower) it will be unbalanced. I did it mainly because RimFantasy gemstones don't have custom stats and cut variants can't even be used for building.</tooltip>
+            </li>
+        -->
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_gacha</key>
+                <label>RimGacha - gacha can only be desonstructed for 1 resource</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>if you have mods that add op resources you could exploit gachas by deconstructing them.</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_rimsenal</key>
+                <label>Rimsenal - defense tech research requires precision rifling</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>its a bit op to have before other research</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ekwhateverphobia</key>
+                <label>Traits Excel - some traits are rarer (Ekrixiphobia, demolitions expert, mechanic)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>Having the "ekrixiphobia" word show up on every second pawn breaks the immersion a bit, and the other traits are way to specific to be as common as they are.</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_shard</key>
+                <label>Weapons From The Vault - shards are 10 times more expensive</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>I think they were too easy to buy and craft some good weapory.</tooltip>
+            </li>
+
+            <!--
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_affair</key>
+                <label>NoAffair - affair has no opinion offset (to fix NoAffair mod)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+        -->
+
+
+        </settings>
+    </XmlExtensions.SettingsMenuDef>
+
+
+</Defs>

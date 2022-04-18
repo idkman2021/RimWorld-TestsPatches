@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!--
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_123456</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+        </caseTrue>
+        <caseFalse>
+
+        </caseFalse>
+    </Operation>
+
+    -->
+    <!-- I believe this is a patch for "weapons from the vault" mod, making the shards ten times more expensive -->
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_shard</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="WFTV_ComponentShar"]/statBases/MarketValue</xpath>
+                <value>
+                    <MarketValue>5000</MarketValue>
+                </value>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <!-- rimsenal research patch -->
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_rimsenal</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[defName="DefenceTech"]/prerequisites</xpath>
+                <value>
+                    <li>PrecisionRifling</li>
+                </value>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <!-- ek-whatever-phobia trait and demolition expert traits were too common  -->
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ekwhateverphobia</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/TraitDef[defName="anxietyBomb" or defName="DemoExpert"]/commonality</xpath>
+                <value>
+                    <commonality>0.1</commonality>
+                </value>
+            </Operation>
+
+            <!-- mechanic traits are also quite specific to have commonality 1 -->
+
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/TraitDef[defName="Mechanic"]/commonality</xpath>
+                <value>
+                    <commonality>0.35</commonality>
+                </value>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <!-- pretty sure no affair mod breaks affairs -->
+
+    <!--
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_affair</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThoughtDef[defName="Affair"]/stages/li</xpath>
+                <value>
+                    <li>
+                        <label>affair</label>
+                        <baseOpinionOffset>0</baseOpinionOffset>
+                    </li>
+                </value>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+-->
+
+    <!-- gacha figurines can't be exploited for deconstruction -->
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_gacha</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Gachapon"]/costStuffCount</xpath>
+                <value>
+                    <costStuffCount>1</costStuffCount>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>carnap2TPatchesModPatch</patchName>
+        <arguments>
+            <li>TPatchesFantasyMetalSolpyrite</li>
+            <li>Fantasy Metals Reforged</li>
+            <li>Tweaks</li>
+            <li>Replace "golden?" with solpyrite</li>
+            <li>Items made from solpyrite will have "solpyrite" adjective instead of "golden?".</li>
+            <li>xpath: removes /Defs/ThingDef[defName="Solorite"]/stuffAdjective</li>
+            <li>false</li>
+        </arguments>
+    </Operation>
+-->
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_solpyrite</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Solorite"]/stuffProps/stuffAdjective</xpath>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>carnap2TPatchesModPatch</patchName>
+        <arguments>
+            <li>TPatchesMegafauna_manhunterOnTameFailChance</li>
+            <li>Megafauna</li>
+            <li>Tweaks</li>
+            <li>Fix tame revenge chance</li>
+            <li>Fixes several megafauna tame revenge chances being 0.28% instead of 28% (which is probably a bug).</li>
+            <li>Chalicotherium, Procoptodon, Castoroides, Sivatherium, Macrauchenia, Megaloceros</li>
+            <li>false</li>
+        </arguments>
+    </Operation>
+-->
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_megafauna</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Chalicotherium"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="Procoptodon"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="Castoroides"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="Sivatherium"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="Macrauchenia"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="Megaloceros"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+                        </value>
+                    </li>
+                </operations>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>carnap2TPatchesModPatch</patchName>
+        <arguments>
+            <li>TPatchesFantasyMetals</li>
+            <li>Fantasy Metals Reforged</li>
+            <li>Balancing</li>
+            <li>Fantasy Metals Reforge deep drilling rebalance</li>
+            <li>Makes Fantasy Metals appear less when using ground-penetrating scanner, which makes vanilla materials more common. Makes lumps smaller. Those materials are very expensive, but without this patch too easy to mine and sell.</li>
+            <li>commonalities reduced from 0.3 to 0.06, reduced lump sizes and portion sizes.</li>
+            <li>false</li>
+        </arguments>
+    </Operation>
+-->
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_fantasydeep</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!-- because there are no prefixes in defnames it first tests if the mod that is loaded is appropriate -->
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>/Defs/ThingDef[defName="Skelsshkrum"]/deepCommonality</xpath>
+                        <value>
+                            <deepCommonality>0.06</deepCommonality>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                    defName="Orichalcum" or
+                    defName="Adamantite" or
+                    defName="Tozra" or
+                    defName="Solorite"]/deepCommonality</xpath>
+                        <value>
+                            <deepCommonality>0.06</deepCommonality>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                    defName="Orichalcum" or
+                    defName="Adamantite" or
+                    defName="Tozra" or
+                    defName="Solorite"]/deepLumpSizeRange</xpath>
+                        <value>
+                            <deepLumpSizeRange>
+                                <min>1</min>
+                                <max>5</max>
+                            </deepLumpSizeRange>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                    defName="Orichalcum" or
+                    defName="Adamantite" or
+                    defName="Tozra" or
+                    defName="Solorite"]/deepCountPerPortion</xpath>
+                        <value>
+                            <deepCountPerPortion>5</deepCountPerPortion>
+                        </value>
+                    </li>
+
+                </operations>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <!-- rimfantasy gemstones - replaces gemstones from rimfantasy with tmaterials ones because they had the same stats and description and i didn't like it -->
+<!--
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_gemstones</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>TMaterials</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <success>Always</success>
+                    <operations>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef[
+                            defName="RF_Diamond" or
+                            defName="RF_Ruby" or
+                            defName="RF_Carnelian" or
+                            defName="RF_Citrine" or
+                            defName="RF_Peridot" or
+                            defName="RF_Emerald" or
+                            defName="RF_Aquamarine" or
+                            defName="RF_Sapphire" or
+                            defName="RF_Amethyst" or
+                            defName="RF_Kunzite" or
+                            defName="RF_Onyx"]</xpath>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_diamond"]</xpath>
+                            <value>
+                                <defName>RF_Diamond</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_ruby"]</xpath>
+                            <value>
+                                <defName>RF_Ruby</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_carnelian"]</xpath>
+                            <value>
+                                <defName>RF_Carnelian</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_citrine"]</xpath>
+                            <value>
+                                <defName>RF_Citrine</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_peridot"]</xpath>
+                            <value>
+                                <defName>RF_Peridot</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_emerald"]</xpath>
+                            <value>
+                                <defName>RF_Emerald</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_aquamarine"]</xpath>
+                            <value>
+                                <defName>RF_Aquamarine</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_sapphire"]</xpath>
+                            <value>
+                                <defName>RF_Sapphire</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_amethyst"]</xpath>
+                            <value>
+                                <defName>RF_Amethyst</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_kunzite"]</xpath>
+                            <value>
+                                <defName>RF_Kunzite</defName>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Normal</success>
+                            <xpath>/Defs/ThingDef/defName[text()="carnap_onyx"]</xpath>
+                            <value>
+                                <defName>RF_Onyx</defName>
+                            </value>
+                        </li>
+
+                    </operations>
+                </match>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse>
+
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>RimFantasy - Gemstones</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <success>Always</success>
+                    <operations>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[
+                            defName="carnap_diamond" or
+                            defName="carnap_ruby" or
+                            defName="carnap_carnelian" or
+                            defName="carnap_citrine" or
+                            defName="carnap_peridot" or
+                            defName="carnap_emerald" or
+                            defName="carnap_aquamarine" or
+                            defName="carnap_sapphire" or
+                            defName="carnap_amethyst" or
+                            defName="carnap_kunzite" or
+                            defName="carnap_onyx"]</xpath>
+                        </li>
+
+                    </operations>
+                </match>
+            </Operation>
+
+
+        </caseFalse>
+    </Operation>
+-->
+
+</Patch>
