@@ -1,2 +1,2 @@
 # RimWorld-TestsPatches
-my personal xml patches, toggleable. everything is off by default.
+my personal xml patches. everything is toggleable and off by default.
