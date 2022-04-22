@@ -571,6 +571,7 @@
 
 
     <Operation Class="XmlExtensions.OptionalPatch">
+        <success>Always</success>
         <modId>tests.patches</modId>
         <key>testspatches_neronix17</key>
         <defaultValue>false</defaultValue>
@@ -658,6 +659,7 @@
             </Operation>
 
             <Operation Class="PatchOperationRemove">
+                <success>Always</success>
                 <xpath>/Defs/MapGeneratorDef/genSteps/li[text()="O21_GenStep_BiomeOverrides"]</xpath>
             </Operation>
 
@@ -916,6 +918,7 @@
             </Operation>
 
             <Operation Class="PatchOperationAttributeAdd">
+                <success>Always</success>
                 <xpath>/Defs/FactionDef[defName="O21_OR_RepublicClones_PhaseI" or defName="O21_Halo_Faction_Innies"]</xpath>
                 <attribute>ParentName</attribute>
                 <value>FactionBase</value>
@@ -1003,6 +1006,7 @@
             </Operation>
 
             <Operation Class="PatchOperationAttributeAdd">
+                <success>Always</success>
                 <xpath>/Defs/ThingDef[defName="O21_Halo_LaserGraphic" or defName="O21_Trek_PhaserBeamGraphic"]</xpath>
                 <attribute>ParentName</attribute>
                 <value>BaseBullet</value>
