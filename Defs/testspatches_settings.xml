@@ -14,17 +14,17 @@
             <li Class="XmlExtensions.Setting.Text">
                 <text>All settings are safe to have enabled even if you don't have the appropriate mods.</text>
             </li>
-            <li Class="XmlExtensions.Setting.GapLine"/>
+            <li Class="XmlExtensions.Setting.GapLine" />
 
             <!--settings -->
-            
+
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_fantasydeep</key>
                 <label>Fantasy Metals Reforged - deep drilling nerf.</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>Makes Fantasy Metals appear less when using ground-penetrating scanner, which makes vanilla materials more common. Makes lumps smaller. Those materials are very expensive, but without this patch too easy to mine and sell.</tooltip>
             </li>
-                        
+
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_solpyrite</key>
                 <label>Fantasy Metals Reforged - items made from solpyrite have "solpyrite" adjective instead of "golden?"</label>
@@ -38,7 +38,7 @@
                 <defaultValue>false</defaultValue>
                 <tooltip>looks like a bug</tooltip>
             </li>
-<!--
+            <!--
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_gemstones</key>
                 <label>RimFantasy - replace cut gemstones with ones from TMaterials</label>
@@ -82,6 +82,80 @@
                 <tooltip></tooltip>
             </li>
         -->
+            <li Class="XmlExtensions.Setting.Gap" />
+            <li Class="XmlExtensions.Setting.Text">
+                <text>races:</text>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine" />
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_rcustomstats</key>
+                <label>remove custom work stats from all races (e.g. research speed, mining yield, etc)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>/Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_MentalBreakThreshold</key>
+                <label>remove custom mental break thresholds from all races</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_GlobalLearningFactor</key>
+                <label>remove custom skill learning rate from all races</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ShootingAccuracyPawn</key>
+                <label>remove custom shooting accuracy and aiming time from all races</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Gap" />
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>neronix17</key>
+                <label>neronix17</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>neronix17</tooltip>
+            </li>
+            
+
+
+
 
 
         </settings>
