@@ -147,15 +147,28 @@
             </li>
             <li Class="XmlExtensions.Setting.Gap" />
             <li Class="XmlExtensions.Setting.Checkbox">
-                <key>neronix17</key>
+                <key>testspatches_neronix17</key>
                 <label>neronix17</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>neronix17</tooltip>
+                <tooltip>allows to load some neronix17 mods without neronix17 C#.
+1. Make a local copy of O21 Toolbox and delete the 1.3 > Assemblies folder. Toolbox is required because it has shared XML code.
+2. Do the same for other neronix17 mods you want.
+    list of supported mods: [O21] Dragons Not Included; [O21] Forgotten Realms; [O21] Halo RimWorld Evolved; [O21] Mechadroids; [O21] Outer Rim Galaxies; [O21] Outland - Core; [O21] Outland - Eastborn Empire; [O21] Star Trek; [O21] Stargate; [O21] Subpersona Shells; [O21] Toolbox.
+3. In each mod check if there is an 1.3 > OnDemand folder and copy it to 1.3 > Defs.
+4. Finally, in each mod open 1.3 > Patches and delete all files that start with "Setting" and those files:
+    [O21] Toolbox - Patch_AlienLeathers.xml
+    [O21] Outland - Setting_GlowingKalocite.xml
+    [O21] Outer Rim Galaxies - ThingSetMaker_RewardPatch.xml
+
+Make sure you unsub from workshop mods so that local ones can be loaded (or change their package ids)
+                </tooltip>
             </li>
-            
-
-
-
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_neronix17removelaserguns</key>
+                <label>neronix17 remove broken Star Trek guns</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>read title</tooltip>
+            </li>
 
 
         </settings>

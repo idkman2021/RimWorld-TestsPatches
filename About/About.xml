@@ -13,5 +13,16 @@
   </description>
   <loadAfter>
     <li>imranfish.xmlextensions</li>
+    <li>neronix17.toolbox</li>
+    <li>neronix17.fr.compilation</li>
+    <li>Neronix17.SubpersonaShells</li>
+    <li>neronix17.mechadroids</li>
+    <li>Neronix17.Outland.Core</li>
+    <li>Neronix17.Outland.EastbornEmpire</li>
+    <li>neronix17.fr.content.dni</li>
+    <li>neronix17.outerrim.galaxies</li>
+    <li>neronix17.haloevolved</li>
+    <li>neronix17.startrek</li>
+    <li>neronix17.stargate</li>
   </loadAfter>
 </ModMetaData>
