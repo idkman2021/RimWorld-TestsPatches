@@ -145,7 +145,14 @@
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
-            <li Class="XmlExtensions.Setting.Gap" />
+
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>100</spacing>
+            </li>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>tests personal patches (please dont use them)</text>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine" />
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_neronix17</key>
                 <label>neronix17</label>
@@ -162,12 +169,6 @@
 
 Make sure you unsub from workshop mods so that local ones can be loaded (or change their package ids)
                 </tooltip>
-            </li>
-            <li Class="XmlExtensions.Setting.Checkbox">
-                <key>testspatches_neronix17removelaserguns</key>
-                <label>neronix17 remove broken Star Trek guns</label>
-                <defaultValue>false</defaultValue>
-                <tooltip>read title</tooltip>
             </li>
 
 

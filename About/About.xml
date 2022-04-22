@@ -7,12 +7,13 @@
   <supportedVersions>
     <li>1.3</li>
   </supportedVersions>
-  <description>toggleable xml patches. everything is off by  default
+  <description>toggleable xml patches. everything is off by  default. does nothing by default.
 
     The menu is at: Options > More Mod Settings > tests patches
   </description>
   <loadAfter>
     <li>imranfish.xmlextensions</li>
+    <li>carnap2.TPatches</li>
     <li>neronix17.toolbox</li>
     <li>neronix17.fr.compilation</li>
     <li>Neronix17.SubpersonaShells</li>

@@ -569,9 +569,10 @@
         <caseFalse></caseFalse>
     </Operation>
 
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
-        <key>testspatches_neronix17removelaserguns</key>
+        <key>testspatches_neronix17</key>
         <defaultValue>false</defaultValue>
         <caseTrue>
 
@@ -579,16 +580,6 @@
                 <success>Always</success>
                 <xpath>/Defs/ThingDef[@Class="O21Toolbox.Laser.LaserGunDef"]</xpath>
             </Operation>
-
-        </caseTrue>
-        <caseFalse></caseFalse>
-    </Operation>
-
-    <Operation Class="XmlExtensions.OptionalPatch">
-        <modId>tests.patches</modId>
-        <key>testspatches_neronix17</key>
-        <defaultValue>false</defaultValue>
-        <caseTrue>
 
 
             <Operation Class="PatchOperationRemove">
@@ -1078,6 +1069,31 @@
                 <xpath>/Defs/ThingDef[defName="SG_Item_SymbioteJar"]/thingClass</xpath>
             </Operation>
 
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="O21_OR_DroidParts" or defName="O21_OR_DroidReactivationKit" or defName="O21_OR_DroidPropulsionJets" or defName="O21_OR_DataSpike" or defName="O21_OR_JT12Jetpack"]</xpath>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="O21_MechanoidParts" or defName="O21_MechanoidRepairKit"]/recipeMaker</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="O21_MechanoidParts" or defName="O21_MechanoidRepairKit"]/costList</xpath>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/RecipeDef[defName="O21_MechanoidRepairKit"]</xpath>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="O21_OR_BaseHumanoidDroid"]/alienRace/raceRestriction/apparelList/li[text()="O21_OR_DroidPropulsionJets"]</xpath>
+            </Operation>
+
+
             <!-- more stuff -->
 
             <Operation Class="PatchOperationReplace">
@@ -1102,13 +1118,204 @@
             </Operation>
 
 
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>/Defs/DesignationCategoryDef[defName="DZ_Decor"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                            ]</xpath>
+                            <value>
+                                <designationCategory>DZ_Decor</designationCategory>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                ]/comps</xpath>
+                        </li>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                ]/researchPrerequisites</xpath>
+                        </li>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"
+                                ]/recipes</xpath>
+                        </li>
+
+
+                        <li Class="PatchOperationReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                ]/costList</xpath>
+                            <value>
+                                <costList>
+                                    <Steel>20</Steel>
+                                </costList>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench" or defName="O21_Mechanoid_Workbench"
+                                ]/costStuffCount</xpath>
+                            <value>
+                                <costStuffCount>10</costStuffCount>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                ]/statBases</xpath>
+                            <value>
+                                <statBases>
+                                    <WorkToBuild>50</WorkToBuild>
+                                    <MaxHitPoints>100</MaxHitPoints>
+                                    <Flammability>0.1</Flammability>
+                                    <Mass>50</Mass>
+                                </statBases>
+                            </value>
+                        </li>
+
+
+                    </operations>
+                </match>
+
+                <nomatch Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>/Defs/DesignationCategoryDef[defName="PropsandDecor"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                ]</xpath>
+                                <value>
+                                    <designationCategory>PropsandDecor</designationCategory>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                    ]/comps</xpath>
+                            </li>
+
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                    ]/researchPrerequisites</xpath>
+                            </li>
+
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"
+                                    ]/recipes</xpath>
+                            </li>
+
+
+                            <li Class="PatchOperationReplace">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                    ]/costList</xpath>
+                                <value>
+                                    <costList>
+                                        <Steel>20</Steel>
+                                    </costList>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench" or defName="O21_Mechanoid_Workbench"
+                                    ]/costStuffCount</xpath>
+                                <value>
+                                    <costStuffCount>10</costStuffCount>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
+                                    ]/statBases</xpath>
+                                <value>
+                                    <statBases>
+                                        <WorkToBuild>50</WorkToBuild>
+                                        <MaxHitPoints>100</MaxHitPoints>
+                                        <Flammability>0.1</Flammability>
+                                        <Mass>50</Mass>
+                                    </statBases>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <operations>
+
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly"
+                            ]</xpath>
+                            </li>
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"]/recipes/li[text()="O21_Make_MechadroidAlpha" or text()="O21_Make_MechadroidGamma" or text()="O21_Make_MechadroidDelta"
+                            ]</xpath>
+                            </li>
+                        </operations>
+                    </nomatch>
+                </nomatch>
+
+            </Operation>
+
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ResearchProjectDef[tab="O21_Mechadroids" or defName="O21_Mechanoids_Parts" or defName="O21_Mechanoids_RepairKits" or defName="O21_Droids_MSEMouseDroid" or defName="O21_OR_AdvancedHypertech" or defName="O21_OR_ChissArmor" or defName="O21_OR_LightInstallations" or defName="O21_OR_MediumInstallations" or defName="O21_OR_HeavyInstallations" or defName="O21_OR_HeavyTurrets" or defName="O21_OR_TacticalDroid" or defName="O21_OR_SuperTacticalDroid" or defName="O21_OR_CommandoDroid" or defName="O21_OR_MagnaGuardDroid" or defName="O21_OR_BattleDroid" or defName="O21_OR_SuperBattleDroid" or defName="O21_OR_DestroyerDroid" or defName="O21_OR_DroidEnergySys" or defName="O21_Trek_Transporters" or defName="O21_Trek_DilithiumMining" or defName="O21_Trek_LaserWeapons" or defName="O21_Trek_Phasers" or defName="O21_Trek_Disruptors" or defName="O21_OR_Jetpacks" or defName="O21_OR_HKSeriesResearch" or defName="SG_TauriResearch"]</xpath>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ResearchProjectDef[defName="O21_OR_LightTurrets" or defName="O21_OR_MedicalApplications"]/prerequisites/li[text()="O21_OR_AdvancedHypertech"]</xpath>
+                <value>
+                    <li>O21_OR_BasicHypertech</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ResearchProjectDef[defName="O21_Trek_DilithiumGenerator"]/prerequisites/li[text()="O21_Trek_DilithiumMining"]</xpath>
+                <value>
+                    <li>MultiAnalyzer</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ResearchProjectDef[defName="SG_TauriWeapons" or defName="SG_TauriArmour"]/prerequisites/li[text()="SG_TauriResearch"]</xpath>
+                <value>
+                    <li>MultiAnalyzer</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ResearchTabDef[defName="O21_Mechadroids" or defName="O21_Droidworks"]</xpath>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/RecipeDef[defName="O21_Make_MechadroidAlpha" or defName="O21_Make_MechadroidDelta" or defName="O21_Make_MechadroidGamma"]</xpath>
+            </Operation>
+
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
-
-
-
-
 
 
     <!--
