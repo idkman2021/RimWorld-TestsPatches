@@ -517,7 +517,8 @@
                     /Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
                     /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
                     /Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance |
+                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ForagedNutritionPerDay
 
                 </xpath>
             </Operation>
@@ -569,758 +570,176 @@
         <caseFalse></caseFalse>
     </Operation>
 
-
+    
     <Operation Class="XmlExtensions.OptionalPatch">
-        <success>Always</success>
         <modId>tests.patches</modId>
-        <key>testspatches_neronix17</key>
+        <key>testspatches_HumongousMoveSpeeds</key>
         <defaultValue>false</defaultValue>
         <caseTrue>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Class="O21Toolbox.Laser.LaserGunDef"]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/comps/li[contains(@Class,"O21Toolbox") or contains(compClass,"O21Toolbox")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/modExtensions/li[contains(@Class,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/comps/li[contains(@Class,"O21Toolbox") or contains(compClass,"O21Toolbox")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/modExtensions/li[contains(@Class,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/PawnKindDef/comps/li[contains(@Class,"O21Toolbox") or contains(compClass,"O21Toolbox")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/PawnKindDef/modExtensions/li[contains(@Class,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef/comps/li[contains(@Class,"O21Toolbox") or contains(compClass,"O21Toolbox")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef/modExtensions/li[contains(@Class,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/thingClass[contains(text(),"O21Toolbox")]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/JobDef[contains(driverClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ScenPartDef[contains(scenPartClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/StatDef[contains(workerClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/WorkGiverDef[contains(giverClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[contains(workerClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/GenStepDef[defName="O21_GenStep_BiomeOverrides"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MapGeneratorDef/genSteps/li[text()="O21_GenStep_BiomeOverrides"]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MainButtonDef[contains(tabWindowClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef[contains(hediffClass,"O21Toolbox")]</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffGiverSetDef/hediffGivers/li[contains(@Class,"O21Toolbox")]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/O21Toolbox.UpdateListings.UpdateDef</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/O21Toolbox.AutomatedProducer.RecipeDef_Automated</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/O21Toolbox.LootCache.LootCacheDef</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/O21Toolbox.SlotLoadable.SlotLoadableDef</xpath>
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/O21Toolbox.Background.BackgroundDef</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThinkTreeDef[defName="DroneMain"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThinkTreeDef[@ParentName="MechMain"]</xpath>
-            </Operation>
-
-
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21_DroneBase"]/race/thinkTreeMain</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/MoveSpeed[text()>"4.6"]</xpath>
                 <value>
-                    <thinkTreeMain>Humanlike</thinkTreeMain>
+                    <MoveSpeed>4.6</MoveSpeed>
                 </value>
             </Operation>
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21_DroneBase"]//race/thinkTreeConstant</xpath>
-                <value>
-                    <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-                </value>
-            </Operation>
-
-            <Operation Class="PatchOperationAttributeAdd">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21_DroneBase"]</xpath>
-                <attribute>ParentName</attribute>
-                <value>BasePawn</value>
-            </Operation>
-
-            <!-- forgotten realm -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="O21_FR_ImplantIllithidTadpole"]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Human"]/recipes/li[text()="O21_FR_ImplantIllithidTadpole"]</xpath>
-            </Operation>
-
-            <!-- sub somethings -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/JobDef[defName="SubAI_EnterReconstructor" or defName="SubAI_CarryToReconstructor" or defName="O21_GatherProgramItem"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="SubAI_SubpersonaReconstructor"]/thingClass</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/inspectorTabs/li[text()="O21Toolbox.AutomatedProducer.ITab_AutomatedProducer"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/modExtensions/li[@Class="SubpersonaAI.DefModExt_ProgramCartridge"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/TraitDef[@Name="SubAI_ShellTraitBase"]/modExtensions/li[@Class="SubpersonaAI.DefModExt_ShellTrait"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SubAI_SubpersonaShell"]/recipes/li[text()="SubAI_ShutDown"]</xpath>
-            </Operation>
-
-            <!-- mechanoid people -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="O21_BaseMechadroid"]/recipes/li[text()="O21_MechanoidRepairKit"]</xpath>
-            </Operation>
-
-            <!-- outladner -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Outland_Ammo_BallistaBolt" or defName="Outland_Ammo_RoundShot"]/modExtensions/li[@Class="Outland.DefModExt_UnconventionalShell"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Outland_KalociteFormation"]/thingClass</xpath>
-            </Operation>
-
-            <!-- there is the bones mod bro -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/StatDef[defName="Outland_BoneAmount"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Outland_Gun_BallistaTurret"]/verbs/li/soundCast</xpath>
-                <value>
-                    <soundCast>Bow_Large</soundCast>
-                </value>
-            </Operation>
-
-
-            <!-- outer galaxies -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/CultureDef/modExtensions/li[@Class="O21Toolbox.Culture.DefModExt_CultureExtended"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MentalStateDef[defName="O21_OR_MSRebellious"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MentalBreakDef[defName="O21_OR_MSRebellious"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MentalStateDef[defName="O21_OR_MSLooseScrews"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/MentalBreakDef[defName="O21_OR_MSLooseScrews"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef[defName="O21_OR_CloneConditioning"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef[defName="O21_OR_CloneConditioning"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="O21_OR_BaseHumanoidDroid"]/modExtensions/li[@Class="OuterRim.DefModExt_Droid"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/TraitDef[@Name="O21_OR_DroidTraitBase"]/modExtensions/li[@Class="OuterRim.DefModExt_DroidTrait"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="O21_OR_AttachRestraintBolt" or defName="O21_OR_RemoveRestraintBolt" or defName="O21_OR_WipeDroidMind"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy"]/inspectorTabs/li[text()="O21Toolbox.Automation.ITab_Mining"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy"]/placeWorkers/li[text()="O21Toolbox.CustomPlaceWorker.PlaceWorker_PlaceNearThing"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/JobDef[defName="O21_OR_ReprogramDroid" or defName="O21_OR_ReactivateDroid"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="O21_OR_BaseHumanoidDroid"]/recipes/li[text()="O21_OR_ShutDownDroid" or text()="O21_OR_AttachRestraintBolt" or text()="O21_OR_RemoveRestraintBolt" or text()="O21_OR_WipeDroidMind"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/comps/li[contains(@Class,"OuterRim") or contains(compClass,"OuterRim")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef/modExtensions/li[contains(@Class,"OuterRim")]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_OR_CloneHelmetII_Snow"][2]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ResearchProjectDef[defName="O21_Droids_MSEMouseDroid"]/tags</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/TraitDef[defName="O21_OR_Rebellious" or defName="O21_OR_LooseScrews"]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationAdd">
-                <success>Always</success>
-                <xpath>/Defs/PawnKindDef[@Name="O21_OR_ClonePhaseIPawnBase" or @Name="O21HaloInsurgentBase"]</xpath>
-                <value>
-                    <initialWillRange>0~1</initialWillRange>
-                    <initialResistanceRange>10~17</initialResistanceRange>
-                </value>
-            </Operation>
-
-            <Operation Class="PatchOperationAttributeAdd">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_OR_RepublicClones_PhaseI" or defName="O21_Halo_Faction_Innies"]</xpath>
-                <attribute>ParentName</attribute>
-                <value>FactionBase</value>
-            </Operation>
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/PawnKindDef[defName="O21_OR_DroneMSE6Droid"]/lifeStages/li/bodyGraphicData/texPath</xpath>
-                <value>
-                    <texPath>OuterRim/Droid/MSE</texPath>
-                </value>
-            </Operation>
-
-            <!-- hello! -->
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/PawnKindDef[@ParentName="UNSCMarineAbstractBase"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef[defName="O21_Halo_Covenant_NeedlerShard"]/comps/li[@Class="Halo.HediffCompProperties_DelayedBlam"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/explosionEffect</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/hitLivingEffect</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/seam</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/lifetime</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/textures</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Class="O21Toolbox.Laser.LaserBeamDef"]/textures</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Class="O21Toolbox.Laser.LaserGunDef"]/barrelLength</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationAttributeRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Class="O21Toolbox.Laser.LaserBeamDef" or @Class="O21Toolbox.Laser.LaserGunDef"]</xpath>
-                <attribute>Class</attribute>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="O21LaserBeamBase" or @Name="PhaserBeamProjectile"]/beamGraphic</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_Halo_Faction_UNSC"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_Halo_Faction_Innies" or defName="O21_Halo_Faction_UNSC"]/startingGoodwill</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_Halo_Faction_Innies" or defName="O21_Halo_Faction_UNSC"]/hairTags</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_Halo_Faction_Innies" or defName="O21_Halo_Faction_UNSC"]/naturalColonyGoodwill</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationAttributeAdd">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_Halo_LaserGraphic" or defName="O21_Trek_PhaserBeamGraphic"]</xpath>
-                <attribute>ParentName</attribute>
-                <value>BaseBullet</value>
-            </Operation>
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_Halo_LaserGraphic"]</xpath>
-                <value>
-                    <graphicData>
-                        <texPath>HaloRE/BeamRifleShotNew</texPath>
-                        <graphicClass>Graphic_Single</graphicClass>
-                    </graphicData>
-                </value>
-            </Operation>
-
-            <!-- star track -->
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="PhaserGunBase"]/beamColor</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_Trek_PhaserBeamGraphic"]</xpath>
-                <value>
-                    <graphicData>
-                        <texPath>Things/Projectiles/PhaserBeam</texPath>
-                        <graphicClass>Graphic_Single</graphicClass>
-                    </graphicData>
-                </value>
-            </Operation>
-
-            <!-- star gates -->
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffDef[defName="SG_SymbioteHost" or defName="SG_SymbioteJaffa"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/HediffGiverSetDef[defName="SG_JaffaStandard"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="SG_ImplantJaffa" or defName="SG_RemoveJaffa" or defName="SG_ImplantSymbiote" or defName="SG_RemoveSymbiote"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SG_Jaffa"]/race/hediffGiverSets/li[text()="SG_JaffaStandard"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SG_Jaffa"]/recipes/li[text()="SG_ImplantJaffa" or text()="SG_RemoveJaffa"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="SG_Item_SymbioteJar"]/thingClass</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_OR_DroidParts" or defName="O21_OR_DroidReactivationKit" or defName="O21_OR_DroidPropulsionJets" or defName="O21_OR_DataSpike" or defName="O21_OR_JT12Jetpack"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_MechanoidParts" or defName="O21_MechanoidRepairKit"]/recipeMaker</xpath>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="O21_MechanoidParts" or defName="O21_MechanoidRepairKit"]/costList</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="O21_MechanoidRepairKit"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="O21_OR_BaseHumanoidDroid"]/alienRace/raceRestriction/apparelList/li[text()="O21_OR_DroidPropulsionJets"]</xpath>
-            </Operation>
-
-
-            <!-- more stuff -->
-
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/FactionDef[defName="O21_Halo_Faction_Innies"]/backstoryFilters</xpath>
-                <value>
-                    <backstoryFilters>
-                        <li>
-                            <categories>
-                                <li>Outlander</li>
-                            </categories>
-                            <commonality>0.95</commonality>
-                        </li>
-                        <li>
-                            <categories>
-                                <li>Offworld</li>
-                            </categories>
-                            <commonality>0.05</commonality>
-                        </li>
-                    </backstoryFilters>
-                </value>
-            </Operation>
-
-
-            <Operation Class="PatchOperationConditional">
-                <success>Always</success>
-                <xpath>/Defs/DesignationCategoryDef[defName="DZ_Decor"]</xpath>
-                <match Class="PatchOperationSequence">
-                    <operations>
-
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                            ]</xpath>
-                            <value>
-                                <designationCategory>DZ_Decor</designationCategory>
-                            </value>
-                        </li>
-
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                ]/comps</xpath>
-                        </li>
-
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                ]/researchPrerequisites</xpath>
-                        </li>
-
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"
-                                ]/recipes</xpath>
-                        </li>
-
-
-                        <li Class="PatchOperationReplace">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                ]/costList</xpath>
-                            <value>
-                                <costList>
-                                    <Steel>20</Steel>
-                                </costList>
-                            </value>
-                        </li>
-
-                        <li Class="PatchOperationReplace">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench" or defName="O21_Mechanoid_Workbench"
-                                ]/costStuffCount</xpath>
-                            <value>
-                                <costStuffCount>10</costStuffCount>
-                            </value>
-                        </li>
-
-                        <li Class="PatchOperationReplace">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                ]/statBases</xpath>
-                            <value>
-                                <statBases>
-                                    <WorkToBuild>50</WorkToBuild>
-                                    <MaxHitPoints>100</MaxHitPoints>
-                                    <Flammability>0.1</Flammability>
-                                    <Mass>50</Mass>
-                                </statBases>
-                            </value>
-                        </li>
-
-
-                    </operations>
-                </match>
-
-                <nomatch Class="PatchOperationConditional">
-                    <success>Always</success>
-                    <xpath>/Defs/DesignationCategoryDef[defName="PropsandDecor"]</xpath>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                ]</xpath>
-                                <value>
-                                    <designationCategory>PropsandDecor</designationCategory>
-                                </value>
-                            </li>
-
-                            <li Class="PatchOperationRemove">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                    ]/comps</xpath>
-                            </li>
-
-                            <li Class="PatchOperationRemove">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                    ]/researchPrerequisites</xpath>
-                            </li>
-
-                            <li Class="PatchOperationRemove">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"
-                                    ]/recipes</xpath>
-                            </li>
-
-
-                            <li Class="PatchOperationReplace">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                    ]/costList</xpath>
-                                <value>
-                                    <costList>
-                                        <Steel>20</Steel>
-                                    </costList>
-                                </value>
-                            </li>
-
-                            <li Class="PatchOperationReplace">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench" or defName="O21_Mechanoid_Workbench"
-                                    ]/costStuffCount</xpath>
-                                <value>
-                                    <costStuffCount>10</costStuffCount>
-                                </value>
-                            </li>
-
-                            <li Class="PatchOperationReplace">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly" or defName="O21_Mechanoid_Workbench"
-                                    ]/statBases</xpath>
-                                <value>
-                                    <statBases>
-                                        <WorkToBuild>50</WorkToBuild>
-                                        <MaxHitPoints>100</MaxHitPoints>
-                                        <Flammability>0.1</Flammability>
-                                        <Mass>50</Mass>
-                                    </statBases>
-                                </value>
-                            </li>
-                        </operations>
-                    </match>
-                    <nomatch Class="PatchOperationSequence">
-                        <operations>
-
-                            <li Class="PatchOperationRemove">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="SG_Building_SymbioteQueenPool" or defName="O21_OR_MineralMinerLight" or defName="O21_OR_MineralMinerMedium" or defName="O21_OR_MineralMinerHeavy" or defName="O21_OR_TibannaExtractorLight" or defName="O21_OR_TibannaExtractorHeavy" or defName="O21_Trek_FoodReplicator" or defName="SubAI_SubpersonaFabricator" or defName="O21_Trek_DilithiumMiner" or defName="SubAI_MapWideSubersonaCharger" or defName="SubAI_SubersonaCharger" or defName="O21_FR_Building_ElderBrainPool" or defName="SubAI_SubpersonaReconstructor" or defName="O21_Trek_TransporterPad" or defName="O21_OR_DroidAssembly"
-                            ]</xpath>
-                            </li>
-                            <li Class="PatchOperationRemove">
-                                <success>Always</success>
-                                <xpath>Defs/ThingDef[defName="O21_Mechanoid_Workbench"]/recipes/li[text()="O21_Make_MechadroidAlpha" or text()="O21_Make_MechadroidGamma" or text()="O21_Make_MechadroidDelta"
-                            ]</xpath>
-                            </li>
-                        </operations>
-                    </nomatch>
-                </nomatch>
-
-            </Operation>
-
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ResearchProjectDef[tab="O21_Mechadroids" or defName="O21_Mechanoids_Parts" or defName="O21_Mechanoids_RepairKits" or defName="O21_Droids_MSEMouseDroid" or defName="O21_OR_AdvancedHypertech" or defName="O21_OR_ChissArmor" or defName="O21_OR_LightInstallations" or defName="O21_OR_MediumInstallations" or defName="O21_OR_HeavyInstallations" or defName="O21_OR_HeavyTurrets" or defName="O21_OR_TacticalDroid" or defName="O21_OR_SuperTacticalDroid" or defName="O21_OR_CommandoDroid" or defName="O21_OR_MagnaGuardDroid" or defName="O21_OR_BattleDroid" or defName="O21_OR_SuperBattleDroid" or defName="O21_OR_DestroyerDroid" or defName="O21_OR_DroidEnergySys" or defName="O21_Trek_Transporters" or defName="O21_Trek_DilithiumMining" or defName="O21_Trek_LaserWeapons" or defName="O21_Trek_Phasers" or defName="O21_Trek_Disruptors" or defName="O21_OR_Jetpacks" or defName="O21_OR_HKSeriesResearch" or defName="SG_TauriResearch"]</xpath>
-            </Operation>
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ResearchProjectDef[defName="O21_OR_LightTurrets" or defName="O21_OR_MedicalApplications"]/prerequisites/li[text()="O21_OR_AdvancedHypertech"]</xpath>
-                <value>
-                    <li>O21_OR_BasicHypertech</li>
-                </value>
-            </Operation>
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ResearchProjectDef[defName="O21_Trek_DilithiumGenerator"]/prerequisites/li[text()="O21_Trek_DilithiumMining"]</xpath>
-                <value>
-                    <li>MultiAnalyzer</li>
-                </value>
-            </Operation>
-            <Operation Class="PatchOperationReplace">
-                <success>Always</success>
-                <xpath>/Defs/ResearchProjectDef[defName="SG_TauriWeapons" or defName="SG_TauriArmour"]/prerequisites/li[text()="SG_TauriResearch"]</xpath>
-                <value>
-                    <li>MultiAnalyzer</li>
-                </value>
-            </Operation>
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/ResearchTabDef[defName="O21_Mechadroids" or defName="O21_Droidworks"]</xpath>
-            </Operation>
-
-            <Operation Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="O21_Make_MechadroidAlpha" or defName="O21_Make_MechadroidDelta" or defName="O21_Make_MechadroidGamma"]</xpath>
-            </Operation>
-
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
 
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ImmunityGainSpeed</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ImmunityGainSpeed</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ToxicSensitivity</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ToxicSensitivity</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_PsychicSensitivity</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/PsychicSensitivity</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_HungerRate</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/HungerRateMultiplier</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/baseHungerRate</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_lifeExpectancy</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/lifeExpectancy[text()>"100"]</xpath>
+                <value>
+                    <lifeExpectancy>100</lifeExpectancy>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_RestRate</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/RestRateMultiplier</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/baseRestRate</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_Temperature</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMin</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMax</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_PainShockThreshold</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/PainShockThreshold[text()>"1"]</xpath>
+                <value>
+                    <PainShockThreshold>1</PainShockThreshold>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_FoodType</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/foodType</xpath>
+                <value>
+                    <foodType>OmnivoreHuman</foodType>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_thoughtSettings</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/thoughtSettings</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
 
     <!--
     <Operation Class="XmlExtensions.OptionalPatch">

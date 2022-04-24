@@ -82,15 +82,15 @@
                 <tooltip></tooltip>
             </li>
         -->
-            <li Class="XmlExtensions.Setting.Gap" />
-            <li Class="XmlExtensions.Setting.Text">
-                <text>races:</text>
-            </li>
             <li Class="XmlExtensions.Setting.GapLine" />
+            <li Class="XmlExtensions.Setting.Text">
+                <text>Humanoid Alien Races - remove custom stats (replace with vanilla human stats) in all HAR races:</text>
+            </li>
+            <li Class="XmlExtensions.Setting.Gap" />
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_rcustomstats</key>
-                <label>remove custom work stats from all races (e.g. research speed, mining yield, etc)</label>
+                <label>remove custom work stats (e.g. research speed, mining yield, etc)</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>/Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
                     /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
@@ -128,26 +128,101 @@
                     /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_HungerRate</key>
+                <label>remove custom hunger rates</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ImmunityGainSpeed</key>
+                <label>remove custom immunity gain speeds</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_MentalBreakThreshold</key>
-                <label>remove custom mental break thresholds from all races</label>
+                <label>remove custom mental break thresholds</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_Temperature</key>
+                <label>replace custom min/max comfy temperatures</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_PsychicSensitivity</key>
+                <label>remove custom psychic sensitivity</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_RestRate</key>
+                <label>remove custom rest rate</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ShootingAccuracyPawn</key>
+                <label>remove custom shooting accuracy and aiming time</label>
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_GlobalLearningFactor</key>
-                <label>remove custom skill learning rate from all races</label>
+                <label>remove custom skill learning rates</label>
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
-                <key>testspatches_ShootingAccuracyPawn</key>
-                <label>remove custom shooting accuracy and aiming time from all races</label>
+                <key>testspatches_ToxicSensitivity</key>
+                <label>remove custom toxic sensitivity</label>
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
 
+            <li Class="XmlExtensions.Setting.Gap" />
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_HumongousMoveSpeeds</key>
+                <label>replace move speeds above 4.6 with 4.6</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_lifeExpectancy</key>
+                <label>replace life expectancies above 100 with 100</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_PainShockThreshold</key>
+                <label>replace pain shock thresholds above 1 with 1</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Gap" />
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_FoodType</key>
+                <label>give all races OmnivoreHuman diet</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>useful when custom thoughts are disabled for some races can only eat raw food and corpses and it would be very unfortunate if they didn't like said raw food and corpses...</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_thoughtSettings</key>
+                <label>remove all custom thoughts (thoughtSettings)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>fun fact: every second race doesn't mind sleeping in barracks because modders are very fond of removing that particular thought from their races.</tooltip>
+            </li>
+
+
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>100</spacing>
+                <spacing>200</spacing>
             </li>
             <li Class="XmlExtensions.Setting.Text">
                 <text>tests personal patches (please dont use them)</text>
@@ -157,18 +232,7 @@
                 <key>testspatches_neronix17</key>
                 <label>neronix17</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>allows to load some neronix17 mods without neronix17 C#.
-1. Make a local copy of O21 Toolbox and delete the 1.3 > Assemblies folder. Toolbox is required because it has shared XML code.
-2. Do the same for other neronix17 mods you want.
-    list of supported mods: [O21] Dragons Not Included; [O21] Forgotten Realms; [O21] Halo RimWorld Evolved; [O21] Mechadroids; [O21] Outer Rim Galaxies; [O21] Outland - Core; [O21] Outland - Eastborn Empire; [O21] Star Trek; [O21] Stargate; [O21] Subpersona Shells; [O21] Toolbox.
-3. In each mod check if there is an 1.3 > OnDemand folder and copy it to 1.3 > Defs.
-4. Finally, in each mod open 1.3 > Patches and delete all files that start with "Setting" and those files:
-    [O21] Toolbox - Patch_AlienLeathers.xml
-    [O21] Outland - Setting_GlowingKalocite.xml
-    [O21] Outer Rim Galaxies - ThingSetMaker_RewardPatch.xml
-
-Make sure you unsub from workshop mods so that local ones can be loaded (or change their package ids)
-                </tooltip>
+                <tooltip>read title</tooltip>
             </li>
 
 
