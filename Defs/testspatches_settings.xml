@@ -309,6 +309,12 @@ Slime molds, as a group, are polyphyletic. They were originally represented by t
                 <defaultValue>false</defaultValue>
                 <tooltip>a pawn should want to become fat because that way there will be more of it in the world</tooltip>
             </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_skeletons</key>
+                <label>skeletons</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>their thoughtdefs appear on other races for no reason so I remove them completely</tooltip>
+            </li>
 
 
         </settings>

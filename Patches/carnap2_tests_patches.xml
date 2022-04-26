@@ -774,6 +774,20 @@
                 <success>Always</success>
                 <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/thoughtSettings</xpath>
             </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeMain</xpath>
+                <value>
+                    <thinkTreeMain>Humanlike</thinkTreeMain>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeConstant</xpath>
+                <value>
+                    <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+                </value>
+            </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
@@ -894,6 +908,11 @@
         <caseFalse></caseFalse>
     </Operation>
 
+
+
+
+    <!-- personal -->
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_SLIMES</key>
@@ -924,6 +943,31 @@
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_skeletons</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThoughtDef[defName="MechClusterSkeleton" or 
+                    defName="MedicalSpecialistSkeleton" or 
+                    defName="StyleDesiredSkeleton" or 
+                    defName="ReactorNeeds" or 
+                    defName="ReGrowthSandy_Skeletons"]</xpath>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThinkTreeDef[defName="Roboticlike"]</xpath>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
 
 
     <!--
