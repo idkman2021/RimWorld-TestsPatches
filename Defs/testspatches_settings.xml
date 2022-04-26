@@ -84,9 +84,11 @@
         -->
             <li Class="XmlExtensions.Setting.GapLine" />
             <li Class="XmlExtensions.Setting.Text">
-                <text>Humanoid Alien Races - remove custom stats (replace with vanilla human stats) in all HAR races:</text>
+                <text>Humanoid Alien Races - those settings affect ALL HAR races:</text>
             </li>
-            <li Class="XmlExtensions.Setting.Gap" />
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>12</spacing>
+            </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_rcustomstats</key>
@@ -184,7 +186,9 @@
                 <tooltip></tooltip>
             </li>
 
-            <li Class="XmlExtensions.Setting.Gap" />
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>12</spacing>
+            </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_HumongousMoveSpeeds</key>
@@ -205,21 +209,76 @@
                 <tooltip></tooltip>
             </li>
 
-            <li Class="XmlExtensions.Setting.Gap" />
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>12</spacing>
+            </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_FoodType</key>
                 <label>give all races OmnivoreHuman diet</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>useful when custom thoughts are disabled for some races can only eat raw food and corpses and it would be very unfortunate if they didn't like said raw food and corpses...</tooltip>
+                <tooltip>useful when custom thoughts are disabled as some races can only eat raw food and corpses and it would be very unfortunate if they didn't like said raw food and corpses...</tooltip>
             </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_humanRecipeImport</key>
+                <label>all races import human surgery recipes</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>adds humanRecipeImport to all races. From HAR wiki - It does a basic check if there are any valid bodyparts in the body of your race before it imports.</tooltip>
+            </li>
+
+
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>12</spacing>
+            </li>
+
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_thoughtSettings</key>
                 <label>remove all custom thoughts (thoughtSettings)</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>fun fact: every second race doesn't mind sleeping in barracks because modders are very fond of removing that particular thought from their races.</tooltip>
             </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_forcedRaceTraitEntries</key>
+                <label>remove forced traits</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>"It is also possible to force traits on the race. Optionally, with a specified chance and gender commonality."</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_disallowedTraits</key>
+                <label>remove disallowed traits</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>"To disable traits for your race, you basically use the same syntax." - HAR Devs. (follow our facebook community for more inspirational quotes)</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_traitCount</key>
+                <label>remove custom trait counts</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>"You can also set the amount of traits and additional traits the race is supposed to get."</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_chemicalSettings</key>
+                <label>remove chemical settings (custom reactions to drugs)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>"You can also set specific settings regarding the use of chemicals (drugs). Either setting race specific reactions to it or just straight up not making it ingestible."</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_raceRestriction</key>
+                <label>remove ALL race restrictions</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>this means all races will be able to wear all apparel, use all weapons, research all researches, build all buildings, plant all plants, etc. This also means all apparel and weapons that could only be used by specific races will now be available to everyone. This also means some races that aren't meant to wear clothes will still wear them, looking weird.</tooltip>
+            </li>
 
+
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>12</spacing>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_hediffGraphics</key>
+                <label>remove hediff- and backstory-based graphics (for performance)</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>I haven't tested it but it might fix TPS impact caused by TryResolveGraphics. Hediff and backstory based graphics are where the race graphics will change based on the severity of a hediff and you probably never notice that.</tooltip>
+            </li>
 
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>200</spacing>
@@ -233,6 +292,22 @@
                 <label>neronix17</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>read title</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_SLIMES</key>
+                <label>slimes</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>Slime mold or slime mould is an informal name given to several kinds of unrelated eukaryotic organisms that can live freely as single cells, but can also aggregate together to form multicellular reproductive structures. Slime molds were formerly classified as fungi but are no longer considered part of that kingdom. Although not forming a single monophyletic clade, they are grouped within the paraphyletic group, kingdom Protista.
+More than 900 species of slime mold occur globally. Their common name refers to part of some of these organisms' life cycles where they can appear as gelatinous "slime". This is mostly seen with the Myxogastria, which are the only macroscopic slime molds.[2] Most slime molds are smaller than a few centimetres, but some species may reach sizes up to several square metres and masses up to 20 kilograms.
+Many slime molds, mainly the "cellular" slime molds, do not spend most of their time in this state. When food is abundant, these slime molds exist as single-celled organisms. When food is in short supply, many of these single-celled organisms will congregate and start moving as a single body. In this state they are sensitive to airborne chemicals and can detect food sources. They can readily change the shape and function of parts, and may form stalks that produce fruiting bodies, releasing countless spores, light enough to be carried on the wind or hitch a ride on passing animals.
+They feed on microorganisms that live in any type of dead plant material. They contribute to the decomposition of dead vegetation, and feed on bacteria, yeasts, and fungi. For this reason, slime molds are usually found in soil, lawns, and on the forest floor, commonly on deciduous logs. In tropical areas they are also common on inflorescences and fruits, and in aerial situations (e.g., in the canopy of trees). In urban areas, they are found on mulch or in the leaf mold in rain gutters, and also grow in air conditioners, especially when the drain is blocked.
+Slime molds, as a group, are polyphyletic. They were originally represented by the subkingdom Gymnomycota in the Fungi kingdom and included the defunct phyla Myxomycota, Acrasiomycota, and Labyrinthulomycota. Slime molds are now divided among several supergroups, none of which is included in the kingdom Fungi.</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_hanarfat</key>
+                <label>fat hanar</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>a pawn should want to become fat because that way there will be more of it in the world</tooltip>
             </li>
 
 

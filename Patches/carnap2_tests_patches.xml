@@ -570,7 +570,7 @@
         <caseFalse></caseFalse>
     </Operation>
 
-    
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_HumongousMoveSpeeds</key>
@@ -650,7 +650,25 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/lifeExpectancy[text()>"100"]</xpath>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race[lifeExpectancy>"100"]/ageGenerationCurve</xpath>
+                <value>
+                    <ageGenerationCurve>
+                        <points>
+                            <li>(14,0)</li>
+                            <li>(16,100)</li>
+                            <li>(50,100)</li>
+                            <li>(60,30)</li>
+                            <li>(70,18)</li>
+                            <li>(80,10)</li>
+                            <li>(90,3)</li>
+                            <li>(100,0)</li>
+                        </points>
+                    </ageGenerationCurve>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/lifeExpectancy[text()>"100"]</xpath>
                 <value>
                     <lifeExpectancy>100</lifeExpectancy>
                 </value>
@@ -659,7 +677,7 @@
         <caseFalse></caseFalse>
     </Operation>
 
-    
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_RestRate</key>
@@ -682,19 +700,25 @@
         <key>testspatches_Temperature</key>
         <defaultValue>false</defaultValue>
         <caseTrue>
-            <Operation Class="PatchOperationRemove">
+            <Operation Class="PatchOperationReplace">
                 <success>Always</success>
                 <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMin</xpath>
+                <value>
+                    <ComfyTemperatureMin>16</ComfyTemperatureMin>
+                </value>
             </Operation>
-            <Operation Class="PatchOperationRemove">
+            <Operation Class="PatchOperationReplace">
                 <success>Always</success>
                 <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMax</xpath>
+                <value>
+                    <ComfyTemperatureMax>26</ComfyTemperatureMax>
+                </value>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
 
-    
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_PainShockThreshold</key>
@@ -723,11 +747,24 @@
                     <foodType>OmnivoreHuman</foodType>
                 </value>
             </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/statBases/Nutrition</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/socialPropernessMatters</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/ingestible</xpath>
+            </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
 
-    
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_thoughtSettings</key>
@@ -740,6 +777,154 @@
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_forcedRaceTraitEntries</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/forcedRaceTraitEntries</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_disallowedTraits</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/disallowedTraits</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_traitCount</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/traitCount</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/additionalTraits</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_raceRestriction</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_raceRestriction</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_chemicalSettings</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/chemicalSettings</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_hediffGraphics</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/hediffGraphics</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/backstoryGraphics</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_humanRecipeImport</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings</xpath>
+                <value>
+                    <humanRecipeImport>true</humanRecipeImport>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_SLIMES</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[@Name="SlimeThingBase"]/race/wildBiomes</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_hanarfat</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AlienHanar"]/alienRace/generalSettings/alienPartGenerator/alienbodytypes</xpath>
+                <value>
+                    <alienbodytypes>
+						<li>Fat</li>
+					</alienbodytypes>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
 
     <!--
     <Operation Class="XmlExtensions.OptionalPatch">
