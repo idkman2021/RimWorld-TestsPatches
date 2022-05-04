@@ -33,6 +33,13 @@
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_idoelogy</key>
+                <label>Ideology - all ideology buildings and terrains are buildable (meant for no ideology mode).</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>yeah.</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_megafauna</key>
                 <label>Megafauna - fix tame revenge chances being 0.28% instead of 28%.</label>
                 <defaultValue>false</defaultValue>
@@ -68,11 +75,32 @@
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_bamboo</key>
+                <label>VGP Bamboo (Standalone) - bamboo nerf</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>VGP Bamboo has the same stats as wood, yet it is easier to plant and available before tree sowing research. With this, it will be an early game alternative inferior to wood. Most notable changes: HP 0.65>0.45; beauty offset 1>-1.</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_bamboocolor</key>
+                <label>VGP Bamboo (Standalone) - make bamboo a bit more green</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>204,170,128 > 159,161,98</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_bamboorecipes</key>
+                <label>VGP Bamboo (Standalone) - remove "convert bamboo into wood" and "smelt bamboo into chemfuel" recipes</label>
+                <defaultValue>false</defaultValue>
+                <tooltip></tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_shard</key>
                 <label>Weapons From The Vault - shards are 10 times more expensive</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>I think they were too easy to buy and craft some good weapory.</tooltip>
             </li>
+
 
             <!--
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -87,7 +115,7 @@
                 <text>Humanoid Alien Races - those settings affect ALL HAR races:</text>
             </li>
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>12</spacing>
+                <spacing>18</spacing>
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -95,39 +123,39 @@
                 <label>remove custom work stats (e.g. research speed, mining yield, etc)</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>/Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
+/Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_HungerRate</key>
@@ -187,7 +215,7 @@
             </li>
 
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>12</spacing>
+                <spacing>18</spacing>
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -210,56 +238,57 @@
             </li>
 
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>12</spacing>
+                <spacing>18</spacing>
             </li>
 
-            <li Class="XmlExtensions.Setting.Checkbox">
-                <key>testspatches_FoodType</key>
-                <label>give all races OmnivoreHuman diet</label>
-                <defaultValue>false</defaultValue>
-                <tooltip>useful when custom thoughts are disabled as some races can only eat raw food and corpses and it would be very unfortunate if they didn't like said raw food and corpses...</tooltip>
-            </li>
+
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_humanRecipeImport</key>
                 <label>all races import human surgery recipes</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>adds humanRecipeImport to all races. From HAR wiki - It does a basic check if there are any valid bodyparts in the body of your race before it imports.</tooltip>
+                <tooltip>adds humanRecipeImport tag to all races, which does a basic check if there are any valid bodyparts in the body of your race before it imports.</tooltip>
             </li>
 
 
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>12</spacing>
+                <spacing>18</spacing>
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_thoughtSettings</key>
                 <label>remove all custom thoughts (thoughtSettings)</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>fun fact: every second race doesn't mind sleeping in barracks because modders are very fond of removing that particular thought from their races.</tooltip>
+                <tooltip>every second race doesn't mind sleeping in barracks because modders are very fond of removing that particular thought from their races.</tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_forcedRaceTraitEntries</key>
                 <label>remove forced traits</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>"It is also possible to force traits on the race. Optionally, with a specified chance and gender commonality."</tooltip>
+                <tooltip></tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_disallowedTraits</key>
                 <label>remove disallowed traits</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>"To disable traits for your race, you basically use the same syntax." - HAR Devs. (follow our facebook community for more inspirational quotes)</tooltip>
+                <tooltip></tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_traitCount</key>
                 <label>remove custom trait counts</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>"You can also set the amount of traits and additional traits the race is supposed to get."</tooltip>
+                <tooltip></tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_chemicalSettings</key>
                 <label>remove chemical settings (custom reactions to drugs)</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>"You can also set specific settings regarding the use of chemicals (drugs). Either setting race specific reactions to it or just straight up not making it ingestible."</tooltip>
+                <tooltip></tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_FoodType</key>
+                <label>give all races OmnivoreHuman diet</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>useful when custom thoughts are disabled as some races can only eat raw food and corpses and it would be very unfortunate if they didn't like said raw food and corpses...</tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_raceRestriction</key>
@@ -275,9 +304,9 @@
 
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_hediffGraphics</key>
-                <label>remove hediff- and backstory-based graphics (for performance)</label>
+                <label>remove hediff- and backstory-based graphics</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>I haven't tested it but it might fix TPS impact caused by TryResolveGraphics. Hediff and backstory based graphics are where the race graphics will change based on the severity of a hediff and you probably never notice that.</tooltip>
+                <tooltip>This doesn't fix the TryResolveGraphics patch, doesn't seem to make it any better at all.</tooltip>
             </li>
 
             <li Class="XmlExtensions.Setting.Gap">

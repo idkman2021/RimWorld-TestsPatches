@@ -909,8 +909,6 @@
     </Operation>
 
 
-
-
     <!-- personal -->
 
     <Operation Class="XmlExtensions.OptionalPatch">
@@ -936,8 +934,8 @@
                 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AlienHanar"]/alienRace/generalSettings/alienPartGenerator/alienbodytypes</xpath>
                 <value>
                     <alienbodytypes>
-						<li>Fat</li>
-					</alienbodytypes>
+                        <li>Fat</li>
+                    </alienbodytypes>
                 </value>
             </Operation>
         </caseTrue>
@@ -968,6 +966,166 @@
         <caseFalse></caseFalse>
     </Operation>
 
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_bamboo</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/MarketValue</xpath>
+                <value>
+                    <MarketValue>0.7</MarketValue>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/MaxHitPoints</xpath>
+                <value>
+                    <MaxHitPoints>75</MaxHitPoints>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/Mass</xpath>
+                <value>
+                    <Mass>0.1</Mass>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Sharp</xpath>
+                <value>
+                    <StuffPower_Armor_Sharp>0.3</StuffPower_Armor_Sharp>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Blunt</xpath>
+                <value>
+                    <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Heat</xpath>
+                <value>
+                    <StuffPower_Armor_Heat>0.3</StuffPower_Armor_Heat>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Cold</xpath>
+                <value>
+                    <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Heat</xpath>
+                <value>
+                    <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/BluntDamageMultiplier</xpath>
+                <value>
+                    <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/commonality</xpath>
+                <value>
+                    <commonality>0.0001</commonality>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/statOffsets/Beauty</xpath>
+                <value>
+                    <Beauty>-1</Beauty>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/statFactors/MaxHitPoints</xpath>
+                <value>
+                    <MaxHitPoints>0.45</MaxHitPoints>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_bamboocolor</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/color</xpath>
+                <value>
+                    <color>(159,161,98)</color>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_bamboorecipes</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/RecipeDef[defName="MakeBambooWood" or defName="MakeBambooWoodBulk" or defName="MakeChemfuelFromBamboo"]</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_idoelogy</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/TerrainDef/canGenerateDefaultDesignator</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef[
+                    @Name="IdeoBuildingBase" or 
+                    @Name="RitualSeatBase" or 
+                    defName="AM_AnimalDatabase" or 
+                    defName="AM_TrapBlunt" or 
+                    defName="AM_RelicSmashingAltar" or 
+                    defName="AM_Pyramid" or 
+                    defName="VME_BonfireAfterRitual" or 
+                    defName="VME_MechanoidEffigy" or 
+                    defName="VME_Obelisk" or 
+                    defName="SleepAccelerator" or 
+                    defName="BiosculpterPod" or 
+                    defName="NeuralSupercharger" or 
+                    defName="Autobong" or 
+                    defName="VME_InsectNest"
+                    ]/canGenerateDefaultDesignator</xpath>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef/recipeMaker/memePrerequisitesAny</xpath>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
 
 
     <!--
