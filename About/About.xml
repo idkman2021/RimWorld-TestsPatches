@@ -11,6 +11,14 @@
 
     The menu is at: Options > More Mod Settings > tests patches
   </description>
+  <modDependencies>
+    <li>
+      <packageId>imranfish.xmlextensions</packageId>
+      <displayName>XML Extensions</displayName>
+      <downloadUrl>https://github.com/15adhami/XmlExtensions/releases/latest</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2574315206</steamWorkshopUrl>
+    </li>
+  </modDependencies>
   <loadAfter>
     <li>imranfish.xmlextensions</li>
     <li>carnap2.TPatches</li>

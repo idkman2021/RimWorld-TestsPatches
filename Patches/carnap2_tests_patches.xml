@@ -24,7 +24,7 @@
 
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="WFTV_ComponentShar"]/statBases/MarketValue</xpath>
+                <xpath>Defs/ThingDef[defName="WFTV_ComponentShar"]/statBases/MarketValue</xpath>
                 <value>
                     <MarketValue>5000</MarketValue>
                 </value>
@@ -65,7 +65,7 @@
 
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/TraitDef[defName="anxietyBomb" or defName="DemoExpert"]/commonality</xpath>
+                <xpath>Defs/TraitDef[defName="anxietyBomb" or defName="DemoExpert"]/commonality</xpath>
                 <value>
                     <commonality>0.1</commonality>
                 </value>
@@ -75,7 +75,7 @@
 
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/TraitDef[defName="Mechanic"]/commonality</xpath>
+                <xpath>Defs/TraitDef[defName="Mechanic"]/commonality</xpath>
                 <value>
                     <commonality>0.35</commonality>
                 </value>
@@ -97,7 +97,7 @@
 
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThoughtDef[defName="Affair"]/stages/li</xpath>
+                <xpath>Defs/ThoughtDef[defName="Affair"]/stages/li</xpath>
                 <value>
                     <li>
                         <label>affair</label>
@@ -120,7 +120,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Gachapon"]/costStuffCount</xpath>
+                <xpath>Defs/ThingDef[defName="Gachapon"]/costStuffCount</xpath>
                 <value>
                     <costStuffCount>1</costStuffCount>
                 </value>
@@ -139,7 +139,7 @@
             <li>Tweaks</li>
             <li>Replace "golden?" with solpyrite</li>
             <li>Items made from solpyrite will have "solpyrite" adjective instead of "golden?".</li>
-            <li>xpath: removes /Defs/ThingDef[defName="Solorite"]/stuffAdjective</li>
+            <li>xpath: removes Defs/ThingDef[defName="Solorite"]/stuffAdjective</li>
             <li>false</li>
         </arguments>
     </Operation>
@@ -152,7 +152,7 @@
 
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Solorite"]/stuffProps/stuffAdjective</xpath>
+                <xpath>Defs/ThingDef[defName="Solorite"]/stuffProps/stuffAdjective</xpath>
             </Operation>
 
         </caseTrue>
@@ -186,42 +186,42 @@
                 <success>Always</success>
                 <operations>
                     <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="Chalicotherium"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Chalicotherium"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <success>Always</success>
-                        <xpath>/Defs/ThingDef[defName="Procoptodon"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Procoptodon"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <success>Always</success>
-                        <xpath>/Defs/ThingDef[defName="Castoroides"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Castoroides"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <success>Always</success>
-                        <xpath>/Defs/ThingDef[defName="Sivatherium"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Sivatherium"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <success>Always</success>
-                        <xpath>/Defs/ThingDef[defName="Macrauchenia"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Macrauchenia"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <success>Always</success>
-                        <xpath>/Defs/ThingDef[defName="Megaloceros"]/race/manhunterOnTameFailChance</xpath>
+                        <xpath>Defs/ThingDef[defName="Megaloceros"]/race/manhunterOnTameFailChance</xpath>
                         <value>
                             <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
                         </value>
@@ -263,7 +263,7 @@
                     <!-- because there are no prefixes in defnames it first tests if the mod that is loaded is appropriate -->
                     <li Class="PatchOperationReplace">
                         <success>Normal</success>
-                        <xpath>/Defs/ThingDef[defName="Skelsshkrum"]/deepCommonality</xpath>
+                        <xpath>Defs/ThingDef[defName="Skelsshkrum"]/deepCommonality</xpath>
                         <value>
                             <deepCommonality>0.06</deepCommonality>
                         </value>
@@ -271,7 +271,7 @@
 
                     <li Class="PatchOperationReplace">
                         <success>Normal</success>
-                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                        <xpath>Defs/ThingDef[defName="Mithril" or
                     defName="Orichalcum" or
                     defName="Adamantite" or
                     defName="Tozra" or
@@ -283,7 +283,7 @@
 
                     <li Class="PatchOperationReplace">
                         <success>Normal</success>
-                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                        <xpath>Defs/ThingDef[defName="Mithril" or
                     defName="Orichalcum" or
                     defName="Adamantite" or
                     defName="Tozra" or
@@ -298,7 +298,7 @@
 
                     <li Class="PatchOperationReplace">
                         <success>Normal</success>
-                        <xpath>/Defs/ThingDef[defName="Mithril" or
+                        <xpath>Defs/ThingDef[defName="Mithril" or
                     defName="Orichalcum" or
                     defName="Adamantite" or
                     defName="Tozra" or
@@ -334,7 +334,7 @@
 
                         <li Class="PatchOperationRemove">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef[
+                            <xpath>Defs/ThingDef[
                             defName="RF_Diamond" or
                             defName="RF_Ruby" or
                             defName="RF_Carnelian" or
@@ -350,7 +350,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_diamond"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_diamond"]</xpath>
                             <value>
                                 <defName>RF_Diamond</defName>
                             </value>
@@ -358,7 +358,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_ruby"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_ruby"]</xpath>
                             <value>
                                 <defName>RF_Ruby</defName>
                             </value>
@@ -366,7 +366,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_carnelian"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_carnelian"]</xpath>
                             <value>
                                 <defName>RF_Carnelian</defName>
                             </value>
@@ -374,7 +374,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_citrine"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_citrine"]</xpath>
                             <value>
                                 <defName>RF_Citrine</defName>
                             </value>
@@ -382,7 +382,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_peridot"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_peridot"]</xpath>
                             <value>
                                 <defName>RF_Peridot</defName>
                             </value>
@@ -390,7 +390,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_emerald"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_emerald"]</xpath>
                             <value>
                                 <defName>RF_Emerald</defName>
                             </value>
@@ -398,7 +398,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_aquamarine"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_aquamarine"]</xpath>
                             <value>
                                 <defName>RF_Aquamarine</defName>
                             </value>
@@ -406,7 +406,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_sapphire"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_sapphire"]</xpath>
                             <value>
                                 <defName>RF_Sapphire</defName>
                             </value>
@@ -414,7 +414,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_amethyst"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_amethyst"]</xpath>
                             <value>
                                 <defName>RF_Amethyst</defName>
                             </value>
@@ -422,7 +422,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_kunzite"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_kunzite"]</xpath>
                             <value>
                                 <defName>RF_Kunzite</defName>
                             </value>
@@ -430,7 +430,7 @@
 
                         <li Class="PatchOperationReplace">
                             <success>Normal</success>
-                            <xpath>/Defs/ThingDef/defName[text()="carnap_onyx"]</xpath>
+                            <xpath>Defs/ThingDef/defName[text()="carnap_onyx"]</xpath>
                             <value>
                                 <defName>RF_Onyx</defName>
                             </value>
@@ -453,7 +453,7 @@
 
                         <li Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[
+                            <xpath>Defs/ThingDef[
                             defName="carnap_diamond" or
                             defName="carnap_ruby" or
                             defName="carnap_carnelian" or
@@ -484,41 +484,41 @@
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
                 <xpath>
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance |
-                    /Defs/AlienRace.ThingDef_AlienRace/statBases/ForagedNutritionPerDay
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance |
+                    Defs/AlienRace.ThingDef_AlienRace/statBases/ForagedNutritionPerDay
 
                 </xpath>
             </Operation>
@@ -534,7 +534,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/MentalBreakThreshold</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/MentalBreakThreshold</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -547,7 +547,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/GlobalLearningFactor</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/GlobalLearningFactor</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -560,11 +560,11 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ShootingAccuracyPawn</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/ShootingAccuracyPawn</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/AimingDelayFactor</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/AimingDelayFactor</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -594,7 +594,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ImmunityGainSpeed</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/ImmunityGainSpeed</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -607,7 +607,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ToxicSensitivity</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/ToxicSensitivity</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -620,7 +620,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/PsychicSensitivity</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/PsychicSensitivity</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -633,11 +633,11 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/HungerRateMultiplier</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/HungerRateMultiplier</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/baseHungerRate</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/baseHungerRate</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -650,7 +650,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race[lifeExpectancy>"100"]/ageGenerationCurve</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race[lifeExpectancy>"100"]/ageGenerationCurve</xpath>
                 <value>
                     <ageGenerationCurve>
                         <points>
@@ -668,7 +668,7 @@
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/lifeExpectancy[text()>"100"]</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/lifeExpectancy[text()>"100"]</xpath>
                 <value>
                     <lifeExpectancy>100</lifeExpectancy>
                 </value>
@@ -685,11 +685,11 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/RestRateMultiplier</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/RestRateMultiplier</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/baseRestRate</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/baseRestRate</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -702,14 +702,14 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMin</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMin</xpath>
                 <value>
                     <ComfyTemperatureMin>16</ComfyTemperatureMin>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMax</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/ComfyTemperatureMax</xpath>
                 <value>
                     <ComfyTemperatureMax>26</ComfyTemperatureMax>
                 </value>
@@ -726,7 +726,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/statBases/PainShockThreshold[text()>"1"]</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/statBases/PainShockThreshold[text()>"1"]</xpath>
                 <value>
                     <PainShockThreshold>1</PainShockThreshold>
                 </value>
@@ -742,7 +742,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/foodType</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/foodType</xpath>
                 <value>
                     <foodType>OmnivoreHuman</foodType>
                 </value>
@@ -750,15 +750,15 @@
 
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/statBases/Nutrition</xpath>
+                <xpath>Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/statBases/Nutrition</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/socialPropernessMatters</xpath>
+                <xpath>Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/socialPropernessMatters</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/ingestible</xpath>
+                <xpath>Defs/ThingDef[defName = "Chemfuel" or defName = "Uranium"]/ingestible</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -772,18 +772,18 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/thoughtSettings</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/thoughtSettings</xpath>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeMain</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeMain</xpath>
                 <value>
                     <thinkTreeMain>Humanlike</thinkTreeMain>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeConstant</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/race/thinkTreeConstant</xpath>
                 <value>
                     <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
                 </value>
@@ -799,7 +799,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/forcedRaceTraitEntries</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/forcedRaceTraitEntries</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -812,7 +812,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/disallowedTraits</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/disallowedTraits</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -825,11 +825,11 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/traitCount</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/traitCount</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/additionalTraits</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/additionalTraits</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -842,7 +842,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -856,7 +856,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/raceRestriction</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -869,7 +869,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/chemicalSettings</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/chemicalSettings</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -882,11 +882,11 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/hediffGraphics</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/hediffGraphics</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/backstoryGraphics</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings/alienPartGenerator/bodyAddons/backstoryGraphics</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -899,7 +899,7 @@
         <caseTrue>
             <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace/alienRace/generalSettings</xpath>
                 <value>
                     <humanRecipeImport>true</humanRecipeImport>
                 </value>
@@ -918,7 +918,7 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[@Name="SlimeThingBase"]/race/wildBiomes</xpath>
+                <xpath>Defs/ThingDef[@Name="SlimeThingBase"]/race/wildBiomes</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
@@ -931,7 +931,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AlienHanar"]/alienRace/generalSettings/alienPartGenerator/alienbodytypes</xpath>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="AlienHanar"]/alienRace/generalSettings/alienPartGenerator/alienbodytypes</xpath>
                 <value>
                     <alienbodytypes>
                         <li>Fat</li>
@@ -950,7 +950,7 @@
 
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThoughtDef[defName="MechClusterSkeleton" or 
+                <xpath>Defs/ThoughtDef[defName="MechClusterSkeleton" or 
                     defName="MedicalSpecialistSkeleton" or 
                     defName="StyleDesiredSkeleton" or 
                     defName="ReactorNeeds" or 
@@ -959,7 +959,7 @@
 
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThinkTreeDef[defName="Roboticlike"]</xpath>
+                <xpath>Defs/ThinkTreeDef[defName="Roboticlike"]</xpath>
             </Operation>
 
         </caseTrue>
@@ -974,84 +974,84 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/MarketValue</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/MarketValue</xpath>
                 <value>
                     <MarketValue>0.7</MarketValue>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/MaxHitPoints</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/MaxHitPoints</xpath>
                 <value>
                     <MaxHitPoints>75</MaxHitPoints>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/Mass</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/Mass</xpath>
                 <value>
                     <Mass>0.1</Mass>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Sharp</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Sharp</xpath>
                 <value>
                     <StuffPower_Armor_Sharp>0.3</StuffPower_Armor_Sharp>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Blunt</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Blunt</xpath>
                 <value>
                     <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Heat</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Armor_Heat</xpath>
                 <value>
                     <StuffPower_Armor_Heat>0.3</StuffPower_Armor_Heat>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Cold</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Cold</xpath>
                 <value>
                     <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Heat</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/StuffPower_Insulation_Heat</xpath>
                 <value>
                     <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/statBases/BluntDamageMultiplier</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/statBases/BluntDamageMultiplier</xpath>
                 <value>
                     <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/commonality</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/stuffProps/commonality</xpath>
                 <value>
                     <commonality>0.0001</commonality>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/statOffsets/Beauty</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/stuffProps/statOffsets/Beauty</xpath>
                 <value>
                     <Beauty>-1</Beauty>
                 </value>
             </Operation>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/statFactors/MaxHitPoints</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/stuffProps/statFactors/MaxHitPoints</xpath>
                 <value>
                     <MaxHitPoints>0.45</MaxHitPoints>
                 </value>
@@ -1067,7 +1067,7 @@
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[defName="Bamboo"]/stuffProps/color</xpath>
+                <xpath>Defs/ThingDef[defName="Bamboo"]/stuffProps/color</xpath>
                 <value>
                     <color>(159,161,98)</color>
                 </value>
@@ -1083,12 +1083,66 @@
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/RecipeDef[defName="MakeBambooWood" or defName="MakeBambooWoodBulk" or defName="MakeChemfuelFromBamboo"]</xpath>
+                <xpath>Defs/RecipeDef[defName="MakeBambooWood" or defName="MakeBambooWoodBulk" or defName="MakeChemfuelFromBamboo"]</xpath>
             </Operation>
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
 
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_wddropdown</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>testspatches_wdjade</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/TerrainDef[@Name="WDJadeFloorBase" and not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>testspatches_wdjade</designatorDropdown>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ssdropdown</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>testspatches_ss</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/TerrainDef[@Name="SS_TerrainBase" and not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>testspatches_ss</designatorDropdown>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+
+
+    <!--
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_idoelogy</key>
@@ -1097,11 +1151,11 @@
 
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/TerrainDef/canGenerateDefaultDesignator</xpath>
+                <xpath>Defs/TerrainDef/canGenerateDefaultDesignator</xpath>
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef[
+                <xpath>Defs/ThingDef[
                     @Name="IdeoBuildingBase" or 
                     @Name="RitualSeatBase" or 
                     defName="AM_AnimalDatabase" or 
@@ -1120,13 +1174,13 @@
             </Operation>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
-                <xpath>/Defs/ThingDef/recipeMaker/memePrerequisitesAny</xpath>
+                <xpath>Defs/ThingDef/recipeMaker/memePrerequisitesAny</xpath>
             </Operation>
 
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
-
+-->
 
     <!--
     <Operation Class="XmlExtensions.OptionalPatch">

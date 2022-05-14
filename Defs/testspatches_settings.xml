@@ -16,6 +16,7 @@
             </li>
             <li Class="XmlExtensions.Setting.GapLine" />
 
+
             <!--settings -->
 
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -31,14 +32,14 @@
                 <defaultValue>false</defaultValue>
                 <tooltip>Items made from solpyrite will have "solpyrite" adjective instead of "golden?"</tooltip>
             </li>
-
+<!--
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_idoelogy</key>
                 <label>Ideology - all ideology buildings and terrains are buildable (meant for no ideology mode).</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>yeah.</tooltip>
             </li>
-
+        -->
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_megafauna</key>
                 <label>Megafauna - fix tame revenge chances being 0.28% instead of 28%.</label>
@@ -65,6 +66,13 @@
                 <label>Rimsenal - defense tech research requires precision rifling</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>its a bit op to have before other research</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ssdropdown</key>
+                <label>Super Soil - super soils dropdown</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>because with all ideology floors the menu is getting huge</tooltip>
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -95,6 +103,13 @@
             </li>
 
             <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_wddropdown</key>
+                <label>[WD] Expanded Floors - jade floors dropdown</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>because with all ideology floors the menu is getting huge</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_shard</key>
                 <label>Weapons From The Vault - shards are 10 times more expensive</label>
                 <defaultValue>false</defaultValue>
@@ -122,40 +137,40 @@
                 <key>testspatches_rcustomstats</key>
                 <label>remove custom work stats (e.g. research speed, mining yield, etc)</label>
                 <defaultValue>false</defaultValue>
-                <tooltip>/Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
-/Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
+                <tooltip>Defs/AlienRace.ThingDef_AlienRace/statBases/ResearchSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MiningSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/GeneralLaborSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/DeepDrillingSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MiningYield |
+Defs/AlienRace.ThingDef_AlienRace/statBases/SmoothingSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/AnimalGatherYield |
+Defs/AlienRace.ThingDef_AlienRace/statBases/PlantWorkSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/PlantHarvestYield |
+Defs/AlienRace.ThingDef_AlienRace/statBases/DrugHarvestYield |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructionSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ConstructSuccessChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/FixBrokenDownBuildingSuccessChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalTendQuality |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalOperationSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/MedicalSurgerySuccessChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/SmeltingSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSynthesisSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/CookSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/FoodPoisonChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/DrugCookingSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidSpeed |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryMechanoidEfficiency |
+Defs/AlienRace.ThingDef_AlienRace/statBases/ButcheryFleshEfficiency |
+Defs/AlienRace.ThingDef_AlienRace/statBases/NegotiationAbility |
+Defs/AlienRace.ThingDef_AlienRace/statBases/TradePriceImprovement |
+Defs/AlienRace.ThingDef_AlienRace/statBases/DrugSellPriceImprovement |
+Defs/AlienRace.ThingDef_AlienRace/statBases/TameAnimalChance |
+Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_HungerRate</key>
@@ -307,6 +322,14 @@
                 <label>remove hediff- and backstory-based graphics</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>This doesn't fix the TryResolveGraphics patch, doesn't seem to make it any better at all.</tooltip>
+            </li>
+
+            <li Class="XmlExtensions.Setting.GapLine" />
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_xmlfixes</key>
+                <label>clean up the log a bit by manually fixing some xml errors i happened to encounter in my game, only if that can be done in a safe way</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>Niilos QOL and Stuffable Turrets add stuffable count to the turrets without a conditional causing duplicate XML error; Unique traits has an xml typo and causes a red error; some chitin mods lead to mild coronavirus when used together.</tooltip>
             </li>
 
             <li Class="XmlExtensions.Setting.Gap">

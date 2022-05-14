@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_xmlfixes</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+
+            <!-- this patch operation is a cardinal sin -->
+
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/node()[(not(ignoreIllegalLabelCharacterConfigError)) and ((label[contains(., "{")]) or (label[contains(., "}")]) or (label[contains(., "[")]) or (label[contains(., "]")]))]</xpath>
+                <value>
+                    <ignoreIllegalLabelCharacterConfigError>True</ignoreIllegalLabelCharacterConfigError>
+                </value>
+            </Operation>
+
+
+            <!-- stuffable xyz mods don't like each other -->
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/costStuffCount</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/stuffCategories</xpath>
+            </Operation>
+
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Turret_Sniper"]/costStuffCount</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Turret_Sniper"]/stuffCategories</xpath>
+            </Operation>
+
+
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Bow_Short"]/costStuffCount</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Bow_Short"]/stuffCategories</xpath>
+            </Operation>
+
+
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Pila"]/costStuffCount</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Pila"]/stuffCategories</xpath>
+            </Operation>
+
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Bow_Great"]/costStuffCount</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="Bow_Great"]/stuffCategories</xpath>
+            </Operation>
+
+            <!-- Unique traits issue -->
+
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>Unique traits</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationReplace">
+                            <success>Always</success>
+                            <xpath>Defs/TraitDef[defName="knight"]/requiredWorkTypes[li="Violent"]</xpath>
+                            <value>
+                                <requiredWorkTags>
+                                    <li>Violent</li>
+                                </requiredWorkTags>
+                            </value>
+                        </li>
+
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/TraitDef[defName="breakBad"]/requiredWorkTypes/li[text()="Intellectual"]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+
+            <!-- chitin mods causing mild coronavirus -->
+
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>Chitin Matters</li>
+                </mods>
+                <match Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Insects have chitin</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationTest">
+                                <xpath>Defs/ThingDef[defName = "Leather_IronChitin"]</xpath>
+                                <success>Invert</success>
+                            </li>
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/RecipeDef[defName="AlphaChitin_ToChitinPlate" or defName="BulkAlphaChitin_ToChitinPlate"]/ingredients/li/filter/thingDefs/li[text()="Leather_IronChitin"]</xpath>
+                            </li>
+                            <li Class="PatchOperationRemove">
+                                <success>Always</success>
+                                <xpath>Defs/RecipeDef[defName="AlphaChitin_ToChitinPlate" or defName="BulkAlphaChitin_ToChitinPlate"]/fixedIngredientFilter/thingDefs/li[text()="Leather_IronChitin"]</xpath>
+                            </li>
+                        </operations>
+                    </match>
+                </match>
+            </Operation>
+
+            <!-- this is not epic -->
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li/carriers/AA_NightMule</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li/carriers/AA_CrepuscularBeetle</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li/carriers/AA_SpinedGow</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li/carriers/AA_NightMule</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li/carriers/AA_CrepuscularBeetle</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li/carriers/AA_SpinedGow</xpath>
+            </Operation>
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/TerrainDef[defName="SterileTile"]/designatorDropdown</xpath>
+            </Operation>
+
+            <!-- Star Wars Biomes caused this -->
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_CrepuscularBeetle"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_FireWasp"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_FrostboundBehemoth"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_ChemfuelMyrmidon"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Junglelisk"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Agaripawn"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Agaripod"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_DuskRat"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Frostling"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_GallatrossMoribund"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_GallatrossMoribund"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_GreenGoo"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_InfectedAerofleet"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Metallovore"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_Metallovore"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_MycoidColossus"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_NightMule"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_NightRam"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_RedGoo"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_RedSpore"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_SpinedGow"]/race/wildBiomes</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <operation>Merge</operation>
+                <xpath>Defs/ThingDef[defName="AA_TarGuzzler"]/race/wildBiomes</xpath>
+            </Operation>
+
+
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="AA_MycoidColossus"]/butcherProducts</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="AA_GreenGoo"]/butcherProducts</xpath>
+            </Operation>
+
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+</Patch>
