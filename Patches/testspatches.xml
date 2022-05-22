@@ -1235,6 +1235,26 @@
         <caseFalse></caseFalse>
     </Operation>
 
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_catfix</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>Animal Commonality Tweaker</li>
+                </mods>
+                <match Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[(@Abstract="true" or @Abstract="True")]/race/wildBiomes</xpath>
+                </match>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
 
     <!--
     <Operation Class="XmlExtensions.OptionalPatch">

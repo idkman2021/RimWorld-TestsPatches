@@ -290,6 +290,21 @@
                 </value>
             </Operation>
 
+            <!-- Mod AudreysStyles.Industrial has multiple Verse.BuildableDefs named Smokestack. Skipping. 
+            Mod AudreysStyles.Industrial has multiple Verse.ThingDefs named Smokestack. Skipping.-->
+            <Operation Class="PatchOperationFindMod">
+                <mods>
+                    <li>Audrey's Styles: Industrial</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="Smokestack"][2]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
 
         </caseTrue>
         <caseFalse></caseFalse>

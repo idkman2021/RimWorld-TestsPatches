@@ -350,7 +350,7 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
                             <li>
                                 <label>Tab label here</label>
                                 <settings>
-                                    <li Class="XmlExtensions.Setting.Gap" />
+                                    <li Class="XmlExtensions.Setting.GapLine" />
                                     <li Class="XmlExtensions.Setting.Checkbox">
                                         <key>testspatches_xmlfixes</key>
                                         <label>xml fixes</label>
@@ -435,6 +435,14 @@ exotics fine weaponry FROM MERGE
 - Arsenal of Reaction: everything
 </tooltip>
                                     </li>
+                                    <!-- epic stuff goes THERE -->
+                                    <li Class="XmlExtensions.Setting.Checkbox">
+                                        <key>testspatches_catfix</key>
+                                        <label>animal commonality tweaker fix</label>
+                                        <tooltip>removes wildbiomes from all abstract defs. this will remove some animals from spawning (only ones that inherit wildbiomes, there are very few mods that do that), but may fix animal commonality tweaker - and you can reenable them back in ACT. So far only two mods I know do that - Slime Rancher and ZWAnimals.</tooltip>
+                                        <defaultValue>false</defaultValue>
+                                    </li>
+                                    
                                     <li Class="XmlExtensions.Setting.Gap">
                                         <spacing>250</spacing>
                                     </li>
@@ -446,7 +454,7 @@ exotics fine weaponry FROM MERGE
                                     <li Class="XmlExtensions.Setting.ToggleableSettings">
                                         <key>testspatches_opquest</key>
                                         <caseTrue>
-                                            <li Class="XmlExtensions.Setting.Gap" />
+                                            <li Class="XmlExtensions.Setting.GapLine" />
 
                                             <li Class="XmlExtensions.Setting.Text">
                                                 <text>please disable</text>
@@ -473,7 +481,7 @@ exotics fine weaponry FROM MERGE
                                         <text>hi</text>
                                     </li>
                                     <li Class="XmlExtensions.Setting.Gap">
-                                        <spacing>250</spacing>
+                                        <spacing>500</spacing>
                                     </li>
                                 </settings>
                             </li>
