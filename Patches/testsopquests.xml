@@ -57,6 +57,11 @@
                             <li>ResearchProjectDef/IM_IndustrialPowerArmor</li>
                             <!-- cursed guns -->
                             <li>ThingDef/Apparel_FedoraCursedGun</li>
+                            <!-- exotic arsenal -->
+                            <li>ThingDef/ExoticEngram</li>
+                            <li>ResearchProjectDef/Exotic_Decoding</li>
+                            <li>ThingDef/Exotic_Bench</li>
+                            <li>WorkGiverDef/DoBillsUseExoticBench</li>
 
                         </defs>
                     </CherryPicker.DefList>
@@ -1180,12 +1185,12 @@
 
                     <Operation Class="XmlExtensions.ForEach">
                         <xpath>Defs/ThingDef[contains(defName, "CursedGun_") and @ParentName="BaseHumanMakeableGun"]</xpath>
-                        <storeIn>bruh</storeIn>
+                        <storeIn>ayyy</storeIn>
                         <prefixLength>2</prefixLength>
                         <apply>
                             <Operation Class="XmlExtensions.CreateVariable">
                                 <storeIn>zamn</storeIn>
-                                <value>{bruh}/defName</value>
+                                <value>{ayyy}/defName</value>
                                 <fromXml>true</fromXml>
                                 <apply>
                                     <Operation Class="XmlExtensions.ApplyPatch">
@@ -1201,6 +1206,160 @@
 
                 </caseTrue>
             </Operation>
+
+            
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Exotic Arsenal</li>
+                    <li>Exotic Arsenal (Continued)</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Equilibrium</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Aesa</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Tyrant</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Shiver</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_BlazeSF</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_GlacialSF</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_celsius</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Oberon</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Judgement</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Paladin</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_BFaith</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_Unleashed</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Xedos_SniperRifle</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Apex: Rimworld Legends (Continued)</li>
+                    <li>Apex: Rimworld Legends</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "ARL_") and (@ParentName="BaseHumanMakeableGun" or @ParentName="BaseMakeableGrenade" or @ParentName="BaseOPToxMakeableGrenade")]</xpath>
+                        <storeIn>roblox</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>oompaville</storeIn>
+                                <value>{roblox}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_opn</patchName>
+                                        <arguments>
+                                            <li>{oompaville}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+
+            
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Arsenal of Revolution</li>
+                    <li>Arsenal of Reaction</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "AOR_") and (@ParentName="BaseHumanMakeableGun" or @ParentName="BaseWeaponNeolithic" or @ParentName="BaseMeleeWeapon_Sharp_Quality" or @ParentName="HatMakeableBase")]</xpath>
+                        <storeIn>sjGih78H8jjh8gVJ9</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>sdAaJ8Hs6da123Hgasdk</storeIn>
+                                <value>{sjGih78H8jjh8gVJ9}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{sdAaJ8Hs6da123Hgasdk}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
 
 
             <!-- 

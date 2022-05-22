@@ -330,7 +330,7 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
 
 
             <li Class="XmlExtensions.Setting.Gap">
-                <spacing>200</spacing>
+                <spacing>500</spacing>
             </li>
             <li Class="XmlExtensions.Setting.GapLine" />
             <li Class="XmlExtensions.Setting.Checkbox">
@@ -350,6 +350,7 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
                             <li>
                                 <label>Tab label here</label>
                                 <settings>
+                                    <li Class="XmlExtensions.Setting.Gap" />
                                     <li Class="XmlExtensions.Setting.Checkbox">
                                         <key>testspatches_xmlfixes</key>
                                         <label>xml fixes</label>
@@ -428,7 +429,14 @@ exotics fine weaponry FROM MERGE
 - HALO: Rimworld Psychic Pulse Armory (Continued): everything
 - Industrial Armory: everything
 - Cursed Guns: all guns
+- Exotic Arsenal: all weapons
+- Apex: Rimworld Legends (Continued): everything
+- Arsenal of Revolution: everything
+- Arsenal of Reaction: everything
 </tooltip>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Gap">
+                                        <spacing>250</spacing>
                                     </li>
                                 </settings>
                             </li>
@@ -438,10 +446,12 @@ exotics fine weaponry FROM MERGE
                                     <li Class="XmlExtensions.Setting.ToggleableSettings">
                                         <key>testspatches_opquest</key>
                                         <caseTrue>
+                                            <li Class="XmlExtensions.Setting.Gap" />
 
                                             <li Class="XmlExtensions.Setting.Text">
                                                 <text>please disable</text>
                                             </li>
+                                            <li Class="XmlExtensions.Setting.GapLine" />
                                             <li Class="XmlExtensions.Setting.Checkbox">
                                                 <key>testspatches_opquest</key>
                                                 <label>please disable...</label>
@@ -458,8 +468,12 @@ exotics fine weaponry FROM MERGE
                             <li>
                                 <label>hi</label>
                                 <settings>
+                                    <li Class="XmlExtensions.Setting.Gap" />
                                     <li Class="XmlExtensions.Setting.Text">
                                         <text>hi</text>
+                                    </li>
+                                    <li Class="XmlExtensions.Setting.Gap">
+                                        <spacing>250</spacing>
                                     </li>
                                 </settings>
                             </li>
@@ -681,7 +695,7 @@ exotics fine weaponry FROM MERGE
                                                 <li>
                                                     <li Class="XmlExtensions.Setting.Text">
                                                         <font>Tiny</font>
-                                                        <text>RewardStandardMidFreq;
+                                                        <text>RewardStandardHighFreq;
 RewardStandardQualitySuper;
 RewardSpecial</text>
                                                     </li>

@@ -21,7 +21,7 @@
   </modDependencies>
   <loadAfter>
     <li>imranfish.xmlextensions</li>
-    <li>tests.merge</li>
+    <!--<li>tests.merge</li>-->
     <li>carnap2.TPatches</li>
     <li>neronix17.toolbox</li>
     <li>neronix17.fr.compilation</li>
