@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_xmlfixes</key>
         <defaultValue>false</defaultValue>
         <caseTrue>
-
-
-            <!-- this patch operation is a cardinal sin -->
 
             <Operation Class="PatchOperationAdd">
                 <success>Always</success>
@@ -40,7 +38,6 @@
             </Operation>
 
 
-
             <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
                 <success>Always</success>
                 <xpath>Defs/ThingDef[defName="Bow_Short"]/costStuffCount</xpath>
@@ -50,7 +47,6 @@
                 <success>Always</success>
                 <xpath>Defs/ThingDef[defName="Bow_Short"]/stuffCategories</xpath>
             </Operation>
-
 
 
             <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
@@ -284,6 +280,15 @@
                 <xpath>Defs/ThingDef[defName="AA_GreenGoo"]/butcherProducts</xpath>
             </Operation>
 
+            <!-- Config error in FCP_Gamma_Gun: verb 0: has incorrect forcedMiss settings; explosive projectiles and only explosive projectiles should have forced miss enabled -->
+            <!-- idk how to fix that -->
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="FCP_Gamma_Gun"]/verbs/li[1][not(forcedMissRadius)]</xpath>
+                <value>
+                    <forcedMissRadius>1</forcedMissRadius>
+                </value>
+            </Operation>
 
 
         </caseTrue>

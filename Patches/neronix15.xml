@@ -18,7 +18,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <success>Always</success>
         <modId>tests.patches</modId>
-        <key>testspatches_neronix17</key>
+        <key>testspatches_neronix19</key>
         <defaultValue>false</defaultValue>
         <caseTrue>
 

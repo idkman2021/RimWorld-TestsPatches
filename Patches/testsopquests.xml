@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_opquest</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <CherryPicker.DefList MayRequire="owlchemist.cherrypicker">
+                        <defName>testspatches_opcherrypicker</defName>
+                        <label>tests patches: op</label>
+                        <defs>
+                            <!-- exotics -->
+                            <li>ResearchTabDef/ExoticTech</li>
+                            <li>ResearchProjectDef/ExoticWeapons</li>
+                            <!--
+                            <li>ThingDef/SawnoffShotgun</li>
+                            <li>ThingDef/SmokeGrenades</li>
+                            <li>ThingDef/FireBow</li>
+                            <li>ThingDef/Crossbow</li>
+                            <li>ThingDef/ExplosiveCrossbow</li>
+                            <li>ThingDef/Bola</li>
+                            <li>ThingDef/Sling</li>
+                            <li>ThingDef/RockBundle</li>
+                            -->
+                            <!-- rimsenal -->
+                            <li>ResearchProjectDef/SmartWeapons</li>
+                            <!-- destiny -->
+                            <li>ThingDef/Exotic_Engram</li>
+                            <li>ThingDef/EngramDecoder</li>
+                            <li>WorkGiverDef/DoBillsMakeExotic</li>
+                            <li>ResearchTabDef/Destiny2Exotics</li>
+                            <li>ResearchProjectDef/EngramDecoding</li>
+                            <!-- weapons from the vault -->
+                            <li>ResearchProjectDef/ShardManipulation</li>
+                            <li>ResearchProjectDef/VOGGuns</li>
+                            <li>ResearchProjectDef/VOGArmor</li>
+                            <li>ResearchTabDef/Rimstiny</li>
+                            <li>ThingDef/WFTV_ComponentShard</li>
+                            <!-- no mans sky -->
+                            <li>ResearchTabDef/NMS_Nomansky_Research</li>
+                            <li>ResearchProjectDef/NMS_Intersteller_Weaponry</li>
+                            <li>ResearchProjectDef/Advanced_Starship_Weaponry</li>
+                            <!-- Grandyy's Fancy Armory -->
+                            <li>ThingDef/GFA_Tall_Turret</li>
+                            <li>ThingDef/Gun_GFA_Tall_Turret</li>
+                            <li>ThingDef/GFA_Tall_Sniper</li>
+                            <li>ThingDef/Gun_GFA_Tall_Sniper</li>
+                            <!-- industrial armory -->
+                            <li>ResearchProjectDef/IM_IndustrialMelee</li>
+                            <li>ResearchProjectDef/IM_IndustrialExo</li>
+                            <li>ResearchProjectDef/IM_IndustrialHeavyMelee</li>
+                            <li>ResearchProjectDef/IM_IndustrialPowerArmor</li>
+                            <!-- cursed guns -->
+                            <li>ThingDef/Apparel_FedoraCursedGun</li>
+
+                        </defs>
+                    </CherryPicker.DefList>
+                </value>
+            </Operation>
+
+            <Operation Class="XmlExtensions.CreateDocument">
+                <docName>testsopquests</docName>
+                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="testspatches_settings"]/settings/li/caseTrue/li/tabs/li[label="op"]/settings/li/caseTrue/li/settings</xpath>
+            </Operation>
+
+            <!-- RewardStandardHighFreq RewardStandardMidFreq RewardStandardLowFreq RewardStandardQualitySuper -->
+            <!-- 
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>testspatches_op1</patchName>
+        <arguments>
+            <li>defName</li>
+            <li>tier</li>
+        </arguments>
+    </Operation>
+-->
+
+            <!-- RewardStandardHighFreq RewardStandardMidFreq RewardStandardLowFreq RewardStandardQualitySuper -->
+            <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>testspatches_op2</patchName>
+        <arguments>
+            <li>defName</li>
+            <li>tier</li>
+            <li>tier2</li>
+        </arguments>
+    </Operation>
+-->
+
+            <!-- RewardStandardHighFreq RewardStandardMidFreq RewardStandardLowFreq RewardStandardQualitySuper -->
+            <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>testspatches_op0</patchName>
+        <arguments>
+            <li>defName</li>
+            <li>tier</li>
+        </arguments>
+    </Operation>
+-->
+
+            <!-- OddityMelee OddityRanged, 8 -->
+            <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>testspatches_opow</patchName>
+        <arguments>
+            <li>defName</li>
+            <li>tag</li>
+            <li>cost</li>
+        </arguments>
+    </Operation>
+-->
+
+            <!-- 8 -->
+            <!--
+    <Operation Class="XmlExtensions.ApplyPatch">
+        <patchName>testspatches_opod</patchName>
+        <arguments>
+            <li>defName</li>
+            <li>cost</li>
+        </arguments>
+    </Operation>
+-->
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Vali's Charged Arsenal</li>
+                    <li>Vali's Charged Arsenal - Eltex Series</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[@ParentName="V_BaseChargeWeapon" or @ParentName="BaseGunBlade" or @ParentName="BaseShortGunBlade" or @ParentName="BaseEltexGunBlade" or
+                                defName="V_AnimaHammer" or
+                                defName="V_AnimaStaff" or
+                                defName="V_AnimaMace" or
+                                defName="V_AnimaDagger" or
+                                defName="V_AnimaLongSword" or
+                                defName="V_AnimaKatana" or
+                                defName="V_AnimaSpearLance"
+                                
+                                ]</xpath>
+                        <storeIn>amongus</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>bigchungus</storeIn>
+                                <value>{amongus}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{bigchungus}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Rimsenal - Augmented Vanilla Pack</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_SmartRifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_SmartPistol</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_SMG</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SmartMG</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_SmartSniperRifle</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Exotic's Fine Weaponry</li>
+                    <li>tests merge</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opow</patchName>
+                        <arguments>
+                            <li>MechadartRifle</li>
+                            <li>OddityRanged</li>
+                            <li>16</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GaussCrossbow</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opow</patchName>
+                        <arguments>
+                            <li>Cryorifle</li>
+                            <li>OddityRanged</li>
+                            <li>8</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opow</patchName>
+                        <arguments>
+                            <li>TranqRifle</li>
+                            <li>OddityRanged</li>
+                            <li>8</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>RocketVulcan</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Mindbreaker</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Plasmathrower</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>DURifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SlimeLauncher</li>
+                        </arguments>
+                    </Operation>
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Destiny 2 Exotic Weapons</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_4thHorseman</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_TheLastWord</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_TheHuckleberry</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_TheChaperone</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_DeadMansTale</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_TheProspector</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_Cryosthesia77K</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_BlackTalon</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_MonteCarlo</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_TractorCannon</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_LeviathansBreath</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Exotic_Telesto</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Weapons from the Vault</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "WFTV_") and @ParentName="BaseHumanMakeableGun"]</xpath>
+                        <storeIn>sus</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>fortnite</storeIn>
+                                <value>{sus}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{fortnite}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "WFTV_") and @ParentName="ApparelMakeableBase"]</xpath>
+                        <storeIn>pewdiepie</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>markiplier</storeIn>
+                                <value>{pewdiepie}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{markiplier}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Kit's VFE Weapons</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_Gun_PlasmaPistol</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_Gun_PlasmaRifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_Gun_PlasmaSMG</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_Gun_PlasmaSniper</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_CryptoHammer</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_CryptoKnife</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_CryptoSpear</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>KIT_CryptoSword</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Too Many Weapons</li>
+                </mods>
+                <caseTrue>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>Gun_CrudeHandcannon</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>Weapon_SketchyGrenade</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Weapon_HolyHandGrenade</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>TMW_Musket_Bayonet</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>TMW_Musket</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>Gun_VarmintRifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>Gun_Flamethrower</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_PowerStroke</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_opn</patchName>
+                        <arguments>
+                            <li>Gun_LaserRifle</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Specialist Weapons (Continued)</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_EMPWaveLance</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_LaserCarbine</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_Coilgun</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_CryoBlower</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_FlameThrower</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>SpecialGun_AcidSprayer</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>No Man Sky Weapon Pack</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_BoltCaster</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_ScatterBlaster</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_Blazejavlin</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_PulseSplitter</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_PlasmaGrenade</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>No Man Sky Heavy Weapon Pack</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_RocketBattery</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_PhaseBeam</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_Infra-knifeAccelerator</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_CyclotronBallista</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_PhotonCannon</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>NMS_Gun_PositronEjector</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>FCP Children of Atom Equipment Teaser</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Radium_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gamma_Gun</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Marine_Armor_Helmet</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Marine_Armor</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Inquisitor_Cowl</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Zelot_Marine_Armor</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Atom_Robes</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Confessor_Robes</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Confessor_Helm</li>
+                        </arguments>
+                    </Operation>
+
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>FCP FNV Heavy Weapons Pack!</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Minigun</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_CZ57_Avenger</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_K9000_Cyberdog_Gun</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_FIDO</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Shoulder_Mounted_Machine_Gun</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>FCP Classic Plasma Weapons Pack!</li>
+                    <li>FCP Plasma Weapons Pack!</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Plasma_Pistol</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Plasma_Defender</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Plasma_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Q35_Matter_Modulator</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Multiplas_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Plasma_Caster</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>FCP FNV Laser Weapons</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Laser_Pistol</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Pew_Pew</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Laser_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_AER14_Prototype</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Tri_Beam_Laser_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Gatling_Laser</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Sprtel_Wood_9700a</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Laser_RCW</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Recharger_Rifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_Recharger_Pistol</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>FCP_Gun_MF_hyperbreeder_Alpha</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Altherian Export - Elemental Weaponry</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Thunderpound</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Cryoblaster</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Plasmabolter</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Homicide_Applicator</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Problem_Dissolver</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HALCYZOM_Sonic_Shredder</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>[M.W]Resonant Munitions</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_GRAVITY_GUN</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.PatchOperationReplace">
+                        <xmlDoc>testsopquests</xmlDoc>
+                        <xpath>testsopquests/settings/li/settings/li/li/texPath[text()="Things/Item/Equipment/WeaponRanged/GRAVITY_GUN"]</xpath>
+                        <value>
+                            <texPath>Things/Item/Equipment/WeaponRanged/GRAVITY_GUN/GRAVITY_GUN_a</texPath>
+                        </value>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>Gun_TAU_CANNON</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.PatchOperationReplace">
+                        <xmlDoc>testsopquests</xmlDoc>
+                        <xpath>testsopquests/settings/li/settings/li/li/texPath[text()="Things/Item/Equipment/WeaponRanged/TAU_CANNON"]</xpath>
+                        <value>
+                            <texPath>Things/Item/Equipment/WeaponRanged/TAU_CANNON/TAU_CANNON_a</texPath>
+                        </value>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Grandyy's Fancy Armory</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_RapidShooter</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_MiniBlaster</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_MiniRocket</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_TestGaussRifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_TeslaRifle</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>GFA_FireBlasterSMG</li>
+                        </arguments>
+                    </Operation>
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>HALO: Rimworld Psychic Pulse Armory (Continued)</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseCannon</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseRepeater</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseSpinner</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseScatter</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseReacher</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseLancer</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>HRPPA_PsychicPulseBlade</li>
+                        </arguments>
+                    </Operation>
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Industrial Armory</li>
+                    <li>Industrial Melee</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_Apparel_IndustrialExoFrame</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_Apparel_IndustrialPowerArmor</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_PowerFist</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_PowerClaw</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_ChainSword</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_ImpactBlade</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_HeaterSaw</li>
+                        </arguments>
+                    </Operation>
+
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_ImpactAxe</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_ImpactHammer</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_GoliathSledge</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_DrillSpear</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_RocketLance</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_Cyrogatana</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_MeleeWeapon_GunLance</li>
+                        </arguments>
+                    </Operation>
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>IM_ImpactBow</li>
+                        </arguments>
+                    </Operation>
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Cursed Guns</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "CursedGun_") and @ParentName="BaseHumanMakeableGun"]</xpath>
+                        <storeIn>bruh</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>zamn</storeIn>
+                                <value>{bruh}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_opn</patchName>
+                                        <arguments>
+                                            <li>{zamn}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+
+            <!-- 
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>1234567890</li>
+                </mods>
+                <caseTrue>
+                    
+                    <Operation Class="XmlExtensions.ApplyPatch">
+                        <patchName>testspatches_op</patchName>
+                        <arguments>
+                            <li>1234567890</li>
+                        </arguments>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+        -->
+            <Operation Class="XmlExtensions.MergeDocument">
+                <docName>testsopquests</docName>
+            </Operation>
+        </caseTrue>
+        <caseFalse>
+            <!--Patch operations here-->
+        </caseFalse>
+    </Operation>
+
+
+</Patch>

@@ -21,6 +21,7 @@
   </modDependencies>
   <loadAfter>
     <li>imranfish.xmlextensions</li>
+    <li>tests.merge</li>
     <li>carnap2.TPatches</li>
     <li>neronix17.toolbox</li>
     <li>neronix17.fr.compilation</li>
@@ -33,5 +34,6 @@
     <li>neronix17.haloevolved</li>
     <li>neronix17.startrek</li>
     <li>neronix17.stargate</li>
+    <li>Owlchemist.SeedsPleaseLite</li>
   </loadAfter>
 </ModMetaData>
