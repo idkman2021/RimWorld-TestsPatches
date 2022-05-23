@@ -68,10 +68,6 @@
                 </value>
             </Operation>
 
-            <Operation Class="XmlExtensions.CreateDocument">
-                <docName>testsopquests</docName>
-                <xpath>Defs/XmlExtensions.SettingsMenuDef[defName="testspatches_settings"]/settings/li/caseTrue/li/tabs/li[label="op"]/settings/li/caseTrue/li/settings</xpath>
-            </Operation>
 
             <!-- RewardStandardHighFreq RewardStandardMidFreq RewardStandardLowFreq RewardStandardQualitySuper -->
             <!-- 
@@ -952,14 +948,6 @@
                         </arguments>
                     </Operation>
 
-                    <Operation Class="XmlExtensions.PatchOperationReplace">
-                        <xmlDoc>testsopquests</xmlDoc>
-                        <xpath>testsopquests/settings/li/settings/li/li/texPath[text()="Things/Item/Equipment/WeaponRanged/GRAVITY_GUN"]</xpath>
-                        <value>
-                            <texPath>Things/Item/Equipment/WeaponRanged/GRAVITY_GUN/GRAVITY_GUN_a</texPath>
-                        </value>
-                    </Operation>
-
                     <Operation Class="XmlExtensions.ApplyPatch">
                         <patchName>testspatches_op</patchName>
                         <arguments>
@@ -967,13 +955,6 @@
                         </arguments>
                     </Operation>
 
-                    <Operation Class="XmlExtensions.PatchOperationReplace">
-                        <xmlDoc>testsopquests</xmlDoc>
-                        <xpath>testsopquests/settings/li/settings/li/li/texPath[text()="Things/Item/Equipment/WeaponRanged/TAU_CANNON"]</xpath>
-                        <value>
-                            <texPath>Things/Item/Equipment/WeaponRanged/TAU_CANNON/TAU_CANNON_a</texPath>
-                        </value>
-                    </Operation>
 
                 </caseTrue>
             </Operation>
@@ -1207,7 +1188,7 @@
                 </caseTrue>
             </Operation>
 
-            
+
             <Operation Class="XmlExtensions.FindMod">
                 <mods>
                     <li>Exotic Arsenal</li>
@@ -1328,7 +1309,6 @@
             </Operation>
 
 
-            
             <Operation Class="XmlExtensions.FindMod">
                 <mods>
                     <li>Arsenal of Revolution</li>
@@ -1361,7 +1341,6 @@
             </Operation>
 
 
-
             <!-- 
             <Operation Class="XmlExtensions.FindMod">
                 <mods>
@@ -1379,9 +1358,7 @@
                 </caseTrue>
             </Operation>
         -->
-            <Operation Class="XmlExtensions.MergeDocument">
-                <docName>testsopquests</docName>
-            </Operation>
+
         </caseTrue>
         <caseFalse>
             <!--Patch operations here-->

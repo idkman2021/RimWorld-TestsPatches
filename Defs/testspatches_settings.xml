@@ -336,7 +336,7 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_iamtest</key>
                 <label>
-                    <![CDATA[tests personal settings (<b>please ignore and don't enable</b>)]]>
+                    <![CDATA[<b>ignore this</b>]]>
                 </label>
                 <defaultValue>false</defaultValue>
                 <highlight>false</highlight>
@@ -345,66 +345,47 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.ToggleableSettings">
                 <key>testspatches_iamtest</key>
                 <caseTrue>
-                    <li Class="XmlExtensions.Setting.TabView">
-                        <tabs>
-                            <li>
-                                <label>Tab label here</label>
-                                <settings>
-                                    <li Class="XmlExtensions.Setting.GapLine" />
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_xmlfixes</key>
-                                        <label>xml fixes</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>a bunch of operations to clean up my log so that I can see my own errors (lack thereof) easier. please don't publish mods with this enabled.</tooltip>
-                                    </li>
-
-                                    <li Class="XmlExtensions.Setting.Gap">
-                                        <spacing>12</spacing>
-                                    </li>
-
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_neronix19</key>
-                                        <label>neronix13</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>read title</tooltip>
-                                    </li>
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_SLIMES</key>
-                                        <label>slimes</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>Slime mold or slime mould is an informal name given to several kinds of unrelated eukaryotic organisms that can live freely as single cells, but can also aggregate together to form multicellular reproductive structures. Slime molds were formerly classified as fungi but are no longer considered part of that kingdom. Although not forming a single monophyletic clade, they are grouped within the paraphyletic group, kingdom Protista.
-More than 900 species of slime mold occur globally. Their common name refers to part of some of these organisms' life cycles where they can appear as gelatinous "slime". This is mostly seen with the Myxogastria, which are the only macroscopic slime molds. Most slime molds are smaller than a few centimetres, but some species may reach sizes up to several square metres and masses up to 20 kilograms.
-They feed on microorganisms that live in any type of dead plant material. They contribute to the decomposition of dead vegetation, and feed on bacteria, yeasts, and fungi. For this reason, slime molds are usually found in soil, lawns, and on the forest floor, commonly on deciduous logs. In tropical areas they are also common on inflorescences and fruits, and in aerial situations (e.g., in the canopy of trees). In urban areas, they are found on mulch or in the leaf mold in rain gutters, and also grow in air conditioners, especially when the drain is blocked.
-                                        </tooltip>
-
-                                    </li>
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_hanarfat</key>
-                                        <label>fat hanar</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>a pawn should want to become fat because that way there will be more of it in the world</tooltip>
-                                    </li>
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_skeletons</key>
-                                        <label>skeletons</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>i already forgot what this one does</tooltip>
-                                    </li>
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_voe</key>
-                                        <label>voe</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>
-                                            <![CDATA[<b>hi</b>]]>
-                                        </tooltip>
-                                    </li>
-
-                                    <li Class="XmlExtensions.Setting.Gap"></li>
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_opquest</key>
-                                        <label>op</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>reminder: cherry picker;
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_xmlfixes</key>
+                        <label>xml</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>ssshhh</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_neronix19</key>
+                        <label>neronix15</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>read title</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_SLIMES</key>
+                        <label>slimes</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>act</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_hanarfat</key>
+                        <label>fat hanar</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>a pawn should want to become fat because that way there will be more of it in the world</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_skeletons</key>
+                        <label>skeletons</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>i already forgot what this one does</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_voe</key>
+                        <label>voe</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>voe</tooltip>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_opquest</key>
+                        <label>op</label>
+                        <defaultValue>false</defaultValue>
+                        <tooltip>reminder: cherry picker;
 oddities;
 exotics fine weaponry FROM MERGE
                 
@@ -434,188 +415,79 @@ exotics fine weaponry FROM MERGE
 - Arsenal of Revolution: everything
 - Arsenal of Reaction: everything
 </tooltip>
-                                    </li>
-                                    <!-- epic stuff goes THERE -->
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_catfix</key>
-                                        <label>animal commonality tweaker fix</label>
-                                        <tooltip>removes wildbiomes from all abstract defs. this will remove some animals from spawning (only ones that inherit wildbiomes, there are very few mods that do that), but may fix animal commonality tweaker - and you can reenable them back in ACT. So far only two mods I know do that - Slime Rancher and ZWAnimals.</tooltip>
-                                        <defaultValue>false</defaultValue>
-                                    </li>
-                                    
-                                    <li Class="XmlExtensions.Setting.Gap">
-                                        <spacing>250</spacing>
-                                    </li>
-                                </settings>
-                            </li>
-                            <li>
-                                <label>op</label>
-                                <settings>
-                                    <li Class="XmlExtensions.Setting.ToggleableSettings">
-                                        <key>testspatches_opquest</key>
-                                        <caseTrue>
-                                            <li Class="XmlExtensions.Setting.GapLine" />
-
-                                            <li Class="XmlExtensions.Setting.Text">
-                                                <text>please disable</text>
-                                            </li>
-                                            <li Class="XmlExtensions.Setting.GapLine" />
-                                            <li Class="XmlExtensions.Setting.Checkbox">
-                                                <key>testspatches_opquest</key>
-                                                <label>please disable...</label>
-                                                <defaultValue>false</defaultValue>
-                                            </li>
-                                            <li Class="XmlExtensions.Setting.GapLine" />
-                                            <li Class="XmlExtensions.Setting.Group">
-                                                <settings></settings>
-                                            </li>
-                                        </caseTrue>
-                                    </li>
-                                </settings>
-                            </li>
-                            <li>
-                                <label>hi</label>
-                                <settings>
-                                    <li Class="XmlExtensions.Setting.Gap" />
-                                    <li Class="XmlExtensions.Setting.Text">
-                                        <text>hi</text>
-                                    </li>
-                                    <li Class="XmlExtensions.Setting.Gap">
-                                        <spacing>500</spacing>
-                                    </li>
-                                </settings>
-                            </li>
-                            <!--As many tabs as you want-->
-                        </tabs>
                     </li>
-
+                    <!--
+                                    <li Class="XmlExtensions.Setting.Checkbox">
+                                        <key>testspatches_opquestf</key>
+                                        <label>op fancy</label>
+                                        <defaultValue>false</defaultValue>
+                                        <tooltip>ZAMN 😍</tooltip>
+                                    </li>
+                                -->
+                    <!-- epic stuff goes THERE -->
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_catfix</key>
+                        <label>act</label>
+                        <tooltip>cat</tooltip>
+                        <defaultValue>false</defaultValue>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Gap">
+                        <spacing>250</spacing>
+                    </li>
                 </caseTrue>
             </li>
-
-
         </settings>
-
-
     </XmlExtensions.SettingsMenuDef>
-
     <XmlExtensions.PatchDef Name="testspatches_opn" Abstract="True">
         <parameters>
             <li>defName</li>
         </parameters>
         <apply>
-
             <Operation Class="PatchOperationConditional">
                 <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                 <match Class="PatchOperationSequence">
                     <operations>
-                        <li Class="XmlExtensions.OptionalPatch">
-                            <modId>tests.patches</modId>
-                            <key>opquest_{defName}</key>
-                            <defaultValue>true</defaultValue>
-                            <caseTrue>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <thingSetMakerTags Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <!--
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]/recipeMaker</xpath>
-                                </Operation>
-                            -->
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <recipeMaker Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationAdd">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                                    <value>
-                                        <costList Inherit="False">
-                                            <Steel>100</Steel>
-                                            <ComponentIndustrial>2</ComponentIndustrial>
-                                        </costList>
-                                    </value>
-                                </Operation>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <costStuffCount Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                                </Operation>
-                            </caseTrue>
-                            <caseFalse></caseFalse>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False" />
+                            </value>
                         </li>
-
-
-                        <li Class="XmlExtensions.CreateVariable">
-                            <storeIn>texture</storeIn>
-                            <value>Defs/ThingDef[defName="{defName}"]/graphicData/texPath</value>
-                            <fromXml>true</fromXml>
-                            <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
-                            <apply>
-                                <Operation Class="XmlExtensions.PatchOperationAdd">
-                                    <xmlDoc>testsopquests</xmlDoc>
-                                    <xpath>testsopquests/settings</xpath>
-                                    <value>
-                                        <li Class="XmlExtensions.Setting.SplitColumns">
-                                            <gapSize>6</gapSize>
-                                            <drawLine>false</drawLine>
-                                            <splits>
-                                                <li>0.1</li>
-                                                <li>0.3</li>
-                                            </splits>
-                                            <settings>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.DrawImage">
-                                                        <texPath>{texture}</texPath>
-                                                        <!--<dimensions>(32,32)</dimensions>-->
-                                                        <anchor>Left</anchor>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Text">
-                                                        <text>none</text>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                                        <key>opquest_{defName}</key>
-                                                        <label>{defName}</label>
-                                                        <defaultValue>false</defaultValue>
-                                                    </li>
-
-                                                </li>
-
-                                            </settings>
-                                        </li>
-                                    </value>
-                                </Operation>
-
-                            </apply>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
                         </li>
-
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentIndustrial>2</ComponentIndustrial>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </li>
                     </operations>
                 </match>
             </Operation>
-
         </apply>
     </XmlExtensions.PatchDef>
-
     <XmlExtensions.PatchDef Name="testspatches_op" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -625,229 +497,94 @@ exotics fine weaponry FROM MERGE
                 <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                 <match Class="PatchOperationSequence">
                     <operations>
-                        <li Class="XmlExtensions.OptionalPatch">
-                            <modId>tests.patches</modId>
-                            <key>opquest_{defName}</key>
-                            <defaultValue>true</defaultValue>
-                            <caseTrue>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <thingSetMakerTags Inherit="False">
-                                            <li>RewardStandardHighFreq</li>
-                                            <li>RewardStandardQualitySuper</li>
-                                            <li>RewardSpecial</li>
-                                        </thingSetMakerTags>
-                                    </value>
-                                </Operation>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <recipeMaker Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationAdd">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                                    <value>
-                                        <costList Inherit="False">
-                                            <Steel>100</Steel>
-                                            <ComponentSpacer>5</ComponentSpacer>
-                                        </costList>
-                                    </value>
-                                </Operation>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <costStuffCount Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                                </Operation>
-                            </caseTrue>
-                            <caseFalse></caseFalse>
+
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardStandardHighFreq</li>
+                                    <li>RewardStandardQualitySuper</li>
+                                    <li>RewardSpecial</li>
+                                </thingSetMakerTags>
+                            </value>
                         </li>
-
-                        <li Class="XmlExtensions.CreateVariable">
-                            <storeIn>texture</storeIn>
-                            <value>Defs/ThingDef[defName="{defName}"]/graphicData/texPath</value>
-                            <fromXml>true</fromXml>
-                            <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
-                            <apply>
-                                <Operation Class="XmlExtensions.PatchOperationAdd">
-                                    <xmlDoc>testsopquests</xmlDoc>
-                                    <xpath>testsopquests/settings</xpath>
-                                    <value>
-                                        <li Class="XmlExtensions.Setting.SplitColumns">
-                                            <gapSize>6</gapSize>
-                                            <drawLine>false</drawLine>
-                                            <splits>
-                                                <li>0.1</li>
-                                                <li>0.3</li>
-                                            </splits>
-                                            <settings>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.DrawImage">
-                                                        <texPath>{texture}</texPath>
-                                                        <!--<dimensions>(32,32)</dimensions>-->
-                                                        <anchor>Left</anchor>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Text">
-                                                        <font>Tiny</font>
-                                                        <text>RewardStandardHighFreq;
-RewardStandardQualitySuper;
-RewardSpecial</text>
-                                                    </li>
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                                        <key>opquest_{defName}</key>
-                                                        <label>{defName}</label>
-                                                        <defaultValue>false</defaultValue>
-                                                    </li>
-
-                                                </li>
-
-                                            </settings>
-                                        </li>
-                                    </value>
-                                </Operation>
-
-                            </apply>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentSpacer>5</ComponentSpacer>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
                         </li>
                     </operations>
                 </match>
             </Operation>
-
-
         </apply>
     </XmlExtensions.PatchDef>
-
-
     <XmlExtensions.PatchDef Name="testspatches_op0" Abstract="True">
         <parameters>
             <li>defName</li>
-            <li>tier</li>
         </parameters>
         <apply>
             <Operation Class="PatchOperationConditional">
                 <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                 <match Class="PatchOperationSequence">
                     <operations>
-                        <li Class="XmlExtensions.OptionalPatch">
-                            <modId>tests.patches</modId>
-                            <key>opquest_{defName}</key>
-                            <defaultValue>true</defaultValue>
-                            <caseTrue>
-                                <!--
-                    <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                        <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                        <compare>Name</compare>
-                        <checkAttributes>false</checkAttributes>
-                        <value>
-                            <thingSetMakerTags>
-                                <li>{tier}</li>
-                                <li>{tier2}</li>
-                            </thingSetMakerTags>
-                        </value>
-                    </Operation>
-                -->
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <recipeMaker Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationAdd">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                                    <value>
-                                        <costList Inherit="False">
-                                            <Steel>100</Steel>
-                                            <ComponentSpacer>3</ComponentSpacer>
-                                        </costList>
-                                    </value>
-                                </Operation>
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <costStuffCount Inherit="False" />
-                                    </value>
-                                </Operation>
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                                </Operation>
-                            </caseTrue>
-                            <caseFalse></caseFalse>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
                         </li>
-
-                        <li Class="XmlExtensions.CreateVariable">
-                            <storeIn>texture</storeIn>
-                            <value>Defs/ThingDef[defName="{defName}"]/graphicData/texPath</value>
-                            <fromXml>true</fromXml>
-                            <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
-                            <apply>
-                                <Operation Class="XmlExtensions.PatchOperationAdd">
-                                    <xmlDoc>testsopquests</xmlDoc>
-                                    <xpath>testsopquests/settings</xpath>
-                                    <value>
-                                        <li Class="XmlExtensions.Setting.SplitColumns">
-                                            <gapSize>6</gapSize>
-                                            <drawLine>false</drawLine>
-                                            <splits>
-                                                <li>0.1</li>
-                                                <li>0.3</li>
-                                            </splits>
-                                            <settings>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.DrawImage">
-                                                        <texPath>{texture}</texPath>
-                                                        <!--<dimensions>(32,32)</dimensions>-->
-                                                        <anchor>Left</anchor>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Text">
-                                                        <text>{tier} (unchanged)</text>
-                                                    </li>
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                                        <key>opquest_{defName}</key>
-                                                        <label>{defName}</label>
-                                                        <defaultValue>false</defaultValue>
-                                                    </li>
-                                                </li>
-
-                                            </settings>
-                                        </li>
-                                    </value>
-                                </Operation>
-
-                            </apply>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentSpacer>3</ComponentSpacer>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
                         </li>
                     </operations>
                 </match>
             </Operation>
-
-
         </apply>
     </XmlExtensions.PatchDef>
-
-
     <XmlExtensions.PatchDef Name="testspatches_opow" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -862,138 +599,72 @@ RewardSpecial</text>
                         <li>Oddities: Weapons Module</li>
                     </mods>
                     <caseTrue>
-
-                        <Operation Class="XmlExtensions.OptionalPatch">
-                            <modId>tests.patches</modId>
-                            <key>opquest_{defName}</key>
-                            <defaultValue>true</defaultValue>
-                            <caseTrue>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <thingSetMakerTags Inherit="False">
-                                            <li>RewardOddity</li>
-                                        </thingSetMakerTags>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <weaponTags>
-                                            <li>{tag}</li>
-                                        </weaponTags>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <tradeability>Sellable</tradeability>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <costList Inherit="False">
-                                            <OC_OddityFragment>{cost}</OC_OddityFragment>
-                                        </costList>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <recipeMaker Inherit="False">
-                                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-                                            <workSkill>Crafting</workSkill>
-                                            <effectWorking>Smith</effectWorking>
-                                            <soundWorking>Recipe_Smith</soundWorking>
-                                            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-                                            <skillRequirements>
-                                                <Crafting>12</Crafting>
-                                            </skillRequirements>
-                                            <recipeUsers Inherit="False">
-                                                <li>FabricationBench</li>
-                                            </recipeUsers>
-                                            <researchPrerequisite>OW_OddityRecombinationWeapon</researchPrerequisite>
-                                        </recipeMaker>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                                </Operation>
-
-                            </caseTrue>
-                            <caseFalse></caseFalse>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardOddity</li>
+                                </thingSetMakerTags>
+                            </value>
                         </Operation>
-
-                        <Operation Class="XmlExtensions.CreateVariable">
-                            <storeIn>texture</storeIn>
-                            <value>Defs/ThingDef[defName="{defName}"]/graphicData/texPath</value>
-                            <fromXml>true</fromXml>
-                            <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
-                            <apply>
-                                <Operation Class="XmlExtensions.PatchOperationAdd">
-                                    <xmlDoc>testsopquests</xmlDoc>
-                                    <xpath>testsopquests/settings</xpath>
-                                    <value>
-                                        <li Class="XmlExtensions.Setting.SplitColumns">
-                                            <gapSize>6</gapSize>
-                                            <drawLine>false</drawLine>
-                                            <splits>
-                                                <li>0.1</li>
-                                                <li>0.3</li>
-                                            </splits>
-                                            <settings>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.DrawImage">
-                                                        <texPath>{texture}</texPath>
-                                                        <!--<dimensions>(32,32)</dimensions>-->
-                                                        <anchor>Left</anchor>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Text">
-                                                        <text>oddity, {cost} fragments</text>
-                                                    </li>
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                                        <key>opquest_{defName}</key>
-                                                        <label>{defName}</label>
-                                                        <defaultValue>false</defaultValue>
-                                                    </li>
-                                                </li>
-
-                                            </settings>
-                                        </li>
-                                    </value>
-                                </Operation>
-
-                            </apply>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <weaponTags>
+                                    <li>{tag}</li>
+                                </weaponTags>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <tradeability>Sellable</tradeability>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
+                                </costList>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False">
+                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                                    <workSkill>Crafting</workSkill>
+                                    <effectWorking>Smith</effectWorking>
+                                    <soundWorking>Recipe_Smith</soundWorking>
+                                    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+                                    <skillRequirements>
+                                        <Crafting>12</Crafting>
+                                    </skillRequirements>
+                                    <recipeUsers Inherit="False">
+                                        <li>FabricationBench</li>
+                                    </recipeUsers>
+                                    <researchPrerequisite>OW_OddityRecombinationWeapon</researchPrerequisite>
+                                </recipeMaker>
+                            </value>
+                        </Operation>
+                        <Operation Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
                         </Operation>
                     </caseTrue>
                 </match>
             </Operation>
-
-
         </apply>
     </XmlExtensions.PatchDef>
-
     <XmlExtensions.PatchDef Name="testspatches_opod" Abstract="True">
         <parameters>
             <li>defName</li>
@@ -1007,126 +678,61 @@ RewardSpecial</text>
                         <li>Oddities: Deployables Module</li>
                     </mods>
                     <caseTrue>
-
-                        <Operation Class="XmlExtensions.OptionalPatch">
-                            <modId>tests.patches</modId>
-                            <key>opquest_{defName}</key>
-                            <defaultValue>true</defaultValue>
-                            <caseTrue>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <thingSetMakerTags Inherit="False">
-                                            <li>RewardOddity</li>
-                                        </thingSetMakerTags>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <compare>Name</compare>
-                                    <checkAttributes>false</checkAttributes>
-                                    <value>
-                                        <tradeability>Sellable</tradeability>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <costList Inherit="False">
-                                            <OC_OddityFragment>{cost}</OC_OddityFragment>
-                                        </costList>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                                    <value>
-                                        <recipeMaker>
-                                            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-                                            <researchPrerequisite>OD_OddityRecombinationDeployable</researchPrerequisite>
-                                            <recipeUsers Inherit="False">
-                                                <li>FabricationBench</li>
-                                            </recipeUsers>
-                                            <useIngredientsForColor>false</useIngredientsForColor>
-                                            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-                                            <workSkill>Crafting</workSkill>
-                                            <effectWorking>Smith</effectWorking>
-                                            <soundWorking>Recipe_Smith</soundWorking>
-                                            <skillRequirements>
-                                                <Crafting>12</Crafting>
-                                            </skillRequirements>
-                                        </recipeMaker>
-                                    </value>
-                                </Operation>
-
-                                <Operation Class="PatchOperationRemove">
-                                    <success>Always</success>
-                                    <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                                </Operation>
-
-                            </caseTrue>
-                            <caseFalse></caseFalse>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardOddity</li>
+                                </thingSetMakerTags>
+                            </value>
                         </Operation>
-
-                        <Operation Class="XmlExtensions.CreateVariable">
-                            <storeIn>texture</storeIn>
-                            <value>Defs/ThingDef[defName="{defName}"]/graphicData/texPath</value>
-                            <fromXml>true</fromXml>
-                            <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
-                            <apply>
-                                <Operation Class="XmlExtensions.PatchOperationAdd">
-                                    <xmlDoc>testsopquests</xmlDoc>
-                                    <xpath>testsopquests/settings</xpath>
-                                    <value>
-                                        <li Class="XmlExtensions.Setting.SplitColumns">
-                                            <gapSize>6</gapSize>
-                                            <drawLine>false</drawLine>
-                                            <splits>
-                                                <li>0.1</li>
-                                                <li>0.3</li>
-                                            </splits>
-                                            <settings>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.DrawImage">
-                                                        <texPath>{texture}</texPath>
-                                                        <!--<dimensions>(32,32)</dimensions>-->
-                                                        <anchor>Left</anchor>
-                                                    </li>
-
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Text">
-                                                        <text>oddity, {cost} fragments</text>
-                                                    </li>
-                                                </li>
-                                                <li>
-                                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                                        <key>opquest_{defName}</key>
-                                                        <label>{defName}</label>
-                                                        <defaultValue>false</defaultValue>
-                                                    </li>
-                                                </li>
-
-                                            </settings>
-                                        </li>
-                                    </value>
-                                </Operation>
-
-                            </apply>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <tradeability>Sellable</tradeability>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
+                                </costList>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker>
+                                    <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+                                    <researchPrerequisite>OD_OddityRecombinationDeployable</researchPrerequisite>
+                                    <recipeUsers Inherit="False">
+                                        <li>FabricationBench</li>
+                                    </recipeUsers>
+                                    <useIngredientsForColor>false</useIngredientsForColor>
+                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                                    <workSkill>Crafting</workSkill>
+                                    <effectWorking>Smith</effectWorking>
+                                    <soundWorking>Recipe_Smith</soundWorking>
+                                    <skillRequirements>
+                                        <Crafting>12</Crafting>
+                                    </skillRequirements>
+                                </recipeMaker>
+                            </value>
+                        </Operation>
+                        <Operation Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
                         </Operation>
                     </caseTrue>
                 </match>
             </Operation>
-
-
         </apply>
     </XmlExtensions.PatchDef>
-
 </Defs>
