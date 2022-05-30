@@ -226,6 +226,13 @@
                             <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
                         </value>
                     </li>
+                    <li Class="PatchOperationReplace">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="Paraceratherium"]/race/manhunterOnTameFailChance</xpath>
+                        <value>
+                            <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+                        </value>
+                    </li>
                 </operations>
             </Operation>
 
@@ -1241,19 +1248,45 @@
         <defaultValue>false</defaultValue>
         <caseTrue>
 
-            <Operation Class="PatchOperationFindMod">
-                <mods>
-                    <li>Animal Commonality Tweaker</li>
-                </mods>
-                <match Class="PatchOperationRemove">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[(@Abstract="true" or @Abstract="True")]/race/wildBiomes</xpath>
-                </match>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[(@Abstract="true" or @Abstract="True")]/race/wildBiomes</xpath>
             </Operation>
+
 
         </caseTrue>
         <caseFalse></caseFalse>
     </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ltsresearch</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"LTS_")]/researchPrerequisites[not(li="ComplexFurniture")]</xpath>
+                <success>Always</success>
+                <value>
+                    <li>ComplexFurniture</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"LTS_") and (not(researchPrerequisites))]</xpath>
+                <success>Always</success>
+                <value>
+                    <researchPrerequisites>
+                        <li>ComplexFurniture</li>
+                    </researchPrerequisites>
+                </value>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
 
 
     <!--

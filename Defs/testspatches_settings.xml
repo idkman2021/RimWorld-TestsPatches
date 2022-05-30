@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Defs>
-
-
     <XmlExtensions.SettingsMenuDef>
         <defName>testspatches_settings</defName> <!--Can be anything unique with no periods-->
         <modId>tests.patches</modId> <!--MUST be the same as the one entered earlier-->
         <label>tests patches</label> <!-- This is what displays as your mod's name-->
         <settings>
-
-
             <li Class="XmlExtensions.Setting.Text">
                 <text>All XML Extensions settings require a restart to be applied!</text>
             </li>
@@ -18,81 +13,73 @@
             </li>
             <li Class="XmlExtensions.Setting.GapLine" />
 
-
             <!--settings -->
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_fantasydeep</key>
                 <label>Fantasy Metals Reforged - deep drilling nerf.</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>Makes Fantasy Metals appear less when using ground-penetrating scanner, which makes vanilla materials more common. Makes lumps smaller. Those materials are very expensive, but without this patch too easy to mine and sell.</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_solpyrite</key>
                 <label>Fantasy Metals Reforged - items made from solpyrite have "solpyrite" adjective instead of "golden?"</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>Items made from solpyrite will have "solpyrite" adjective instead of "golden?"</tooltip>
             </li>
-
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_ltsresearch</key>
+                <label>[LTS]Furnishing - all buildings require complex furniture research</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>if you use no starting research, lts furnishing is strikingly powerful earlygame, especially the recreation ones, so I move all of them behind complex furniture research.</tooltip>
+            </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_megafauna</key>
                 <label>Megafauna - fix tame revenge chances being 0.28% instead of 28%.</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>looks like a bug</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_gacha</key>
                 <label>RimGacha - gacha can only be desonstructed for 1 resource</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>if you have mods that add op resources you could exploit gachas by deconstructing them.</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_seedspleasenope</key>
                 <label>SeedsPlease: Lite - undo vanilla changes</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>Undoes the vanilla changes where cotton, devilstrand, healroot, and cocoa yield raw resources that must be refined to be useful. Actually if seeds plus adds any processing chains to modded items, that will be undone too.</tooltip>
             </li>
-
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_donteatmyseedspleasethankyou</key>
                 <label>SeedsPlease: Lite - seeds aren't eedible</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>restricting animals from eating valuable seeds requires some annoying (imo) areas micromanagement, not worth it.</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_rimsenal</key>
                 <label>Rimsenal - defense tech research requires precision rifling</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>its a bit op to have before other research</tooltip>
             </li>
-
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_ssdropdown</key>
                 <label>Super Soil - super soils dropdown</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>because with all ideology floors the menu is getting huge</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_ekwhateverphobia</key>
                 <label>Traits Excel - some traits are rarer (Ekrixiphobia, demolitions expert, mechanic)</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>Having the "ekrixiphobia" word show up on every second pawn breaks the immersion a bit, and the other traits are way to specific to be as common as they are.</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_bamboo</key>
                 <label>VGP Bamboo (Standalone) - bamboo nerf</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>VGP Bamboo has the same stats as wood, yet it is easier to plant and available before tree sowing research. With this, it will be an early game alternative inferior to wood. Most notable changes: HP 0.65>0.45; beauty offset 1>-1.</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_bamboocolor</key>
                 <label>VGP Bamboo (Standalone) - make bamboo a bit more green</label>
@@ -105,14 +92,12 @@
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_wddropdown</key>
                 <label>[WD] Expanded Floors - jade floors dropdown</label>
                 <defaultValue>false</defaultValue>
                 <tooltip>because with all ideology floors the menu is getting huge</tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_shard</key>
                 <label>Weapons From The Vault - shards are 10 times more expensive</label>
@@ -120,15 +105,7 @@
                 <tooltip>I think they were too easy to buy and craft some good weapory.</tooltip>
             </li>
 
-
-            <!--
-            <li Class="XmlExtensions.Setting.Checkbox">
-                <key>testspatches_affair</key>
-                <label>NoAffair - affair has no opinion offset (to fix NoAffair mod)</label>
-                <defaultValue>false</defaultValue>
-                <tooltip></tooltip>
-            </li>
-        -->
+            <!-- har -->
             <li Class="XmlExtensions.Setting.GapLine" />
             <li Class="XmlExtensions.Setting.Text">
                 <text>Humanoid Alien Races - those settings affect ALL HAR races:</text>
@@ -136,7 +113,6 @@
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>18</spacing>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_rcustomstats</key>
                 <label>remove custom work stats (e.g. research speed, mining yield, etc)</label>
@@ -188,7 +164,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_MentalBreakThreshold</key>
                 <label>remove custom mental break thresholds</label>
@@ -213,7 +188,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
                 <defaultValue>false</defaultValue>
                 <tooltip></tooltip>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_ShootingAccuracyPawn</key>
                 <label>remove custom shooting accuracy and aiming time</label>
@@ -236,7 +210,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>18</spacing>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_HumongousMoveSpeeds</key>
                 <label>replace move speeds above 4.6 with 4.6</label>
@@ -259,8 +232,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>18</spacing>
             </li>
-
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_humanRecipeImport</key>
                 <label>all races import human surgery recipes</label>
@@ -272,7 +243,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>18</spacing>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_thoughtSettings</key>
                 <label>remove all custom thoughts (thoughtSettings)</label>
@@ -320,7 +290,6 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>12</spacing>
             </li>
-
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_hediffGraphics</key>
                 <label>remove hediff- and backstory-based graphics</label>
@@ -328,23 +297,1119 @@ Defs/AlienRace.ThingDef_AlienRace/statBases/TrainAnimalChance</tooltip>
                 <tooltip>This doesn't fix the TryResolveGraphics patch, doesn't seem to make it any better at all.</tooltip>
             </li>
 
+            
+            <li Class="XmlExtensions.Setting.GapLine" />
+            <li Class="XmlExtensions.Setting.Text">
+                <text>Animal commonality multiplier</text>
+            </li>
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>18</spacing>
+            </li>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>Allows you to multiply spawning commonalitities of all animals in a mod, in all biomes, by a value you choose.</text>
+            </li>
+            <li Class="XmlExtensions.Setting.Text">
+                <text>The list of mods is handpicked from ones I wanted to edit, and I can add more requested mods.</text>
+            </li>
+            <li Class="XmlExtensions.Setting.Checkbox">
+                <key>testspatches_hidethedamnact</key>
+                <label>hide animal commonality settings</label>
+                <defaultValue>false</defaultValue>
+                <tooltip>to avoid accidental editing and unclutter the menu (doesn't disable the settings!)</tooltip>
+            </li>
+            <li Class="XmlExtensions.Setting.Gap">
+                <spacing>18</spacing>
+            </li>
+            <li Class="XmlExtensions.Setting.ToggleableSettings">
+                <key>testspatches_hidethedamnact</key>
+                <caseTrue>
+                    <li Class="XmlExtensions.Setting.Text">
+                        <text>Animal commonality multiplier settings are hidden.</text>
+                    </li>
+                </caseTrue>
+                <caseFalse>
 
+
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actbastyon</key>
+                                    <label>Bastyon</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actbastyon</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actbastyonk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actbastyon</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actbastyonk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>18</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actbirdsup</key>
+                                    <label>BIRD UP! All-in-one</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actbirdsup</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actbirdsupk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actbirdsup</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actbirdsupk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actboomaphant</key>
+                                    <label>Boomaphants</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actboomaphant</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actboomaphantk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actboomaphant</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actboomaphantk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actdevilstrand</key>
+                                    <label>Devilstrand Animals</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdevilstrand</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actdevilstrandk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdevilstrand</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actdevilstrandk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actdinosauria</key>
+                                    <label>Dinosauria</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdinosauria</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actdinosauriak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdinosauria</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actdinosauriak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actdoomalope</key>
+                                    <label>Doomalope</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdoomalope</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actdoomalopek</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdoomalope</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actdoomalopek</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_escpspriggan</key>
+                                    <label>ESCP - Spriggan</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_escpspriggan</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_escpspriggank</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_escpspriggan</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_escpspriggank</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actchocobo</key>
+                                    <label>Erin's Chocobos</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actchocobo</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actchocobok</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actchocobo</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actchocobok</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_acthccreatures</key>
+                                    <label>HC_Creatures_1</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acthccreatures</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_acthccreaturesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acthccreatures</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_acthccreaturesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_acthalflifecreatures</key>
+                                    <label>Half-Life Creatures</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acthalflifecreatures</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_acthalflifecreaturesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acthalflifecreatures</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_acthalflifecreaturesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actlegacyark</key>
+                                    <label>Legacy Ark</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actlegacyark</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actlegacyarkk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actlegacyark</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actlegacyarkk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actmm</key>
+                                    <label>Magical Menagerie</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmm</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actmmk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmm</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actmmk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actmeagfauna</key>
+                                    <label>Megafauna</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmeagfauna</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actmeagfaunak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmeagfauna</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actmeagfaunak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actmorrowrimtrolls</key>
+                                    <label>MorrowRim - Trolls</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmorrowrimtrolls</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actmorrowrimtrollsk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actmorrowrimtrolls</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actmorrowrimtrollsk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actdndn</key>
+                                    <label>Mooloh's Dnd Menagerie</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdndn</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actdndnk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actdndn</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actdndnk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actoniam</key>
+                                    <label>Oxygen Not Included Animals Module</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actoniam</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actoniamk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actoniam</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actoniamk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actpetcucumber</key>
+                                    <label>Pet Cucumber</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actpetcucumber</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actpetcucumberk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actpetcucumber</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actpetcucumberk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actpinkmaterialsheep</key>
+                                    <label>Pink Material Sheep</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actpinkmaterialsheep</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actpinkmaterialsheepk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actpinkmaterialsheep</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actpinkmaterialsheepk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actrttr</key>
+                                    <label>Race to the Rim</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actrttr</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actrttrk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actrttr</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actrttrk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actrrea</key>
+                                    <label>ReGrowth Remastered: Extinct Animals</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actrrea</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actrreak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actrrea</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actrreak</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actscaledworld</key>
+                                    <label>Scaled World</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actscaledworld</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actscaledworldk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actscaledworld</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actscaledworldk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actslimerancher</key>
+                                    <label>Slime Rancher</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actslimerancher</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actslimerancherk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actslimerancher</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actslimerancherk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_actslimes</key>
+                                    <label>Slimes</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actslimes</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_actslimesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_actslimes</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_actslimesk</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+                    <li Class="XmlExtensions.Setting.SplitColumns">
+                        <gapSize>12</gapSize>
+                        <splits>
+                            <li>0.35</li>
+                            <li>0.1</li>
+                        </splits>
+                        <settings>
+                            <li>
+                                <li Class="XmlExtensions.Setting.Checkbox">
+                                    <key>testspatches_acttribble</key>
+                                    <label>Tribbles!</label>
+                                    <defaultValue>false</defaultValue>
+                                    <tooltip></tooltip>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acttribble</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Numeric">
+                                            <key>testspatches_acttribblek</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>100</max>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                            <li>
+                                <li Class="XmlExtensions.Setting.ToggleableSettings">
+                                    <key>testspatches_acttribble</key>
+                                    <caseTrue>
+                                        <li Class="XmlExtensions.Setting.Slider">
+                                            <key>testspatches_acttribblek</key>
+                                            <defaultValue>1</defaultValue>
+                                            <min>0</min>
+                                            <max>2</max>
+                                            <decimals>2</decimals>
+                                        </li>
+                                    </caseTrue>
+                                </li>
+                            </li>
+                        </settings>
+                    </li>
+
+
+                </caseFalse>
+            </li>
+            <li Class="XmlExtensions.Setting.GapLine" />
+
+
+            <!-- my personal stuff -->
             <li Class="XmlExtensions.Setting.Gap">
                 <spacing>500</spacing>
             </li>
-            <li Class="XmlExtensions.Setting.GapLine" />
+            <li Class="XmlExtensions.Setting.SetColor">
+                <color>(0,0,0)</color>
+            </li>
             <li Class="XmlExtensions.Setting.Checkbox">
                 <key>testspatches_iamtest</key>
-                <label>
-                    <![CDATA[<b>ignore this</b>]]>
-                </label>
                 <defaultValue>false</defaultValue>
                 <highlight>false</highlight>
             </li>
-            <li Class="XmlExtensions.Setting.GapLine" />
+            <li Class="XmlExtensions.Setting.SetColor"/>
             <li Class="XmlExtensions.Setting.ToggleableSettings">
                 <key>testspatches_iamtest</key>
                 <caseTrue>
+                    <li Class="XmlExtensions.Setting.GapLine" />
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <key>testspatches_xmlfixes</key>
                         <label>xml</label>
@@ -413,20 +1478,16 @@ exotics fine weaponry FROM MERGE
 - Exotic Arsenal: all weapons
 - Apex: Rimworld Legends (Continued): everything
 - Arsenal of Revolution: everything
-- Arsenal of Reaction: everything
-</tooltip>
+- Arsenal of Reaction: everything</tooltip>
                     </li>
-                    <!--
-                                    <li Class="XmlExtensions.Setting.Checkbox">
-                                        <key>testspatches_opquestf</key>
-                                        <label>op fancy</label>
-                                        <defaultValue>false</defaultValue>
-                                        <tooltip>ZAMN 😍</tooltip>
-                                    </li>
-                                -->
-                    <!-- epic stuff goes THERE -->
                     <li Class="XmlExtensions.Setting.Checkbox">
                         <key>testspatches_catfix</key>
+                        <label>act</label>
+                        <tooltip>cat</tooltip>
+                        <defaultValue>false</defaultValue>
+                    </li>
+                    <li Class="XmlExtensions.Setting.Checkbox">
+                        <key>testspatches_actlogging</key>
                         <label>act</label>
                         <tooltip>cat</tooltip>
                         <defaultValue>false</defaultValue>
@@ -438,301 +1499,4 @@ exotics fine weaponry FROM MERGE
             </li>
         </settings>
     </XmlExtensions.SettingsMenuDef>
-    <XmlExtensions.PatchDef Name="testspatches_opn" Abstract="True">
-        <parameters>
-            <li>defName</li>
-        </parameters>
-        <apply>
-            <Operation Class="PatchOperationConditional">
-                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                <match Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <thingSetMakerTags Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <recipeMaker Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                            <value>
-                                <costList Inherit="False">
-                                    <Steel>100</Steel>
-                                    <ComponentIndustrial>2</ComponentIndustrial>
-                                </costList>
-                            </value>
-                        </li>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <costStuffCount Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                        </li>
-                    </operations>
-                </match>
-            </Operation>
-        </apply>
-    </XmlExtensions.PatchDef>
-    <XmlExtensions.PatchDef Name="testspatches_op" Abstract="True">
-        <parameters>
-            <li>defName</li>
-        </parameters>
-        <apply>
-            <Operation Class="PatchOperationConditional">
-                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                <match Class="PatchOperationSequence">
-                    <operations>
-
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <thingSetMakerTags Inherit="False">
-                                    <li>RewardStandardHighFreq</li>
-                                    <li>RewardStandardQualitySuper</li>
-                                    <li>RewardSpecial</li>
-                                </thingSetMakerTags>
-                            </value>
-                        </li>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <recipeMaker Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                            <value>
-                                <costList Inherit="False">
-                                    <Steel>100</Steel>
-                                    <ComponentSpacer>5</ComponentSpacer>
-                                </costList>
-                            </value>
-                        </li>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <costStuffCount Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                        </li>
-                    </operations>
-                </match>
-            </Operation>
-        </apply>
-    </XmlExtensions.PatchDef>
-    <XmlExtensions.PatchDef Name="testspatches_op0" Abstract="True">
-        <parameters>
-            <li>defName</li>
-        </parameters>
-        <apply>
-            <Operation Class="PatchOperationConditional">
-                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                <match Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <recipeMaker Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationAdd">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
-                            <value>
-                                <costList Inherit="False">
-                                    <Steel>100</Steel>
-                                    <ComponentSpacer>3</ComponentSpacer>
-                                </costList>
-                            </value>
-                        </li>
-                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <costStuffCount Inherit="False" />
-                            </value>
-                        </li>
-                        <li Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                        </li>
-                    </operations>
-                </match>
-            </Operation>
-        </apply>
-    </XmlExtensions.PatchDef>
-    <XmlExtensions.PatchDef Name="testspatches_opow" Abstract="True">
-        <parameters>
-            <li>defName</li>
-            <li>tag</li> <!-- OddityMelee OddityRanged -->
-            <li>cost</li> <!-- 8 -->
-        </parameters>
-        <apply>
-            <Operation Class="PatchOperationConditional">
-                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                <match Class="XmlExtensions.FindMod">
-                    <mods>
-                        <li>Oddities: Weapons Module</li>
-                    </mods>
-                    <caseTrue>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <thingSetMakerTags Inherit="False">
-                                    <li>RewardOddity</li>
-                                </thingSetMakerTags>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <weaponTags>
-                                    <li>{tag}</li>
-                                </weaponTags>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <tradeability>Sellable</tradeability>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <costList Inherit="False">
-                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
-                                </costList>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <recipeMaker Inherit="False">
-                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-                                    <workSkill>Crafting</workSkill>
-                                    <effectWorking>Smith</effectWorking>
-                                    <soundWorking>Recipe_Smith</soundWorking>
-                                    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-                                    <skillRequirements>
-                                        <Crafting>12</Crafting>
-                                    </skillRequirements>
-                                    <recipeUsers Inherit="False">
-                                        <li>FabricationBench</li>
-                                    </recipeUsers>
-                                    <researchPrerequisite>OW_OddityRecombinationWeapon</researchPrerequisite>
-                                </recipeMaker>
-                            </value>
-                        </Operation>
-                        <Operation Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                        </Operation>
-                    </caseTrue>
-                </match>
-            </Operation>
-        </apply>
-    </XmlExtensions.PatchDef>
-    <XmlExtensions.PatchDef Name="testspatches_opod" Abstract="True">
-        <parameters>
-            <li>defName</li>
-            <li>cost</li>
-        </parameters>
-        <apply>
-            <Operation Class="PatchOperationConditional">
-                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                <match Class="XmlExtensions.FindMod">
-                    <mods>
-                        <li>Oddities: Deployables Module</li>
-                    </mods>
-                    <caseTrue>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <thingSetMakerTags Inherit="False">
-                                    <li>RewardOddity</li>
-                                </thingSetMakerTags>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
-                            <compare>Name</compare>
-                            <checkAttributes>false</checkAttributes>
-                            <value>
-                                <tradeability>Sellable</tradeability>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <costList Inherit="False">
-                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
-                                </costList>
-                            </value>
-                        </Operation>
-                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
-                            <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
-                            <value>
-                                <recipeMaker>
-                                    <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-                                    <researchPrerequisite>OD_OddityRecombinationDeployable</researchPrerequisite>
-                                    <recipeUsers Inherit="False">
-                                        <li>FabricationBench</li>
-                                    </recipeUsers>
-                                    <useIngredientsForColor>false</useIngredientsForColor>
-                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-                                    <workSkill>Crafting</workSkill>
-                                    <effectWorking>Smith</effectWorking>
-                                    <soundWorking>Recipe_Smith</soundWorking>
-                                    <skillRequirements>
-                                        <Crafting>12</Crafting>
-                                    </skillRequirements>
-                                </recipeMaker>
-                            </value>
-                        </Operation>
-                        <Operation Class="PatchOperationRemove">
-                            <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
-                        </Operation>
-                    </caseTrue>
-                </match>
-            </Operation>
-        </apply>
-    </XmlExtensions.PatchDef>
 </Defs>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- not a reward, for weak stuff -->
+    <XmlExtensions.PatchDef Name="testspatches_opn" Abstract="True">
+        <parameters>
+            <li>defName</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentIndustrial>2</ComponentIndustrial>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+     <!-- reward, for OP stuff -->
+    <XmlExtensions.PatchDef Name="testspatches_op" Abstract="True">
+        <parameters>
+            <li>defName</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardStandardHighFreq</li>
+                                    <li>RewardStandardQualitySuper</li>
+                                    <li>RewardSpecial</li>
+                                </thingSetMakerTags>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentSpacer>5</ComponentSpacer>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+     <!-- keep the reward settings from the original def -->
+    <XmlExtensions.PatchDef Name="testspatches_op0" Abstract="True">
+        <parameters>
+            <li>defName</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentSpacer>3</ComponentSpacer>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+     <!-- oddity, for very OP weapons -->
+    <XmlExtensions.PatchDef Name="testspatches_opow" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>tag</li> <!-- OddityMelee OddityRanged -->
+            <li>cost</li> <!-- 8 -->
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="XmlExtensions.FindMod">
+                    <mods>
+                        <li>Oddities: Weapons Module</li>
+                    </mods>
+                    <caseTrue>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardOddity</li>
+                                </thingSetMakerTags>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <weaponTags>
+                                    <li>{tag}</li>
+                                </weaponTags>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <tradeability>Sellable</tradeability>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
+                                </costList>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False">
+                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                                    <workSkill>Crafting</workSkill>
+                                    <effectWorking>Smith</effectWorking>
+                                    <soundWorking>Recipe_Smith</soundWorking>
+                                    <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+                                    <skillRequirements>
+                                        <Crafting>12</Crafting>
+                                    </skillRequirements>
+                                    <recipeUsers Inherit="False">
+                                        <li>FabricationBench</li>
+                                    </recipeUsers>
+                                    <researchPrerequisite>OW_OddityRecombinationWeapon</researchPrerequisite>
+                                </recipeMaker>
+                            </value>
+                        </Operation>
+                        <Operation Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </Operation>
+                    </caseTrue>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- oddity, for very OP deployables -->
+    <XmlExtensions.PatchDef Name="testspatches_opod" Abstract="True">
+        <parameters>
+            <li>defName</li>
+            <li>cost</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="XmlExtensions.FindMod">
+                    <mods>
+                        <li>Oddities: Deployables Module</li>
+                    </mods>
+                    <caseTrue>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardOddity</li>
+                                </thingSetMakerTags>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <tradeability>Sellable</tradeability>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <OC_OddityFragment>{cost}</OC_OddityFragment>
+                                </costList>
+                            </value>
+                        </Operation>
+                        <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker>
+                                    <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+                                    <researchPrerequisite>OD_OddityRecombinationDeployable</researchPrerequisite>
+                                    <recipeUsers Inherit="False">
+                                        <li>FabricationBench</li>
+                                    </recipeUsers>
+                                    <useIngredientsForColor>false</useIngredientsForColor>
+                                    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+                                    <workSkill>Crafting</workSkill>
+                                    <effectWorking>Smith</effectWorking>
+                                    <soundWorking>Recipe_Smith</soundWorking>
+                                    <skillRequirements>
+                                        <Crafting>12</Crafting>
+                                    </skillRequirements>
+                                </recipeMaker>
+                            </value>
+                        </Operation>
+                        <Operation Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                        </Operation>
+                    </caseTrue>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    
+    <!-- building + texture, automatic vanilla texture, adds automatically -->
+    <XmlExtensions.PatchDef Name="testspatches_tv" Abstract="True">
+        <parameters>
+            <li>building</li>
+            <li>texture</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <success>Invert</success>
+                        <xpath>Defs/ThingDef[defName = "{building}"]/comps/li[@Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"]/randomGraphics</xpath>
+                        <value>
+                            <li>{texture}</li>
+                        </value>
+                    </li>
+                    <li Class="XmlExtensions.CreateVariable">
+                        <storeIn>vanilla</storeIn>
+                        <value>Defs/ThingDef[defName = "{building}"]/graphicData/texPath</value>
+                        <fromXml>true</fromXml>
+                        <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
+                        <apply>
+                            <Operation Class="PatchOperationAdd">
+                                <success>Invert</success>
+                                <xpath>Defs/ThingDef[defName = "{building}"]/comps</xpath>
+                                <value>
+                                    <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                        <randomGraphics>
+                                            <li>{vanilla}</li>
+                                            <li>{texture}</li>
+                                        </randomGraphics>
+                                    </li>
+                                </value>
+                            </Operation>
+                            <Operation Class="PatchOperationAdd">
+                                <xpath>Defs/ThingDef[defName = "{building}"]</xpath>
+                                <value>
+                                    <comps>
+                                        <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                            <randomGraphics>
+                                                <li>{vanilla}</li>
+                                                <li>{texture}</li>
+                                            </randomGraphics>
+                                        </li>
+                                    </comps>
+                                </value>
+                            </Operation>
+                        </apply>
+                    </li>
+                </operations>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="{building}"]</xpath>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- building + texture + vanilla texture, adds automatically -->
+    <XmlExtensions.PatchDef Name="testspatches_tvf" Abstract="True">
+        <parameters>
+            <li>building</li>
+            <li>texture</li>
+            <li>vanilla</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <success>Invert</success>
+                        <xpath>Defs/ThingDef[defName = "{building}"]/comps/li[@Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"]/randomGraphics</xpath>
+                        <value>
+                            <li>{texture}</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <success>Invert</success>
+                        <xpath>Defs/ThingDef[defName = "{building}"]/comps</xpath>
+                        <value>
+                            <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                <randomGraphics>
+                                    <li>{vanilla}</li>
+                                    <li>{texture}</li>
+                                </randomGraphics>
+                            </li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName = "{building}"]</xpath>
+                        <value>
+                            <comps>
+                                <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                    <randomGraphics>
+                                        <li>{vanilla}</li>
+                                        <li>{texture}</li>
+                                    </randomGraphics>
+                                </li>
+                            </comps>
+                        </value>
+                    </li>
+                </operations>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="{building}"]</xpath>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- building + texture for ones that already have the comp -->
+    <XmlExtensions.PatchDef Name="testspatches_tvs" Abstract="True">
+        <parameters>
+            <li>building</li>
+            <li>texture</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[@Name = "{building}"]/comps/li[@Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"]/randomGraphics</xpath>
+                <value>
+                    <li>{texture}</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="{building}"]</xpath>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- building1 + building2, automatic textures, adds automatically -->
+    <XmlExtensions.PatchDef Name="testspatches_tvc" Abstract="True">
+        <parameters>
+            <li>buildingvar</li>
+            <li>buildingdel</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.CreateVariable">
+                <success>Always</success>
+                <storeIn>texture</storeIn>
+                <value>Defs/ThingDef[defName = "{buildingdel}"]/graphicData/texPath</value>
+                <fromXml>true</fromXml>
+                <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
+                <apply>
+                    <Operation Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <success>Invert</success>
+                                <xpath>Defs/ThingDef[defName = "{buildingvar}"]/comps/li[@Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"]/randomGraphics</xpath>
+                                <value>
+                                    <li>{texture}</li>
+                                </value>
+                            </li>
+                            <li Class="XmlExtensions.CreateVariable">
+                                <storeIn>vanilla</storeIn>
+                                <value>Defs/ThingDef[defName = "{buildingvar}"]/graphicData/texPath</value>
+                                <fromXml>true</fromXml>
+                                <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
+                                <apply>
+                                    <Operation Class="PatchOperationAdd">
+                                        <success>Invert</success>
+                                        <xpath>Defs/ThingDef[defName = "{buildingvar}"]/comps</xpath>
+                                        <value>
+                                            <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                                <randomGraphics>
+                                                    <li>{vanilla}</li>
+                                                    <li>{texture}</li>
+                                                </randomGraphics>
+                                            </li>
+                                        </value>
+                                    </Operation>
+                                    <Operation Class="PatchOperationAdd">
+                                        <xpath>Defs/ThingDef[defName = "{buildingvar}"]</xpath>
+                                        <value>
+                                            <comps>
+                                                <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+                                                    <randomGraphics>
+                                                        <li>{vanilla}</li>
+                                                        <li>{texture}</li>
+                                                    </randomGraphics>
+                                                </li>
+                                            </comps>
+                                        </value>
+                                    </Operation>
+                                </apply>
+                            </li>
+                        </operations>
+                    </Operation>
+                </apply>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="{buildingdel}"]</xpath>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- building1 + building2, automatic textures, for ones that already have the comp -->
+    <XmlExtensions.PatchDef Name="testspatches_tvcs" Abstract="True">
+        <parameters>
+            <li>buildingvar</li>
+            <li>buildingdel</li>
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.CreateVariable">
+                <success>Always</success>
+                <storeIn>texture</storeIn>
+                <value>Defs/ThingDef[defName = "{buildingdel}"]/graphicData/texPath</value>
+                <fromXml>true</fromXml>
+                <defaultValue>World/WorldObjects/Expanding/PeaceTalks</defaultValue>
+                <apply>
+                    <Operation Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName = "{buildingvar}"]/comps/li[@Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"]/randomGraphics</xpath>
+                        <value>
+                            <li>{texture}</li>
+                        </value>
+                    </Operation>
+                </apply>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="{buildingdel}"]</xpath>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- animal commonality tweaker replacement for contains-->
+    <XmlExtensions.PatchDef Name="testspatches_actcd" Abstract="True">
+        <parameters>
+            <li>CONTAINS</li>
+            <li>DIVIDER</li>
+            <!-- TWEAKER -->
+        </parameters>
+        <apply>
+            <Operation Class="XmlExtensions.PatchOperationMath">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[contains(defName,"{CONTAINS}")]/race/wildBiomes/*</xpath>
+                <value>{DIVIDER}</value>
+                <operation>/</operation>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+</Defs>

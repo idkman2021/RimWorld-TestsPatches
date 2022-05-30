@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actlogging</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            
+            <Operation Class="XmlExtensions.StopwatchStart"/>
+            
+        </caseTrue>
+        <caseFalse>
+
+        </caseFalse>
+    </Operation>
+
+    
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actbirdsup</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actbirdsupk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="Budgerigar" or defName="Cockatiel" or defName="Peregrine_falcon" or defName="Macaw" or defName="Raven" or defName="Vulture"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actbirdsupk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/Budgerigar | Defs/BiomeDef/wildAnimals/Cockatiel |  Defs/BiomeDef/wildAnimals/Peregrine_falcon | Defs/BiomeDef/wildAnimals/Macaw | Defs/BiomeDef/wildAnimals/Raven | Defs/BiomeDef/wildAnimals/Vulture</xpath>
+                        <value>{testspatches_actbirdsupk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actboomaphant</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actboomaphantk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="Boomaphant"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actboomaphantk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/Boomaphant</xpath>
+                        <value>{testspatches_actboomaphantk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actmeagfauna</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actmeagfaunak</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="Arthropleura" or 
+                            defName="Doedicurus" or 
+                            defName="Daeodon" or 
+                            defName="Gigantopithecus" or 
+                            defName="Paraceratherium" or 
+                            defName="Titanis" or 
+                            defName="Titanoboa" or 
+                            defName="WoollyMammoth" or 
+                            defName="Elasmotherium" or 
+                            defName="Smilodon" or 
+                            defName="Chalicotherium" or 
+                            defName="Megaloceros" or 
+                            defName="Procoptodon" or 
+                            defName="Megalania" or 
+                            defName="Gomphotaria" or 
+                            defName="Diprotodon" or 
+                            defName="ShortfacedBear" or 
+                            defName="Dinocrocuta" or 
+                            defName="Sivatherium" or 
+                            defName="Andrewsarchus" or 
+                            defName="Dinornis" or 
+                            defName="Macrauchenia" or 
+                            defName="Quinkana" or 
+                            defName="Deinotherium" or 
+                            defName="Aurochs" or 
+                            defName="Megalochelys" or 
+                            defName="Palaeeudyptes" or 
+                            defName="Josephoartigasia" or 
+                            defName="Gigantophis" or 
+                            defName="Meganeura" or 
+                            defName="Zygolophodon" or 
+                            defName="Platybelodon" or 
+                            defName="Purussaurus" or 
+                            defName="Uintatherium" or 
+                            defName="Pulmonoscorpius" or 
+                            defName="Dinopithecus" or 
+                            defName="Castoroides" or 
+                            defName="Enhydriodon"
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actmeagfaunak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/Arthropleura |
+                            Defs/BiomeDef/wildAnimals/Doedicurus |
+                            Defs/BiomeDef/wildAnimals/Daeodon |
+                            Defs/BiomeDef/wildAnimals/Gigantopithecus |
+                            Defs/BiomeDef/wildAnimals/Paraceratherium |
+                            Defs/BiomeDef/wildAnimals/Titanis |
+                            Defs/BiomeDef/wildAnimals/Titanoboa |
+                            Defs/BiomeDef/wildAnimals/WoollyMammoth |
+                            Defs/BiomeDef/wildAnimals/Elasmotherium |
+                            Defs/BiomeDef/wildAnimals/Smilodon |
+                            Defs/BiomeDef/wildAnimals/Chalicotherium |
+                            Defs/BiomeDef/wildAnimals/Megaloceros |
+                            Defs/BiomeDef/wildAnimals/Procoptodon |
+                            Defs/BiomeDef/wildAnimals/Megalania |
+                            Defs/BiomeDef/wildAnimals/Gomphotaria |
+                            Defs/BiomeDef/wildAnimals/Diprotodon |
+                            Defs/BiomeDef/wildAnimals/ShortfacedBear |
+                            Defs/BiomeDef/wildAnimals/Dinocrocuta |
+                            Defs/BiomeDef/wildAnimals/Sivatherium |
+                            Defs/BiomeDef/wildAnimals/Andrewsarchus |
+                            Defs/BiomeDef/wildAnimals/Dinornis |
+                            Defs/BiomeDef/wildAnimals/Macrauchenia |
+                            Defs/BiomeDef/wildAnimals/Quinkana |
+                            Defs/BiomeDef/wildAnimals/Deinotherium |
+                            Defs/BiomeDef/wildAnimals/Aurochs |
+                            Defs/BiomeDef/wildAnimals/Megalochelys |
+                            Defs/BiomeDef/wildAnimals/Palaeeudyptes |
+                            Defs/BiomeDef/wildAnimals/Josephoartigasia |
+                            Defs/BiomeDef/wildAnimals/Gigantophis |
+                            Defs/BiomeDef/wildAnimals/Meganeura |
+                            Defs/BiomeDef/wildAnimals/Zygolophodon |
+                            Defs/BiomeDef/wildAnimals/Platybelodon |
+                            Defs/BiomeDef/wildAnimals/Purussaurus |
+                            Defs/BiomeDef/wildAnimals/Uintatherium |
+                            Defs/BiomeDef/wildAnimals/Pulmonoscorpius |
+                            Defs/BiomeDef/wildAnimals/Dinopithecus |
+                            Defs/BiomeDef/wildAnimals/Castoroides |
+                            Defs/BiomeDef/wildAnimals/Enhydriodon
+                            </xpath>
+                        <value>{testspatches_actmeagfaunak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actdevilstrand</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actdevilstrandk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"ATK_")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actdevilstrandk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"ATK_")]</xpath>
+                        <value>{testspatches_actdevilstrandk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actdoomalope</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actdoomalopek</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="Doomalope" or defName="CCPBoomalotter"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actdoomalopek}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/Doomalope | Defs/BiomeDef/wildAnimals/CCPBoomalotter</xpath>
+                        <value>{testspatches_actdoomalopek}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_escpspriggan</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_escpspriggank</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[@ParentName="ESCP_SprigganThingBase" or @Name="ESCP_SprigganThingBase" or contains(defName,"ESCP_Spriggan")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_escpspriggank}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"ESCP_Spriggan")]</xpath>
+                        <value>{testspatches_escpspriggank}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actchocobo</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actchocobok</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="ERN_Chocobo"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actchocobok}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/ERN_Chocobo</xpath>
+                        <value>{testspatches_actchocobok}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_acthccreatures</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_acthccreaturesk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="HC_Carbuncle" or 
+                            defName="HC_Nightmares" or 
+                            defName="HC_Gorgon" or 
+                            defName="HC_Owlbear" or 
+                            defName="HC_Unicorn" or 
+                            defName="HC_Wyvern" or 
+                            defName="HC_Kelpie" or 
+                            defName="HC_Griffin" or 
+                            defName="HC_Yeti" or 
+                            defName="HC_Roc"
+                            
+                            
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_acthccreaturesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/HC_Carbuncle | 
+                            Defs/BiomeDef/wildAnimals/HC_Nightmares |
+                            Defs/BiomeDef/wildAnimals/HC_Gorgon |
+                            Defs/BiomeDef/wildAnimals/HC_Owlbear |
+                            Defs/BiomeDef/wildAnimals/HC_Unicorn |
+                            Defs/BiomeDef/wildAnimals/HC_Wyvern |
+                            Defs/BiomeDef/wildAnimals/HC_Kelpie |
+                            Defs/BiomeDef/wildAnimals/HC_Griffin |
+                            Defs/BiomeDef/wildAnimals/HC_Yeti |
+                            Defs/BiomeDef/wildAnimals/HC_Roc
+                        </xpath>
+                        <value>{testspatches_acthccreaturesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_acthalflifecreatures</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_acthalflifecreaturesk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="Monster_Bullsquid" or 
+                            defName="Monster_Houndeye" or 
+                            defName="Monster_Antlion" or 
+                            defName="Monster_AntlionWorker" or 
+                            defName="Monster_AntlionGuard" or 
+                            defName="Monster_AntlionGrub" or 
+                            defName="Monster_Headcrab" or 
+                            defName="Monster_HeadcrabFast" or 
+                            defName="Monster_HeadcrabPoison" or 
+                            defName="Monster_HeadcrabReviver" or 
+                            defName="Monster_BigMomma" or 
+                            defName="Monster_Gargantua"
+                            
+                            
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_acthalflifecreaturesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/Monster_Bullsquid | 
+                            Defs/BiomeDef/wildAnimals/Monster_Houndeye |
+                            Defs/BiomeDef/wildAnimals/Monster_Antlion |
+                            Defs/BiomeDef/wildAnimals/Monster_AntlionWorker |
+                            Defs/BiomeDef/wildAnimals/Monster_AntlionGuard |
+                            Defs/BiomeDef/wildAnimals/Monster_AntlionGrub |
+                            Defs/BiomeDef/wildAnimals/Monster_Headcrab |
+                            Defs/BiomeDef/wildAnimals/Monster_HeadcrabFast |
+                            Defs/BiomeDef/wildAnimals/Monster_HeadcrabPoison |
+                            Defs/BiomeDef/wildAnimals/Monster_HeadcrabReviver |
+                            Defs/BiomeDef/wildAnimals/Monster_BigMomma |
+                            Defs/BiomeDef/wildAnimals/Monster_Gargantua
+                        </xpath>
+                        <value>{testspatches_acthalflifecreaturesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actlegacyark</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actlegacyarkk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            @ParentName="ArkCowBase" or 
+                            @Name="ArkCowBase" or 
+                            defName="AngusCow" or 
+                            defName="HerefordCow" or 
+                            defName="HarianaCow" or 
+                            defName="HighlandCow" or 
+                            defName="LonghornCow" or 
+                            defName="ZebuCow" or 
+                            defName="HolsteinFriesianCow" or 
+                            defName="JerseyCow" or 
+                            defName="LimousinCow" or 
+                            defName="BrownSwissCow" or 
+                            defName="AnkoleWatusiCow" or 
+                            defName="BravaCow" or 
+                            defName="BoomooCow" or 
+                            defName="BrahmanCow" or 
+                            defName="Gerbil" or 
+                            defName="IndianGiantSquirrel" or 
+                            defName="LeopardTortoise" or 
+                            defName="Copperhead" or 
+                            defName="GreenSnake" or 
+                            defName="CoralSnake" or 
+                            defName="BrushTurkey" or 
+                            defName="Badger" or 
+                            defName="CactusMantis" or 
+                            defName="MudSnake" or 
+                            defName="Cottonmouth" or 
+                            defName="Nutria" or 
+                            defName="WaterDeer" or 
+                            defName="Muskrat" or 
+                            defName="ScarletKingSnake" or 
+                            defName="TimberRattler" or 
+                            defName="YellowViper" or 
+                            defName="RedFootedTortoise" or 
+                            @ParentName="ArkPigBase" or 
+                            @Name="ArkPigBase" or 
+                            defName="GloucestershirePig" or 
+                            defName="DurocPig" or 
+                            defName="WoolyPig" or 
+                            defName="DairyPig" or 
+                            defName="BerkshirePig" or 
+                            defName="SaddlebackPig" or 
+                            @ParentName="ArkSheepBase" or 
+                            @Name="ArkSheepBase" or 
+                            defName="MerinoSheep" or 
+                            defName="JacobsSheep" or 
+                            defName="BighornSheep" or 
+                            defName="MouflonSheep" or 
+                            defName="LincolnSheep" or 
+                            defName="SuffolkSheep" or 
+                            defName="AwassiSheep" or 
+                            defName="AssafSheep" or 
+                            defName="RedRattler" or 
+                            defName="BorderLeicesterSheep"
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actlegacyarkk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/AngusCow | 
+                            Defs/BiomeDef/wildAnimals/HerefordCow | 
+                            Defs/BiomeDef/wildAnimals/HarianaCow | 
+                            Defs/BiomeDef/wildAnimals/HighlandCow | 
+                            Defs/BiomeDef/wildAnimals/LonghornCow | 
+                            Defs/BiomeDef/wildAnimals/ZebuCow | 
+                            Defs/BiomeDef/wildAnimals/HolsteinFriesianCow | 
+                            Defs/BiomeDef/wildAnimals/JerseyCow | 
+                            Defs/BiomeDef/wildAnimals/LimousinCow | 
+                            Defs/BiomeDef/wildAnimals/BrownSwissCow | 
+                            Defs/BiomeDef/wildAnimals/AnkoleWatusiCow | 
+                            Defs/BiomeDef/wildAnimals/BravaCow | 
+                            Defs/BiomeDef/wildAnimals/BoomooCow | 
+                            Defs/BiomeDef/wildAnimals/BrahmanCow | 
+                            Defs/BiomeDef/wildAnimals/Gerbil | 
+                            Defs/BiomeDef/wildAnimals/IndianGiantSquirrel | 
+                            Defs/BiomeDef/wildAnimals/LeopardTortoise | 
+                            Defs/BiomeDef/wildAnimals/Copperhead | 
+                            Defs/BiomeDef/wildAnimals/GreenSnake | 
+                            Defs/BiomeDef/wildAnimals/CoralSnake | 
+                            Defs/BiomeDef/wildAnimals/BrushTurkey | 
+                            Defs/BiomeDef/wildAnimals/Badger | 
+                            Defs/BiomeDef/wildAnimals/CactusMantis | 
+                            Defs/BiomeDef/wildAnimals/MudSnake | 
+                            Defs/BiomeDef/wildAnimals/Cottonmouth | 
+                            Defs/BiomeDef/wildAnimals/Nutria | 
+                            Defs/BiomeDef/wildAnimals/WaterDeer | 
+                            Defs/BiomeDef/wildAnimals/Muskrat | 
+                            Defs/BiomeDef/wildAnimals/ScarletKingSnake | 
+                            Defs/BiomeDef/wildAnimals/TimberRattler | 
+                            Defs/BiomeDef/wildAnimals/YellowViper | 
+                            Defs/BiomeDef/wildAnimals/RedFootedTortoise | 
+                            Defs/BiomeDef/wildAnimals/GloucestershirePig | 
+                            Defs/BiomeDef/wildAnimals/DurocPig | 
+                            Defs/BiomeDef/wildAnimals/WoolyPig | 
+                            Defs/BiomeDef/wildAnimals/DairyPig | 
+                            Defs/BiomeDef/wildAnimals/BerkshirePig | 
+                            Defs/BiomeDef/wildAnimals/SaddlebackPig | 
+                            Defs/BiomeDef/wildAnimals/MerinoSheep | 
+                            Defs/BiomeDef/wildAnimals/JacobsSheep | 
+                            Defs/BiomeDef/wildAnimals/BighornSheep | 
+                            Defs/BiomeDef/wildAnimals/MouflonSheep | 
+                            Defs/BiomeDef/wildAnimals/LincolnSheep | 
+                            Defs/BiomeDef/wildAnimals/SuffolkSheep | 
+                            Defs/BiomeDef/wildAnimals/AwassiSheep | 
+                            Defs/BiomeDef/wildAnimals/AssafSheep | 
+                            Defs/BiomeDef/wildAnimals/RedRattler | 
+                            Defs/BiomeDef/wildAnimals/BorderLeicesterSheep
+                        </xpath>
+                        <value>{testspatches_actlegacyarkk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actmorrowrimtrolls</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actmorrowrimtrollsk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"MorrowRim_Troll") or @ParentName="MorrowRim_TrollThingBase" or @ParentName="MorrowRim_TrollThingBase_T2" or @Name="MorrowRim_TrollThingBase" or @Name="MorrowRim_TrollThingBase_T2"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actmorrowrimtrollsk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"MorrowRim_Troll")]</xpath>
+                        <value>{testspatches_actmorrowrimtrollsk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actdndn</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actdndnk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"DND")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actdndnk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"DND")]</xpath>
+                        <value>{testspatches_actdndnk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actoniam</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actoniamk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="Drecko" or 
+                            defName="GlossyDrecko" or 
+                            defName="SmoothHatch" or 
+                            defName="Hatch" or 
+                            defName="StoneHatch" or 
+                            defName="SageHatch" or 
+                            defName="TropicalPacu" or 
+                            defName="Pacu" or 
+                            defName="GulpFish" or 
+                            defName="SqueakyPuft" or 
+                            defName="PuftPrince" or 
+                            defName="Puft" or 
+                            defName="DensePuft" or 
+                            defName="Sunbug" or 
+                            defName="Abyssbug" or 
+                            defName="Royalbug" or 
+                            defName="Radiantbug" or 
+                            defName="Coralbug" or 
+                            defName="Azurebug" or 
+                            defName="Shinebug" or 
+                            defName="Slickster" or 
+                            defName="MoltenSlickster" or 
+                            defName="LonghairSlickster" or 
+                            defName="Pokeshell" or 
+                            defName="Shovevole" or 
+                            defName="Gassymoo" or 
+                            defName="Pip" or 
+                            defName="Morb"
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actoniamk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/Drecko |  
+                            Defs/BiomeDef/wildAnimals/GlossyDrecko |  
+                            Defs/BiomeDef/wildAnimals/SmoothHatch |  
+                            Defs/BiomeDef/wildAnimals/Hatch |  
+                            Defs/BiomeDef/wildAnimals/StoneHatch |  
+                            Defs/BiomeDef/wildAnimals/SageHatch |  
+                            Defs/BiomeDef/wildAnimals/TropicalPacu |  
+                            Defs/BiomeDef/wildAnimals/Pacu |  
+                            Defs/BiomeDef/wildAnimals/GulpFish |  
+                            Defs/BiomeDef/wildAnimals/SqueakyPuft |  
+                            Defs/BiomeDef/wildAnimals/PuftPrince |  
+                            Defs/BiomeDef/wildAnimals/Puft |  
+                            Defs/BiomeDef/wildAnimals/DensePuft |  
+                            Defs/BiomeDef/wildAnimals/Sunbug |  
+                            Defs/BiomeDef/wildAnimals/Abyssbug |  
+                            Defs/BiomeDef/wildAnimals/Royalbug |  
+                            Defs/BiomeDef/wildAnimals/Radiantbug |  
+                            Defs/BiomeDef/wildAnimals/Coralbug |  
+                            Defs/BiomeDef/wildAnimals/Azurebug |  
+                            Defs/BiomeDef/wildAnimals/Shinebug |  
+                            Defs/BiomeDef/wildAnimals/Slickster |  
+                            Defs/BiomeDef/wildAnimals/MoltenSlickster |  
+                            Defs/BiomeDef/wildAnimals/LonghairSlickster |  
+                            Defs/BiomeDef/wildAnimals/Pokeshell |  
+                            Defs/BiomeDef/wildAnimals/Shovevole |  
+                            Defs/BiomeDef/wildAnimals/Gassymoo |  
+                            Defs/BiomeDef/wildAnimals/Pip |  
+                            Defs/BiomeDef/wildAnimals/Morb
+                        </xpath>
+                        <value>{testspatches_actoniamk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actpetcucumber</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actpetcucumberk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="SeaCucumber"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actpetcucumberk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/SeaCucumber</xpath>
+                        <value>{testspatches_actpetcucumberk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actpinkmaterialsheep</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actpinkmaterialsheepk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="aka_BSheep" or ParentName="Suzumetan"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actpinkmaterialsheepk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/aka_BSheep</xpath>
+                        <value>{testspatches_actpinkmaterialsheepk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actrttr</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actrttrk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"RttR")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actrttrk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"RttR")]</xpath>
+                        <value>{testspatches_actrttrk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actslimerancher</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actslimerancherk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[@ParentName="SlimeThingBase" or @Name="SlimeThingBase"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actslimerancherk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/GreenSlime | 
+                            Defs/BiomeDef/wildAnimals/PuddleSlime | 
+                            Defs/BiomeDef/wildAnimals/FireSlime | 
+                            Defs/BiomeDef/wildAnimals/BoomSlime | 
+                            Defs/BiomeDef/wildAnimals/TarrSlime | 
+                            Defs/BiomeDef/wildAnimals/QuicksilverSlime | 
+                            Defs/BiomeDef/wildAnimals/BuddingSlime | 
+                            Defs/BiomeDef/wildAnimals/GoldSlime | 
+                            Defs/BiomeDef/wildAnimals/MetalSlime | 
+                            Defs/BiomeDef/wildAnimals/TabbySlime | 
+                            Defs/BiomeDef/wildAnimals/RadSlime | 
+                            Defs/BiomeDef/wildAnimals/HoneySlime | 
+                            Defs/BiomeDef/wildAnimals/RockSlime
+                        </xpath>
+                        <value>{testspatches_actslimerancherk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actslimes</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actslimesk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[@ParentName="ZSL_SlimeBase" or @Name="ZSL_SlimeBase" or (contains(defName,"ZSL") and contains(defName,"Slime"))]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actslimesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"ZSL") and contains(local-name(),"Slime")]</xpath>
+                        <value>{testspatches_actslimesk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actbastyon</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actbastyonk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"Bast_")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actbastyonk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"Bast_")]</xpath>
+                        <value>{testspatches_actbastyonk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actmm</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actmmk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[contains(defName,"MM_")]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actmmk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/*[contains(local-name(),"MM_")]</xpath>
+                        <value>{testspatches_actmmk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_acttribble</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_acttribblek</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="SHTribble"]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_acttribblek}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/BiomeDef/wildAnimals/SHTribble</xpath>
+                        <value>{testspatches_acttribblek}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actscaledworld</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actscaledworldk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="Skrill" or 
+                            defName="Monstrous_Nightmare" or 
+                            defName="Fury" or 
+                            defName="Speed_Stinger" or 
+                            defName="Stormcutter" or 
+                            defName="Deadly_Nadder"
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actscaledworldk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/Skrill | 
+                            Defs/BiomeDef/wildAnimals/Monstrous_Nightmare |
+                            Defs/BiomeDef/wildAnimals/Fury |
+                            Defs/BiomeDef/wildAnimals/Speed_Stinger |
+                            Defs/BiomeDef/wildAnimals/Stormcutter |
+                            Defs/BiomeDef/wildAnimals/Deadly_Nadder
+                        </xpath>
+                        <value>{testspatches_actscaledworldk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actdinosauria</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actdinosauriak</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="TyrannosaurusRex" or 
+                            defName="Yutyrannus" or 
+                            defName="Carnotaurus" or 
+                            defName="Allosaurus" or 
+                            defName="Spinosaurus" or 
+                            defName="Baryonyx" or 
+                            defName="Ankylosaurus" or 
+                            defName="Minmi" or 
+                            defName="Brachiosaurus" or 
+                            defName="Brontosaurus" or 
+                            defName="Diplodocus" or 
+                            defName="Magyarosaurus" or 
+                            defName="Utahraptor" or 
+                            defName="Dakotaraptor" or 
+                            defName="Dilophosaurus" or 
+                            defName="Velociraptor" or 
+                            defName="Compsognathus" or 
+                            defName="Gallimimus" or 
+                            defName="Gigantoraptor" or 
+                            defName="Iguanodon" or 
+                            defName="Parasaur" or 
+                            defName="Corythosaurus" or 
+                            defName="Deinocheirus" or 
+                            defName="Therizinosaurus" or 
+                            defName="Pachycephalosaurus" or 
+                            defName="Stygimoloch" or 
+                            defName="Dryosaurus" or 
+                            defName="Stegosaurus" or 
+                            defName="Triceratops" or 
+                            defName="Protoceratops" or 
+                            defName="Quetzalcoatlus" or 
+                            defName="Pteranodon"
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actdinosauriak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/TyrannosaurusRex | 
+                            Defs/BiomeDef/wildAnimals/Yutyrannus | 
+                            Defs/BiomeDef/wildAnimals/Carnotaurus | 
+                            Defs/BiomeDef/wildAnimals/Allosaurus | 
+                            Defs/BiomeDef/wildAnimals/Spinosaurus | 
+                            Defs/BiomeDef/wildAnimals/Baryonyx | 
+                            Defs/BiomeDef/wildAnimals/Ankylosaurus | 
+                            Defs/BiomeDef/wildAnimals/Minmi | 
+                            Defs/BiomeDef/wildAnimals/Brachiosaurus | 
+                            Defs/BiomeDef/wildAnimals/Brontosaurus | 
+                            Defs/BiomeDef/wildAnimals/Diplodocus | 
+                            Defs/BiomeDef/wildAnimals/Magyarosaurus | 
+                            Defs/BiomeDef/wildAnimals/Utahraptor | 
+                            Defs/BiomeDef/wildAnimals/Dakotaraptor | 
+                            Defs/BiomeDef/wildAnimals/Dilophosaurus | 
+                            Defs/BiomeDef/wildAnimals/Velociraptor | 
+                            Defs/BiomeDef/wildAnimals/Compsognathus | 
+                            Defs/BiomeDef/wildAnimals/Gallimimus | 
+                            Defs/BiomeDef/wildAnimals/Gigantoraptor | 
+                            Defs/BiomeDef/wildAnimals/Iguanodon | 
+                            Defs/BiomeDef/wildAnimals/Parasaur | 
+                            Defs/BiomeDef/wildAnimals/Corythosaurus | 
+                            Defs/BiomeDef/wildAnimals/Deinocheirus | 
+                            Defs/BiomeDef/wildAnimals/Therizinosaurus | 
+                            Defs/BiomeDef/wildAnimals/Pachycephalosaurus | 
+                            Defs/BiomeDef/wildAnimals/Stygimoloch | 
+                            Defs/BiomeDef/wildAnimals/Dryosaurus | 
+                            Defs/BiomeDef/wildAnimals/Stegosaurus | 
+                            Defs/BiomeDef/wildAnimals/Triceratops | 
+                            Defs/BiomeDef/wildAnimals/Protoceratops | 
+                            Defs/BiomeDef/wildAnimals/Quetzalcoatlus | 
+                            Defs/BiomeDef/wildAnimals/Pteranodon
+                        </xpath>
+                        <value>{testspatches_actdinosauriak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actrrea</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_actrreak</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[
+                            defName="RG_WoollyMammoth" or 
+                            defName="RG_WoollyRhinoceros" or 
+                            defName="RG_WoollyStegosaurus" or 
+                            defName="RG_SabertoothSquirrel" or 
+                            defName="RG_Protoceratidae" or 
+                            defName="RG_Dodo" or 
+                            defName="RG_ArcticDrak" or 
+                            defName="RG_ArcticLuizicus" or 
+                            defName="RG_TerrorBird" or 
+                            defName="RG_Megalenhydris" or 
+                            defName="RG_Thrinaxodon" or 
+                            defName="RG_Velociraptor"
+                            
+                            
+                            ]/race/wildBiomes/*</xpath>
+                        <value>{testspatches_actrreak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>
+                            Defs/BiomeDef/wildAnimals/RG_WoollyMammoth | 
+                            Defs/BiomeDef/wildAnimals/RG_WoollyRhinoceros |
+                            Defs/BiomeDef/wildAnimals/RG_WoollyStegosaurus |
+                            Defs/BiomeDef/wildAnimals/RG_SabertoothSquirrel |
+                            Defs/BiomeDef/wildAnimals/RG_Protoceratidae |
+                            Defs/BiomeDef/wildAnimals/RG_Dodo |
+                            Defs/BiomeDef/wildAnimals/RG_ArcticDrak |
+                            Defs/BiomeDef/wildAnimals/RG_ArcticLuizicus |
+                            Defs/BiomeDef/wildAnimals/RG_TerrorBird |
+                            Defs/BiomeDef/wildAnimals/RG_Megalenhydris |
+                            Defs/BiomeDef/wildAnimals/RG_Thrinaxodon |
+                            Defs/BiomeDef/wildAnimals/RG_Velociraptor
+                        </xpath>
+                        <value>{testspatches_actrreak}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_actlogging</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="XmlExtensions.Log">
+                <success>Always</success>
+                <text>nonzeroes</text>
+                <xpath>Defs/ThingDef[race/wildBiomes/*>0]/defName</xpath>
+            </Operation>
+            <Operation Class="XmlExtensions.StopwatchStop"/>
+            
+        </caseTrue>
+        <caseFalse>
+
+        </caseFalse>
+    </Operation>
+
+    
+</Patch>
