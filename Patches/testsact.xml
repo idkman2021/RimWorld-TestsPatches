@@ -952,7 +952,13 @@
                             defName="Fury" or 
                             defName="Speed_Stinger" or 
                             defName="Stormcutter" or 
-                            defName="Deadly_Nadder"
+                            defName="Deadly_Nadder" or 
+                            defName="Dramillion" or 
+                            defName="Triple_Stryke" or 
+                            defName="Changewing" or 
+                            defName="Thunderdrum" or 
+                            defName="Boneknapper" or 
+                            defName="Hideous_Zippleback"
                             ]/race/wildBiomes/*</xpath>
                         <value>{testspatches_actscaledworldk}</value>
                         <operation>*</operation>
@@ -965,7 +971,13 @@
                             Defs/BiomeDef/wildAnimals/Fury |
                             Defs/BiomeDef/wildAnimals/Speed_Stinger |
                             Defs/BiomeDef/wildAnimals/Stormcutter |
-                            Defs/BiomeDef/wildAnimals/Deadly_Nadder
+                            Defs/BiomeDef/wildAnimals/Deadly_Nadder | 
+                            Defs/BiomeDef/wildAnimals/Dramillion | 
+                            Defs/BiomeDef/wildAnimals/Triple_Stryke | 
+                            Defs/BiomeDef/wildAnimals/Changewing | 
+                            Defs/BiomeDef/wildAnimals/Thunderdrum | 
+                            Defs/BiomeDef/wildAnimals/Boneknapper | 
+                            Defs/BiomeDef/wildAnimals/Hideous_Zippleback
                         </xpath>
                         <value>{testspatches_actscaledworldk}</value>
                         <operation>*</operation>
