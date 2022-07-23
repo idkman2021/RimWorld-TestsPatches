@@ -96,7 +96,7 @@
                 </match>
             </Operation>
 
-            <!-- chitin mods causing mild coronavirus -->
+            <!-- chitin mods causing mild clinical depression -->
 
             <Operation Class="PatchOperationFindMod">
                 <mods>
@@ -125,7 +125,7 @@
                 </match>
             </Operation>
 
-            <!-- this is not epic -->
+            <!-- Duplicate AA nodes -->
             <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
                 <success>Always</success>
                 <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li/carriers/AA_NightMule</xpath>
@@ -157,7 +157,7 @@
                 <xpath>Defs/TerrainDef[defName="SterileTile"]/designatorDropdown</xpath>
             </Operation>
 
-            <!-- Star Wars Biomes caused this -->
+            <!-- I installed Star Wars Biomes and THIS happened... -->
 
             <Operation Class="XmlExtensions.PatchOperationRemoveDuplicateNodes">
                 <success>Always</success>
@@ -284,7 +284,7 @@
             <!-- idk how to fix that -->
             <Operation Class="PatchOperationAdd">
                 <success>Always</success>
-                <xpath>Defs/ThingDef[defName="FCP_Gamma_Gun"]/verbs/li[1][not(forcedMissRadius)]</xpath>
+                <xpath>Defs/ThingDef[defName="FCP_Gamma_Gun" or defName="KushalaDaora"]/verbs/li[1][not(forcedMissRadius)]</xpath>
                 <value>
                     <forcedMissRadius>1</forcedMissRadius>
                 </value>
@@ -304,6 +304,71 @@
                         </li>
                     </operations>
                 </match>
+            </Operation>
+
+            <!-- wvc nodes have non existent parentnames and hyperlinks -->
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[@Name="WVC_BuildingBed_Base"]</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@ParentName="WVC_BuildingBed_Base" and (not(graphicData))]</xpath>
+                    <value>
+                        <graphicData>
+                            <!--
+                            <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
+                            <drawSize>(2.05,2.05)</drawSize>
+                            <damageData>
+                                <rect>(0,0.05,2,1.95)</rect>
+                            </damageData>
+                        -->
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <shaderType>CutoutComplex</shaderType>
+                        </graphicData>
+                    </value>
+                </nomatch>
+            </Operation>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[@Name="WVC_BuildingBed_Base"]</xpath>
+                <nomatch Class="PatchOperationAttributeSet">
+                    <xpath>Defs/ThingDef[@ParentName="WVC_BuildingBed_Base"]</xpath>
+                    <attribute>ParentName</attribute>
+                    <value>ArtableBedBase</value>
+                </nomatch>
+            </Operation>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[@Name="WVC_MechanoidIncubator_Base"]</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@ParentName="WVC_MechanoidIncubator_Base"]/graphicData[not(graphicClass)]</xpath>
+                    <value>
+                        <graphicClass>Graphic_Multi</graphicClass>
+                        <shaderType>CutoutComplex</shaderType>
+                    </value>
+                </nomatch>
+            </Operation>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[@Name="WVC_MechanoidIncubator_Base"]</xpath>
+                <nomatch Class="PatchOperationAttributeSet">
+                    <xpath>Defs/ThingDef[@ParentName="WVC_MechanoidIncubator_Base"]</xpath>
+                    <attribute>ParentName</attribute>
+                    <value>BuildingBase</value>
+                </nomatch>
+            </Operation>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ConceptDef[defName="WVC_AboutNodes"]</xpath>
+                <nomatch Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef/descriptionHyperlinks/ConceptDef[text()="WVC_AboutNodes"]</xpath>
+                </nomatch>
+            </Operation>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ConceptDef[defName="WVC_AboutNodes"]</xpath>
+                <nomatch Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef/descriptionHyperlinks/ConceptDef[text()="WVC_AboutNodes"]</xpath>
+                </nomatch>
             </Operation>
 
         </caseTrue>

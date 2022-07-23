@@ -40,7 +40,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_rimsenal</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
 
             <Operation Class="PatchOperationAdd">
@@ -60,7 +60,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_ekwhateverphobia</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
 
             <Operation Class="PatchOperationReplace">
@@ -116,7 +116,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_gacha</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
@@ -178,7 +178,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_megafauna</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
 
 
@@ -260,7 +260,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_fantasydeep</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
 
 
@@ -273,6 +273,20 @@
                         <xpath>Defs/ThingDef[defName="Skelsshkrum"]/deepCommonality</xpath>
                         <value>
                             <deepCommonality>0.06</deepCommonality>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[
+                            defName="Mithril" or
+                            defName="Orichalcum" or
+                            defName="Adamantite" or
+                            defName="Tozra" or
+                            defName="Solorite"
+                    ]/stuffProps/commonality</xpath>
+                        <value>
+                            <commonality>0.005</commonality>
                         </value>
                     </li>
 
@@ -314,6 +328,7 @@
                             <deepCountPerPortion>5</deepCountPerPortion>
                         </value>
                     </li>
+
 
                 </operations>
             </Operation>
@@ -977,7 +992,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_bamboo</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationReplace">
                 <success>Always</success>
@@ -1086,7 +1101,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_bamboorecipes</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationRemove">
                 <success>Always</success>
@@ -1124,7 +1139,7 @@
     <Operation Class="XmlExtensions.OptionalPatch">
         <modId>tests.patches</modId>
         <key>testspatches_ssdropdown</key>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <caseTrue>
             <Operation Class="PatchOperationAdd">
                 <success>Always</success>
@@ -1286,7 +1301,574 @@
         <caseFalse></caseFalse>
     </Operation>
 
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_ltsresearch</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
 
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"LTS_")]/researchPrerequisites[not(li="ComplexFurniture")]</xpath>
+                <success>Always</success>
+                <value>
+                    <li>ComplexFurniture</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"LTS_") and (not(researchPrerequisites))]</xpath>
+                <success>Always</success>
+                <value>
+                    <researchPrerequisites>
+                        <li>ComplexFurniture</li>
+                    </researchPrerequisites>
+                </value>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_rh2research</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"RH2_")]/researchPrerequisites[not(li="ComplexFurniture")]</xpath>
+                <success>Always</success>
+                <value>
+                    <li>ComplexFurniture</li>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[contains(defName,"RH2_") and (not(researchPrerequisites))]</xpath>
+                <success>Always</success>
+                <value>
+                    <researchPrerequisites>
+                        <li>ComplexFurniture</li>
+                    </researchPrerequisites>
+                </value>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_froggleings</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+
+            <Operation Class="XmlExtensions.PatchOperationMath">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="ZW_Frog" or defName="ZW_FrogRed" or defName="ZW_FrogYellow" or defName="HC_Bullfrog"]/race/wildBiomes/*</xpath>
+                <value>0.1</value>
+                <operation>*</operation>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationMath">
+                <success>Always</success>
+                <xpath>Defs/BiomeDef/wildAnimals/ZW_Frog | 
+                    Defs/BiomeDef/wildAnimals/ZW_FrogRed |
+                    Defs/BiomeDef/wildAnimals/ZW_FrogYellow | 
+                    Defs/BiomeDef/wildAnimals/HC_Bullfrog
+                </xpath>
+                <value>0.1</value>
+                <operation>*</operation>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_volcanictransparency</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="MorrowRim_Glass"]/stuffProps/color</xpath>
+                <value>
+                    <color>RGBA(82,142,97,180)</color>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="MorrowRim_Ebony"]/stuffProps/color</xpath>
+                <value>
+                    <color>RGBA(36,29,38,150)</color>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_volcanicglassdeep</key>
+        <defaultValue>true</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[
+                    defName="MorrowRim_Glass" or
+                    defName="MorrowRim_Ebony"
+                    ]/deepCommonality</xpath>
+                        <value>
+                            <deepCommonality>0.06</deepCommonality>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[defName="MorrowRim_Glass" or
+                            defName="MorrowRim_Ebony"
+                            ]/deepLumpSizeRange</xpath>
+                        <value>
+                            <deepLumpSizeRange>
+                                <min>1</min>
+                                <max>5</max>
+                            </deepLumpSizeRange>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[defName="MorrowRim_Glass" or
+                            defName="MorrowRim_Ebony"]/deepCountPerPortion</xpath>
+                        <value>
+                            <deepCountPerPortion>5</deepCountPerPortion>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[
+                    defName="MorrowRim_Glass" or
+                    defName="MorrowRim_Ebony"
+                    ]/stuffProps/commonality</xpath>
+                        <value>
+                            <commonality>0.005</commonality>
+                        </value>
+                    </li>
+
+                </operations>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_madamantiumdeep</key>
+        <defaultValue>true</defaultValue>
+        <caseTrue>
+
+
+            <Operation Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[
+                    defName="MorrowRim_Adamantium"
+                    ]/deepCommonality</xpath>
+                        <value>
+                            <deepCommonality>0.06</deepCommonality>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[defName="MorrowRim_Adamantium"
+                            ]/deepLumpSizeRange</xpath>
+                        <value>
+                            <deepLumpSizeRange>
+                                <min>1</min>
+                                <max>5</max>
+                            </deepLumpSizeRange>
+                        </value>
+                    </li>
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[defName="MorrowRim_Adamantium"]/deepCountPerPortion</xpath>
+                        <value>
+                            <deepCountPerPortion>5</deepCountPerPortion>
+                        </value>
+                    </li>
+
+
+                    <li Class="PatchOperationReplace">
+                        <success>Normal</success>
+                        <xpath>Defs/ThingDef[
+                    defName="MorrowRim_Adamantium"
+                    ]/stuffProps/commonality</xpath>
+                        <value>
+                            <commonality>0.005</commonality>
+                        </value>
+                    </li>
+
+                </operations>
+            </Operation>
+
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+    <!--
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_hotspringsarenotasepicasiwouldlikethemtobesothereforetheymustbepatchedtoebeabitmoreepic</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/JobDef[driverClass="VFEC.Jobs.JobDriver_SitInBuilding"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/JobDef[defName="BathStandaloneHotSpring" or defName="BathSmallHotSpring"]/driverClass</xpath>
+                            <success>Always</success>
+                            <value>
+                                <driverClass>VFEC.Jobs.JobDriver_SitInBuilding</driverClass>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationReplace">
+                            <xpath>Defs/ThingDef/thingClass[text()="StandaloneHotSpring.StandaloneHotSpringBath"]</xpath>
+                            <success>Always</success>
+                            <value>
+                                <thingClass>VFEC.Buildings.Thermaebath</thingClass>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+
+        </caseTrue>
+    </Operation>
+-->
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_woolyhorses</key>
+        <defaultValue>true</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="ACPWoolyHorse"]/race/trainability</xpath>
+                <value>
+                    <trainability>None</trainability>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="ACPWoolyHorse"]/race[not(roamMtbDays)]</xpath>
+                <value>
+                    <roamMtbDays>2</roamMtbDays>
+                </value>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_dndmeatcsharpfix</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[contains(defName,"DND_") and race/specificMeatDef]/statBases/MeatAmount</xpath>
+                <value>
+                    <MeatAmount>0</MeatAmount>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[contains(defName,"DND_")]/race/specificMeatDef</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_dndunhediffier</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/ThingDef/comps/li[@Class="MoodndBehaviorsAndEvents.CompProperties_HediffEffecterRework"]</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_allanimalscanmanhunt</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/PawnKindDef/canArriveManhunter</xpath>
+            </Operation>
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_noltsfloors</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>Defs/TerrainDef[
+                    @ParentName="LTS_WoodBase"
+                    or @ParentName="LTS_FineWoodBase"
+                    or @ParentName="LTS_StoneBase"
+                    or @ParentName="LTS_GravelBase"
+                    or @ParentName="LTS_RoughSquareBase"
+                    or @ParentName="LTS_RoughTileBase"
+                    or @ParentName="LTS_EvenBase"
+                    or @ParentName="LTS_UnevenBase"
+                    or @ParentName="LTS_RoughSquareDiagonalBase"
+                    or @ParentName="LTS_RoughSquareStraightBase"
+                    or @ParentName="LTS_RoughTileBase_H"
+                    or @ParentName="LTS_RoughTileBase_V"
+                    ]</xpath>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_highdensityhydrosearch</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[defName="HDH_HighDensity"]/baseCost</xpath>
+                <value>
+                    <baseCost>8000</baseCost>
+                </value>
+            </Operation>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[defName="HDH_HighDensity_Ultra"]/baseCost</xpath>
+                <value>
+                    <baseCost>20000</baseCost>
+                </value>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_tidaldeopifier</key>
+        <defaultValue>true</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="VFE_TidalGenerator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+                <value>
+                    <basePowerConsumption>-1100</basePowerConsumption>
+                </value>
+            </Operation>
+        </caseTrue>
+    </Operation>
+    <!-- doesnt work probably less than 0 values get whatevered
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_productionoutpostmultiplier</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.UseSetting">
+                <modId>tests.patches</modId>
+                <key>testspatches_productionoutpostmultiplierk</key>
+                <defaultValue>1</defaultValue>
+                <apply>
+                    <Operation Class="XmlExtensions.PatchOperationMath">
+                        <success>Always</success>
+                        <xpath>Defs/WorldObjectDef[defName="Outpost_Production"]/modExtensions/li[@Class="Outposts.OutpostExtension_Choose"]/ResultOptions/li/AmountsPerSkills/Crafting</xpath>
+                        <value>{testspatches_productionoutpostmultiplierk}</value>
+                        <operation>*</operation>
+                    </Operation>
+                </apply>
+            </Operation>
+
+        </caseTrue>
+        <caseFalse></caseFalse>
+    </Operation>
+-->
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_tidalresearch</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[defName="VFE_TidalPower"]/prerequisites[not(li="WatermillGenerator")]</xpath>
+                <value>
+                    <li>WatermillGenerator</li>
+                </value>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_gascoolingafterair</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[defName="VPE_GasCooler"]/researchPrerequisites[not(li="AirConditioning")]</xpath>
+                <value>
+                    <li>AirConditioning</li>
+                </value>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_huttsatlas</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="SW_Hutts_Pawn"]/alienRace/generalSettings/alienPartGenerator[(not(borderScale)) and (not(atlasScale))]</xpath>
+                <value>
+                    <borderScale>2</borderScale>
+                    <atlasScale>2</atlasScale>
+                </value>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_woweracesdefault</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationReplace">
+                <success>Always</success>
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/statBases</xpath>
+                <value>
+                    <statBases>
+                        <MarketValue>1750</MarketValue>
+                        <MoveSpeed>4.6</MoveSpeed>
+                        <ComfyTemperatureMin>16</ComfyTemperatureMin>
+                        <ComfyTemperatureMax>26</ComfyTemperatureMax>
+                        <LeatherAmount>50</LeatherAmount>
+                        <RoyalFavorValue>3</RoyalFavorValue>
+                    </statBases>
+                </value>
+            </Operation>
+
+            <Operation Class="PatchOperationRemove">
+                <success>Always</success>
+                <xpath>
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/factionRelations
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/notXenophobistTowards
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/disallowedTraits
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/forcedRaceTraitEntries
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/thoughtSettings
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/alienRace/generalSettings/raceRestriction
+                    |
+                    Defs/AlienRace.ThingDef_AlienRace[(contains(defName, "WoW_")) or (contains(@Name, "WoW_"))]/race/baseHungerRate
+                </xpath>
+            </Operation>
+
+
+        </caseTrue>
+    </Operation>
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_wvcisweird</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="PatchOperationConditional">
+                <success>Always</success>
+                <xpath>Defs/ThingDef[@Name="WVC_MechanoidIncubator_Base"]</xpath>
+                <nomatch Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[@ParentName="WVC_MechanoidIncubator_Base"]</xpath>
+                </nomatch>
+            </Operation>
+        </caseTrue>
+    </Operation>
+
+
+    <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>tests.patches</modId>
+        <key>testspatches_wvciscool</key>
+        <defaultValue>false</defaultValue>
+        <caseTrue>
+            <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[@ParentName="ValkyriesTechs_Default_WVC" or @ParentName="WVC_ExperimentalTechs_Base" or @ParentName="WVC_NodeTechs_Base" or @Name="ValkyriesTechs_Default_WVC" or @Name="WVC_ExperimentalTechs_Base" or @Name="WVC_NodeTechs_Base"]</xpath>
+                <value>
+                    <techprintCount>2</techprintCount>
+                </value>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[@ParentName="ValkyriesTechs_Default_WVC" or @ParentName="WVC_ExperimentalTechs_Base" or @ParentName="WVC_NodeTechs_Base" or @Name="ValkyriesTechs_Default_WVC" or @Name="WVC_ExperimentalTechs_Base" or @Name="WVC_NodeTechs_Base"]</xpath>
+                <value>
+                    <techprintCommonality>1</techprintCommonality>
+                </value>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[@ParentName="ValkyriesTechs_Default_WVC" or @ParentName="WVC_ExperimentalTechs_Base" or @ParentName="WVC_NodeTechs_Base" or @Name="ValkyriesTechs_Default_WVC" or @Name="WVC_ExperimentalTechs_Base" or @Name="WVC_NodeTechs_Base"]</xpath>
+                <value>
+                    <techprintMarketValue>4000</techprintMarketValue>
+                </value>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
+                <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[@ParentName="ValkyriesTechs_Default_WVC" or @ParentName="WVC_ExperimentalTechs_Base" or @ParentName="WVC_NodeTechs_Base" or @Name="ValkyriesTechs_Default_WVC" or @Name="WVC_ExperimentalTechs_Base" or @Name="WVC_NodeTechs_Base"]</xpath>
+                <value>
+                    <heldByFactionCategoryTags Inherit="False">
+                        <li MayRequire="ludeon.rimworld.royalty">Empire</li>
+                        <li>Outlander</li>
+                    </heldByFactionCategoryTags>
+                </value>
+            </Operation>
+            <Operation Class="XmlExtensions.PatchOperationMath">
+               <success>Always</success>
+                <xpath>Defs/ResearchProjectDef[@ParentName="ValkyriesTechs_Default_WVC" or @ParentName="WVC_ExperimentalTechs_Base" or @ParentName="WVC_NodeTechs_Base" or @Name="ValkyriesTechs_Default_WVC" or @Name="WVC_ExperimentalTechs_Base" or @Name="WVC_NodeTechs_Base"]/baseCost</xpath>
+                <value>10</value>
+                <operation>*</operation>
+            </Operation>
+        </caseTrue>
+    </Operation>
 
 
     <!--

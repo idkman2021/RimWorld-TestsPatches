@@ -20,14 +20,14 @@
                         </li>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <recipeMaker Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationAdd">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
                             <value>
                                 <costList Inherit="False">
                                     <Steel>100</Steel>
@@ -37,14 +37,14 @@
                         </li>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <costStuffCount Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
                         </li>
                     </operations>
                 </match>
@@ -76,14 +76,14 @@
                         </li>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <recipeMaker Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationAdd">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
                             <value>
                                 <costList Inherit="False">
                                     <Steel>100</Steel>
@@ -93,14 +93,70 @@
                         </li>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <costStuffCount Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </Operation>
+        </apply>
+    </XmlExtensions.PatchDef>
+    <!-- always replace costlist -->
+    <XmlExtensions.PatchDef Name="testspatches_opc" Abstract="True">
+        <parameters>
+            <li>defName</li>
+        </parameters>
+        <apply>
+            <Operation Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                <match Class="PatchOperationSequence">
+                    <operations>
+
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <compare>Name</compare>
+                            <checkAttributes>false</checkAttributes>
+                            <value>
+                                <thingSetMakerTags Inherit="False">
+                                    <li>RewardStandardHighFreq</li>
+                                    <li>RewardStandardQualitySuper</li>
+                                    <li>RewardSpecial</li>
+                                </thingSetMakerTags>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <recipeMaker Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <value>
+                                <costList Inherit="False">
+                                    <Steel>100</Steel>
+                                    <ComponentSpacer>5</ComponentSpacer>
+                                </costList>
+                            </value>
+                        </li>
+                        <li Class="XmlExtensions.PatchOperationAddOrReplace">
+                            <success>Always</success>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
+                            <value>
+                                <costStuffCount Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationRemove">
+                            <success>Always</success>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
                         </li>
                     </operations>
                 </match>
@@ -119,14 +175,14 @@
                     <operations>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <recipeMaker Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationAdd">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}" and (not(costList))]</xpath>
                             <value>
                                 <costList Inherit="False">
                                     <Steel>100</Steel>
@@ -136,14 +192,14 @@
                         </li>
                         <li Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <costStuffCount Inherit="False" />
                             </value>
                         </li>
                         <li Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
                         </li>
                     </operations>
                 </match>
@@ -195,7 +251,7 @@
                         </Operation>
                         <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <costList Inherit="False">
                                     <OC_OddityFragment>{cost}</OC_OddityFragment>
@@ -204,7 +260,7 @@
                         </Operation>
                         <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <recipeMaker Inherit="False">
                                     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -224,7 +280,7 @@
                         </Operation>
                         <Operation Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
                         </Operation>
                     </caseTrue>
                 </match>
@@ -265,7 +321,7 @@
                         </Operation>
                         <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <costList Inherit="False">
                                     <OC_OddityFragment>{cost}</OC_OddityFragment>
@@ -274,7 +330,7 @@
                         </Operation>
                         <Operation Class="XmlExtensions.PatchOperationAddOrReplace">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="{defName}"]</xpath>
+                            <xpath>Defs/ThingDef[defName="{defName}"]</xpath>
                             <value>
                                 <recipeMaker>
                                     <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
@@ -295,7 +351,7 @@
                         </Operation>
                         <Operation Class="PatchOperationRemove">
                             <success>Always</success>
-                            <xpath>/Defs/RecipeDef[products/{defName}]</xpath>
+                            <xpath>Defs/RecipeDef[products/{defName}]</xpath>
                         </Operation>
                     </caseTrue>
                 </match>

@@ -62,6 +62,27 @@
                             <li>ResearchProjectDef/Exotic_Decoding</li>
                             <li>ThingDef/Exotic_Bench</li>
                             <li>WorkGiverDef/DoBillsUseExoticBench</li>
+                            <!-- zombies -->
+                            <li>ThingDef/CodZP_Pack-A-Punch</li>
+                            <li>ThingDef/CodZP_Wond-R-Works</li>
+                            <li>ThingDef/CodZP_Amm-O-Matic</li>
+                            <li>ThingDef/CodZP_Perk-A-Cola</li>
+                            <li>ThingDef/CODZP_Juggernog</li>
+                            <li>ThingDef/CODZP_SpeedCola</li>
+                            <li>ThingDef/CODZP_DoubleTap</li>
+                            <li>ThingDef/CODZP_QuickRevive</li>
+                            <li>ThingDef/CODZP_StaminUp</li>
+                            <li>ThingDef/CODZP_DeadshotDaiquiri</li>
+                            <li>ResearchProjectDef/CodZP_PackAPunch</li>
+                            <li>ResearchProjectDef/CodZP_WonderWorks</li>
+                            <li>ResearchProjectDef/CodZP_AmmoMatic</li>
+                            <li>ResearchProjectDef/CodZP_PerkACola</li>
+                            <li>RecipeDef/CODZP_BuyJuggernog</li>
+                            <li>RecipeDef/CODZP_BuySpeedCola</li>
+                            <li>RecipeDef/CODZP_BuyDoubleTap</li>
+                            <li>RecipeDef/CODZP_BuyQuickRevive</li>
+                            <li>RecipeDef/CODZP_BuyStaminUp</li>
+                            <li>RecipeDef/CODZP_BuyDeadshotDaiquiri</li>
 
                         </defs>
                     </CherryPicker.DefList>
@@ -279,77 +300,26 @@
                     <li>Destiny 2 Exotic Weapons</li>
                 </mods>
                 <caseTrue>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_4thHorseman</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_TheLastWord</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_TheHuckleberry</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_TheChaperone</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_DeadMansTale</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_TheProspector</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_Cryosthesia77K</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_BlackTalon</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_MonteCarlo</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_TractorCannon</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_LeviathansBreath</li>
-                        </arguments>
-                    </Operation>
-                    <Operation Class="XmlExtensions.ApplyPatch">
-                        <patchName>testspatches_op</patchName>
-                        <arguments>
-                            <li>Exotic_Telesto</li>
-                        </arguments>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[(@ParentName="BaseHumanMakeableGun" or @ParentName="BaseMakeableGun" or @ParentName="BaseWeaponNeolithic") and costList/Exotic_Engram]</xpath>
+                        <storeIn>sidemen</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>sideman</storeIn>
+                                <value>{sidemen}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{sideman}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
                     </Operation>
 
                 </caseTrue>
@@ -1330,6 +1300,66 @@
                                         <patchName>testspatches_op</patchName>
                                         <arguments>
                                             <li>{sdAaJ8Hs6da123Hgasdk}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Call of Duty: Zombies Pack</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[(contains(defName, "CodZP_") or contains(defName, "CODZP_")) and (@ParentName="CODZP_BaseWonderWeaponSharp" or @ParentName="CODZP_BaseWonderPackAPunchSharp" or @ParentName="CODZP_BaseWonderWeaponBlunt" or @ParentName="CODZP_BaseWonderPackAPunchBlunt" or @ParentName="CODZP_BasePackAPunchGun" or @ParentName="CODZP_BaseUncraftablePackAPunch" or @ParentName="CODZP_BaseWonderWeaponGun" or @ParentName="CODZP_BasePAPWonderWeaponGun" or @ParentName="CODZP_BaseUncraftableWonderGun" or @ParentName="CODZP_UncraftablePAPWonderGun" or @ParentName="CODZP_BaseAmmoMaticGun" or @ParentName="CODZP_BaseWonderAmmoMaticGun" or @ParentName="CODZP_BasePAPWonderAmmoMaticGun")]</xpath>
+                        <storeIn>asdsadsad</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>asdasdsad</storeIn>
+                                <value>{asdsadsad}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{asdasdsad}</li>
+                                        </arguments>
+                                    </Operation>
+                                </apply>
+                            </Operation>
+                        </apply>
+                    </Operation>
+
+                </caseTrue>
+            </Operation>
+
+            <Operation Class="XmlExtensions.FindMod">
+                <mods>
+                    <li>Fallout: Retro Weapon Pack</li>
+                </mods>
+                <caseTrue>
+
+                    <Operation Class="XmlExtensions.ForEach">
+                        <xpath>Defs/ThingDef[contains(defName, "AJ_") and (@ParentName="BaseWeaponNeolithic" or @ParentName="BaseHumanMakeableGun" or @ParentName="BaseMakeableGrenade" or @ParentName="BaseMeleeWeapon_Blunt_Quality" or @ParentName="BaseMeleeWeapon_Sharp_Quality")]</xpath>
+                        <storeIn>asdsadsad</storeIn>
+                        <prefixLength>2</prefixLength>
+                        <apply>
+                            <Operation Class="XmlExtensions.CreateVariable">
+                                <storeIn>asdasdsad</storeIn>
+                                <value>{asdsadsad}/defName</value>
+                                <fromXml>true</fromXml>
+                                <apply>
+                                    <Operation Class="XmlExtensions.ApplyPatch">
+                                        <patchName>testspatches_op</patchName>
+                                        <arguments>
+                                            <li>{asdasdsad}</li>
                                         </arguments>
                                     </Operation>
                                 </apply>
